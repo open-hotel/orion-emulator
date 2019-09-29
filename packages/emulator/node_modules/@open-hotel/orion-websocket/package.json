@@ -1,0 +1,21 @@
+{
+  "name": "@open-hotel/orion-websocket",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Salomão Neto <salomaosnff@yahoo.com>",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "directories": {
+    "lib": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@open-hotel/orion-core": "^0.0.0"
+  }
+}

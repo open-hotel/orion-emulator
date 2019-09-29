@@ -1,0 +1,1 @@
+{"version":3,"file":"WSModule.module.js","sourceRoot":"","sources":["../src/WSModule.module.ts"],"names":[],"mappings":";;;;;;;;AAAA,2CAAgD;AAChD,+DAAmD;AAOnD,IAAa,QAAQ,GAArB,MAAa,QAAQ;CAAG,CAAA;AAAX,QAAQ;IALpB,eAAM,EAAE;IACR,eAAM,CAAC;QACN,SAAS,EAAE,CAAC,4BAAQ,CAAC;QACrB,OAAO,EAAE,CAAC,4BAAQ,CAAC;KACpB,CAAC;GACW,QAAQ,CAAG;AAAX,4BAAQ"}

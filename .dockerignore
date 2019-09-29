@@ -1,0 +1,12 @@
+.docker
+node_modules
+src
+test
+.dockerignore
+.gitignore
+.prettierrc
+.docker-compose.yml
+DockerFile
+nest-cli.json
+README.md
+*.log
