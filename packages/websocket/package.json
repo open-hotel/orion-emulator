@@ -7,7 +7,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "start:dev": "tsc -w \"node dist/main.js\"",
+    "start:dev": "tsc -w",
     "prepare": "yarn build"
   },
   "directories": {

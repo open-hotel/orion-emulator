@@ -30,7 +30,7 @@ export class WSServer {
   shellCommand ({
     _:[bin, action],
     host = '0.0.0.0',
-    port = 6543
+    port = 65432
   }, sh:ShellProvider) {
     if (action === 'start') return this.start({ host, port: Number(port) })
     if (action === 'stop') return this.stop()

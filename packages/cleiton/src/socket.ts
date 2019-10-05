@@ -1,26 +1,30 @@
 import { store } from './store'
-console.log(store)
+import { Socket } from '@open-hotel/core'
+import Vue from 'vue'
+
 const writes = (type: string) => (...text: string[]) => store.dispatch('writel', { type, text: text.join(' ') })
 const info = writes('info')
 const warn = writes('warning')
 const error = writes('error')
 
+const emitter = new Vue()
+
 export const getSocket = async () => {
     info('Trying to open socket...')
-    const ws = new WebSocket(process.env.SOCKET_URL)
-    ws.onopen = () => {
-        info('Socket successfully open.')
-    }
-
-    ws.onerror = () => {
+    const socket = new Socket(process.env.SOCKET_URL)
+    try {
+        await socket.connect()
+    } catch (e) {
+        console.log(e)
         error('Socket error')
+        return
     }
 
-    ws.onclose = async (e) => {
-        error('Closed with status ' + e.code)
-        await new Promise(r => setTimeout(r, 3000))
-        getSocket()
-    }
+    info('Socket successfully open.')
 
-    return ws
+    // ws.onclose = async (e) => {
+    //     error('Closed with status ' + e.code)
+    //     await new Promise(r => setTimeout(r, 3000))
+    //     getSocket()
+    // }
 }

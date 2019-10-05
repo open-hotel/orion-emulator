@@ -10,6 +10,7 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "@open-hotel/core": "^1.0.11",
     "tsc-watch": "^4.0.0",
     "typescript": "^3.6.3",
     "vue": "^2.6.10",
