@@ -13,7 +13,8 @@
     "lib"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.build.json"
+    "build": "tsc -p tsconfig.build.json",
+    "start:dev":  "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/main.js\""
   },
   "dependencies": {
     "@open-hotel/orion-core": "^0.0.0",
