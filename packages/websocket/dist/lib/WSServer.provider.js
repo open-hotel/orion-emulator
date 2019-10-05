@@ -19,7 +19,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const WSChannel_1 = require("./WSChannel");
 const ws_1 = require("ws");
 const common_1 = require("@nestjs/common");
-const core_1 = require("@orion-emulator/core");
+const orion_core_1 = require("@open-hotel/orion-core");
 const Packet_1 = require("./Packet");
 const url = __importStar(require("url"));
 const qs = __importStar(require("querystring"));
@@ -102,21 +102,21 @@ let WSServer = class WSServer {
     }
 };
 __decorate([
-    core_1.ShellService({
+    orion_core_1.ShellService({
         name: 'websocket',
         title: 'WebSocket Server',
         description: 'Websocket Server',
         boot: true,
         after: ['api'],
     }),
-    core_1.ShellCommand({
+    orion_core_1.ShellCommand({
         name: 'websocket',
         alias: ['ws'],
         description: 'Controls websocket server',
         usage: 'websocket <start|stop|restart>'
     }),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, core_1.ShellProvider]),
+    __metadata("design:paramtypes", [Object, orion_core_1.ShellProvider]),
     __metadata("design:returntype", void 0)
 ], WSServer.prototype, "shellCommand", null);
 WSServer = __decorate([

@@ -6,8 +6,9 @@
   "license": "ISC",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
-    "start:dev":  "tsc -w \"node dist/main.js\""
+    "build": "tsc -p tsconfig.json",
+    "start:dev": "tsc -w \"node dist/main.js\"",
+    "prepare": "yarn build"
   },
   "directories": {
     "lib": "dist",
@@ -17,6 +18,11 @@
     "dist"
   ],
   "dependencies": {
-    "@open-hotel/orion-core": "^0.0.0"
+    "@open-hotel/orion-core": "^0.0.0",
+    "tsc-watch": "^4.0.0",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.3"
   }
 }

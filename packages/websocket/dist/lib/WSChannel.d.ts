@@ -7,5 +7,5 @@ export declare class WSChannel {
     constructor(id: string);
     add(user: WSUser): this;
     remove(user: WSUser | string): this;
-    send(packet: Packet): Promise<{}>;
+    send(packet: Packet): Promise<unknown>;
 }

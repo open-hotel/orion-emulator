@@ -3,7 +3,7 @@ import { WSChannel } from "./WSChannel";
 import { WSUser } from "./WSUser";
 import { Server } from "ws";
 import { Injectable } from "@nestjs/common";
-import { ShellCommand, ShellProvider, ShellService } from '@orion-emulator/core'
+import { ShellCommand, ShellProvider, ShellService } from '@open-hotel/orion-core'
 import { Packet } from "./Packet";
 import * as url from "url";
 import * as qs from "querystring";

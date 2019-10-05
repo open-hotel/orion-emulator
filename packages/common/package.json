@@ -27,5 +27,12 @@
     },
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "dependencies": {
+    "tsc-watch": "^4.0.0",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.3"
   }
 }

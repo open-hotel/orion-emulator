@@ -2,7 +2,7 @@ import { WSChannelList, WSUsersList } from "../types";
 import { WSChannel } from "./WSChannel";
 import { WSUser } from "./WSUser";
 import { Server } from "ws";
-import { ShellProvider } from '@orion-emulator/core';
+import { ShellProvider } from '@open-hotel/orion-core';
 export declare class WSServer {
     server: Server;
     users: WSUsersList;
@@ -11,12 +11,12 @@ export declare class WSServer {
         _: [any, any];
         host?: string;
         port?: number;
-    }, sh: ShellProvider): Promise<{}>;
+    }, sh: ShellProvider): Promise<unknown>;
     start({ host, port, }: {
         host?: string;
         port?: number;
-    }): Promise<{}>;
-    stop(): Promise<{}>;
+    }): Promise<unknown>;
+    stop(): Promise<unknown>;
     getUser(user: string | WSUser): WSUser;
     getChannel(channel: string | WSChannel): WSChannel;
     addUser(user: WSUser): this;

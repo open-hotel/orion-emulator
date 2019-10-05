@@ -11,5 +11,5 @@ export declare class WSUser {
     enterChannel(channel: WSChannel): this;
     leaveChannel(channel: string | WSChannel): this;
     disconnect(): void;
-    send(packet: Packet): Promise<{}>;
+    send(packet: Packet): Promise<unknown>;
 }

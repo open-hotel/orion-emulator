@@ -1,0 +1,30 @@
+{
+  "name": "cleiton",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel index.html",
+    "docker:dev": "cross-env NODE_ENV=docker parcel --hmr-port 44113 index.html",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "tsc-watch": "^4.0.0",
+    "typescript": "^3.6.3",
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.4",
+    "vuex": "^3.1.1"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.0.0",
+    "cross-env": "^6.0.3",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.23.0",
+    "typescript": "^3.6.3",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "browserslist": [
+    "last 1 Chrome versions"
+  ]
+}
