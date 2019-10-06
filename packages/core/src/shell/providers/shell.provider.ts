@@ -4,33 +4,69 @@ import { Injectable, OnApplicationBootstrap } from '@nestjs/common';
 import { ShellCommandProvider } from './commands.provider';
 import { ShellServicesProvider } from './services.provider';
 
-@Injectable()
-export class ShellProvider implements OnApplicationBootstrap {
-  private ignoreNextCommand = false
+const users = {
+  root: 'root',
+  salomaosnff: 'salomaosnff'
+};
 
-  constructor (
-    private bin: ShellCommandProvider,
-    private service: ShellServicesProvider,
+export class ShellSession {
+  rl: readline.Interface;
+  user: string;
+  alive = false;
+
+  constructor(
+    input: NodeJS.ReadStream,
+    output: NodeJS.WriteStream,
+    public sh: ShellProvider,
+    private onDestroy = () => {}
   ) {
-    process.on('uncaughtException', (error) => {
-      this.ignoreNextCommand = true
-      this.error(error)
-    })
+    this.rl = readline.createInterface({
+      input,
+      output,
+      prompt: `\x1b[36;1mOrion > \x1b[0m`,
+      terminal: true,
+      removeHistoryDuplicates: true,
+    });
 
-    process
-    .on('exit', () => this.run('shutdown'))
-    .on('SIGINT', () => this.run('shutdown'))
-
-    this.rl.on('SIGINT', () => this.run('shutdown'))
+    this.rl.on('SIGINT', () => this.exit());
   }
 
-  public rl: readline.Interface = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-    prompt: `\x1b[36;1mOrion > \x1b[0m`,
-    terminal: true,
-    removeHistoryDuplicates: true,
-  });
+  run(cmd: string | Function, catchErrors = true, args?) {
+    return this.sh.run(this, cmd, catchErrors, args)
+  }
+
+  exit() {
+    this.destroy();
+  }
+
+  async login() {
+    const user = await this.question('User: ');
+    const password = await this.question('Password: ');
+
+    if (!(user in users) || password !== users[user]) {
+      this.error('Invalid Credentials!');
+      return this.login();
+    }
+
+    this.user = user
+    this.alive = true;
+
+    return true;
+  }
+
+  destroy() {
+    this.rl.write('\n')
+    this.onDestroy()
+    this.rl.close();
+    this.sh.removeSession(this);
+    this.alive = false;
+  }
+
+  question(question: string): Promise<string> {
+    return new Promise(resolve => {
+      this.rl.question(question, resolve);
+    });
+  }
 
   prompt(prompt?: string): Promise<string> {
     return new Promise(resolve => {
@@ -40,9 +76,12 @@ export class ShellProvider implements OnApplicationBootstrap {
     });
   }
 
-  print(data: string | Buffer, newLine = true) {
+  print(data: string | Buffer, end = '\n', ignoreCommand = true) {
+    this.sh.ignoreNextCommand = ignoreCommand
     this.rl.write(data);
-    newLine && this.rl.write('\n');
+    this.rl.write(end);
+
+    return this;
   }
 
   error(errorOrString: string | Error) {
@@ -51,43 +90,87 @@ export class ShellProvider implements OnApplicationBootstrap {
     this.print(`\x1b[31mError: ${message}\x1b[0m`);
     return 1;
   }
+}
 
-  async run(cmd: string|Function, catchErrors = true, args?): Promise<number> {
-    if (this.ignoreNextCommand) {
-      cmd = ''
-      this.ignoreNextCommand = false
+@Injectable()
+export class ShellProvider implements OnApplicationBootstrap {
+  public ignoreNextCommand = false;
+  public sessions: ShellSession[] = [];
+
+  constructor(
+    private bin: ShellCommandProvider,
+    private service: ShellServicesProvider,
+  ) {
+    process.on('uncaughtException', error => {
+      this.ignoreNextCommand = true;
+      this.sessions.forEach(session => session.error(error));
+    });
+
+    process
+      .on('exit', () => this.run(this.sessions[0], 'shutdown'))
+      .on('SIGINT', () => this.run(this.sessions[0], 'shutdown'));
+  }
+
+  async startTTY(input: NodeJS.ReadStream, output: NodeJS.WriteStream, onDestroy?) {
+    const session = new ShellSession(input, output, this, onDestroy);
+
+    this.sessions.push(session);
+
+    await session.login();
+
+    while (session.alive) {
+      const cmd = await session.prompt();
+      await session.run(cmd);
     }
-    if (!cmd) return 0;
 
-    let result = null
+    if (this.sessions.length < 1) await session.run('shutdown');
+  }
+
+  removeSession(session: ShellSession) {
+    const index = this.sessions.indexOf(session);
+    if (index > -1) this.sessions.splice(index, 1);
+    return this;
+  }
+
+  async run(
+    session: ShellSession,
+    cmd: string | Function,
+    catchErrors = true,
+    args?,
+  ): Promise<number> {
+    if (!cmd || this.ignoreNextCommand) {
+      this.ignoreNextCommand = false;
+      return 0;
+    }
+
+    let result = null;
 
     try {
       if (typeof cmd === 'string') {
         const args = YargsParser(cmd);
         const [binName] = args._;
-        const command = this.bin.get(binName)
-  
-        result = command.main(args, this)
+        const command = this.bin.get(binName);
+
+        result = command.main(args, session);
       } else if (typeof cmd === 'function') {
-        result = cmd(args, this)
+        result = cmd(args, session);
       }
 
-      const exitCode = await result
+      const exitCode = await result;
 
       return typeof exitCode === 'number' ? result : 0;
     } catch (err) {
-      if (catchErrors) return this.error(err)
-      throw err
+      if (catchErrors) {
+        this.sessions.forEach(session => session.error(err));
+        return;
+      }
+      throw err;
     }
   }
 
   async start() {
-    await this.service.boot(this)
-
-    while (true) {
-      const cmd = await this.prompt();
-      await this.run(cmd);
-    }
+    await this.service.boot(this);
+    await this.startTTY(process.stdin, process.stdout);
   }
 
   async onApplicationBootstrap() {

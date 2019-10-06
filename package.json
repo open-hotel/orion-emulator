@@ -10,7 +10,7 @@
     "run:docker": "docker run --rm -it open-hotel/sirius-emulator:latest",
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
-    "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/main.js\"",
+    "start:dev": "lerna run build:w --parallel & tsc-watch -p ./packages/emulator/tsconfig.build.json --onSuccess \"node ./packages/emulator/dist/main.js\"",
     "start:debug": "tsc-watch -p tsconfig.build.json --onSuccess \"node --inspect-brk dist/main.js\"",
     "start:prod": "node dist/main.js",
     "lint": "tslint -p tsconfig.json -c tslint.json",
@@ -31,7 +31,6 @@
     "rimraf": "^2.6.2",
     "rxjs": "^6.3.3",
     "uuid": "^3.3.3",
-    "what-the-pack": "^2.0.3",
     "ws": "^7.1.2",
     "yargs-parser": "^13.1.1"
   },
@@ -66,5 +65,8 @@
     },
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

@@ -59,7 +59,7 @@ export class ShellServicesProvider implements OnApplicationBootstrap {
       for (let service of services) {
         const start = performance.now();
         await sh
-          .run(service.main, false, { _: [service.name, 'stop'] })
+          .run(sh.sessions[0], service.main, false, { _: [service.name, 'stop'] })
           .then(() => {
             const time = Math.round(performance.now() - start);
             loader.succeed(`Stopped ${service.title}\t+${ms(time)}`);
@@ -81,7 +81,7 @@ export class ShellServicesProvider implements OnApplicationBootstrap {
       const start = performance.now();
       loader.start(`\x1b[2mStarting ${service.title}...\x1b[0m`);
       const execution = sh
-        .run(service.main, false, { _: [service.name, 'start'] })
+        .run(sh.sessions[0], service.main, false, { _: [service.name, 'start'] })
         .then(() => {
           const time = Math.round(performance.now() - start);
           loader.succeed(`\x1b[32mStarted ${service.title}\x1b[0m\t+${ms(time)}`);
@@ -104,9 +104,9 @@ export class ShellServicesProvider implements OnApplicationBootstrap {
 
   @ShellCommand({
     name: 'shutdown',
-    alias: ['exit', 'poweroff'],
+    alias: ['poweroff'],
     description: 'Shutdown Emulator',
-    usage: ['shutdown', 'exit', 'poweroff'].join('\n'),
+    usage: ['shutdown', 'poweroff'].join('\n'),
   })
   async shutdown (args: any, sh: ShellProvider) {
     await this.boot(sh, true)

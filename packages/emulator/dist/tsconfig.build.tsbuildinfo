@@ -1094,8 +1094,8 @@
         "signature": "c286185ba37e7d9c0ddd118f0d0449ca972250c4de34ac8b2546056c299c6935"
       },
       "../../core/dist/shell/providers/shell.provider.d.ts": {
-        "version": "7a57f769e0669308865ab5f6bb2da76d2da76fde080bb535773f214153d7ff28",
-        "signature": "7a57f769e0669308865ab5f6bb2da76d2da76fde080bb535773f214153d7ff28"
+        "version": "6ff346182861142d90bebe59adf7cf494f5451155e525a4bd42c552de7f292f7",
+        "signature": "6ff346182861142d90bebe59adf7cf494f5451155e525a4bd42c552de7f292f7"
       },
       "../../../node_modules/@types/yargs-parser/index.d.ts": {
         "version": "7b48555954a556ad80cc5fda89473d339f570eeac7a7b4d99c88ff5e646c24f7",
@@ -1106,8 +1106,8 @@
         "signature": "6f15cf4b24659aa2b9f957dc0b4254b89f35a77978f9da1f161587b66ef75663"
       },
       "../../core/dist/shell/types/index.d.ts": {
-        "version": "296db5c92460b2ff24c1df4180d4ea11d8795bbd0d8cda18b5ebd967dd886b70",
-        "signature": "296db5c92460b2ff24c1df4180d4ea11d8795bbd0d8cda18b5ebd967dd886b70"
+        "version": "808be64ea33d08553019e8af54dbe31030febe20ac578121f78dc5e6c01f738b",
+        "signature": "808be64ea33d08553019e8af54dbe31030febe20ac578121f78dc5e6c01f738b"
       },
       "../../core/dist/shell/decorators/ShellBin.d.ts": {
         "version": "9c54ab02d7c0c06e9ff521faf5da77ffceaa4397d48474ae1d66a30c9328fe21",
@@ -1133,8 +1133,48 @@
         "version": "4ccc5ba99a4c709dcd818aa6b8b45ff661a2c6eb0fff7c5c59fc8d54de8bf096",
         "signature": "4ccc5ba99a4c709dcd818aa6b8b45ff661a2c6eb0fff7c5c59fc8d54de8bf096"
       },
+      "../../../node_modules/@types/ws/index.d.ts": {
+        "version": "edf9f7a505ebd55d49ef0a6ab571b131480f558498c4141b736bdbd80ce98311",
+        "signature": "edf9f7a505ebd55d49ef0a6ab571b131480f558498c4141b736bdbd80ce98311"
+      },
+      "../../websocket/dist/lib/Packet.d.ts": {
+        "version": "5df6c8e3b0e1f79d430dc9e983d0e0b49ba088acc85511ee322afc1aee7924bb",
+        "signature": "5df6c8e3b0e1f79d430dc9e983d0e0b49ba088acc85511ee322afc1aee7924bb"
+      },
+      "../../websocket/dist/lib/WSUser.d.ts": {
+        "version": "89fd53348228a34f42873d14929d18a0cf092bcf844feb7b97f32973c9d62952",
+        "signature": "89fd53348228a34f42873d14929d18a0cf092bcf844feb7b97f32973c9d62952"
+      },
+      "../../websocket/dist/types/index.d.ts": {
+        "version": "3d7664b64c03b241eb291e9956f01faa65ace9c0b32767ff43165b1733508679",
+        "signature": "3d7664b64c03b241eb291e9956f01faa65ace9c0b32767ff43165b1733508679"
+      },
+      "../../websocket/dist/lib/WSChannel.d.ts": {
+        "version": "7c213d820207b48c7ebb2cee225fe051585cf4a0ad8c4d78f4f78a102238cd7b",
+        "signature": "7c213d820207b48c7ebb2cee225fe051585cf4a0ad8c4d78f4f78a102238cd7b"
+      },
+      "../../websocket/dist/lib/WSServer.provider.d.ts": {
+        "version": "b6de998f49bcbe9644626439bc0afc62c9ed38547804cab0c3180a8bf3362200",
+        "signature": "b6de998f49bcbe9644626439bc0afc62c9ed38547804cab0c3180a8bf3362200"
+      },
+      "../../websocket/dist/WSModule.module.d.ts": {
+        "version": "dac23b1ff30d949b04e03638a1cfef49503d8cfe09ebd13c38b622287584edac",
+        "signature": "dac23b1ff30d949b04e03638a1cfef49503d8cfe09ebd13c38b622287584edac"
+      },
+      "../../websocket/dist/index.d.ts": {
+        "version": "474ef8889c2183aa844bb46365f29eff239aeb992a94ccfa0c4e63683486bc5c",
+        "signature": "474ef8889c2183aa844bb46365f29eff239aeb992a94ccfa0c4e63683486bc5c"
+      },
+      "../../web-shell/dist/WebShell.module.d.ts": {
+        "version": "b94cd58bd854bc78f2b42839e9b13fdf74b4ac97819dee53f02f2e524ce554ca",
+        "signature": "b94cd58bd854bc78f2b42839e9b13fdf74b4ac97819dee53f02f2e524ce554ca"
+      },
+      "../../web-shell/dist/index.d.ts": {
+        "version": "a688881db270d57a49837859592e93fb75a46ad1bfa4d8cd6b8ec71eaecd64e0",
+        "signature": "a688881db270d57a49837859592e93fb75a46ad1bfa4d8cd6b8ec71eaecd64e0"
+      },
       "../src/main.ts": {
-        "version": "cfb77e8f50137882c56a37e59f4092f179b8ae8f5f1f5cc3ec3145777763e69b",
+        "version": "64c87f09924e30caa11ac6eaca9b215d3b45392393e708cd7059ed6db5376fcc",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "../../../node_modules/@babel/types/lib/index.d.ts": {
@@ -1244,10 +1284,6 @@
       "../../../node_modules/@types/supertest/index.d.ts": {
         "version": "79e8fe7df47b9eee82aba6de491c17ed11759171ed0ee0d804e83971b2a17fc3",
         "signature": "79e8fe7df47b9eee82aba6de491c17ed11759171ed0ee0d804e83971b2a17fc3"
-      },
-      "../../../node_modules/@types/ws/index.d.ts": {
-        "version": "edf9f7a505ebd55d49ef0a6ab571b131480f558498c4141b736bdbd80ce98311",
-        "signature": "edf9f7a505ebd55d49ef0a6ab571b131480f558498c4141b736bdbd80ce98311"
       }
     },
     "options": {
@@ -1262,7 +1298,6 @@
       "outDir": "./",
       "incremental": true,
       "project": "../tsconfig.build.json",
-      "watch": true,
       "configFilePath": "../tsconfig.build.json"
     },
     "referencedMap": {
@@ -2941,10 +2976,79 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../../../node_modules/@types/ws/index.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/http.d.ts",
+        "../../../node_modules/@types/node/https.d.ts",
+        "../../../node_modules/@types/node/net.d.ts",
+        "../../../node_modules/@types/node/zlib.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../websocket/dist/lib/Packet.d.ts": [
+        "../../../node_modules/@types/ws/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../websocket/dist/lib/WSUser.d.ts": [
+        "../../../node_modules/@types/ws/index.d.ts",
+        "../../websocket/dist/lib/Packet.d.ts",
+        "../../websocket/dist/types/index.d.ts",
+        "../../websocket/dist/lib/WSChannel.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../websocket/dist/types/index.d.ts": [
+        "../../websocket/dist/lib/WSUser.d.ts",
+        "../../websocket/dist/lib/WSChannel.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../websocket/dist/lib/WSChannel.d.ts": [
+        "../../websocket/dist/lib/Packet.d.ts",
+        "../../websocket/dist/types/index.d.ts",
+        "../../websocket/dist/lib/WSUser.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../websocket/dist/lib/WSServer.provider.d.ts": [
+        "../../websocket/dist/types/index.d.ts",
+        "../../websocket/dist/lib/WSChannel.d.ts",
+        "../../websocket/dist/lib/WSUser.d.ts",
+        "../../../node_modules/@types/ws/index.d.ts",
+        "../../core/dist/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../websocket/dist/WSModule.module.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../websocket/dist/index.d.ts": [
+        "../../websocket/dist/lib/Packet.d.ts",
+        "../../websocket/dist/lib/WSChannel.d.ts",
+        "../../websocket/dist/lib/WSServer.provider.d.ts",
+        "../../websocket/dist/lib/WSUser.d.ts",
+        "../../websocket/dist/WSModule.module.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../web-shell/dist/WebShell.module.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../web-shell/dist/index.d.ts": [
+        "../../web-shell/dist/WebShell.module.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/main.ts": [
         "../../core/dist/index.d.ts",
+        "../../websocket/dist/index.d.ts",
         "../../../node_modules/@types/node/path.d.ts",
         "../../../node_modules/@types/yargs/index.d.ts",
+        "../../web-shell/dist/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3092,16 +3196,6 @@
       ],
       "../../../node_modules/@types/supertest/index.d.ts": [
         "../../../node_modules/@types/superagent/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/ws/index.d.ts": [
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/http.d.ts",
-        "../../../node_modules/@types/node/https.d.ts",
-        "../../../node_modules/@types/node/net.d.ts",
-        "../../../node_modules/@types/node/zlib.d.ts",
-        "../../../node_modules/@types/node/ts3.2/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ]
@@ -3243,7 +3337,403 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../../../node_modules/@nestjs/common/cache/index.d.ts": [
+        "../../../node_modules/@nestjs/common/cache/cache.constants.d.ts",
+        "../../../node_modules/@nestjs/common/cache/cache.module.d.ts",
+        "../../../node_modules/@nestjs/common/cache/decorators/index.d.ts",
+        "../../../node_modules/@nestjs/common/cache/interceptors/index.d.ts",
+        "../../../node_modules/@nestjs/common/cache/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/index.d.ts": [
+        "../../../node_modules/reflect-metadata/index.d.ts",
+        "../../../node_modules/@nestjs/common/cache/index.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/index.d.ts",
+        "../../../node_modules/@nestjs/common/enums/index.d.ts",
+        "../../../node_modules/@nestjs/common/exceptions/index.d.ts",
+        "../../../node_modules/@nestjs/common/http/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/common/pipes/index.d.ts",
+        "../../../node_modules/@nestjs/common/serializer/index.d.ts",
+        "../../../node_modules/@nestjs/common/services/index.d.ts",
+        "../../../node_modules/@nestjs/common/utils/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../core/dist/shell/providers/shell.provider.d.ts": [
+        "../../../node_modules/@types/node/readline.d.ts",
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../core/dist/shell/providers/commands.provider.d.ts",
+        "../../core/dist/shell/providers/services.provider.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../core/dist/shell/providers/index.d.ts": [
+        "../../core/dist/shell/providers/commands.provider.d.ts",
+        "../../core/dist/shell/providers/services.provider.d.ts",
+        "../../core/dist/shell/providers/shell.provider.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../core/dist/shell/index.d.ts": [
+        "../../core/dist/shell/shell.module.d.ts",
+        "../../core/dist/shell/decorators/index.d.ts",
+        "../../core/dist/shell/providers/index.d.ts",
+        "../../core/dist/shell/types/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../core/dist/index.d.ts": [
+        "../../core/dist/lib/Emulator.d.ts",
+        "../../core/dist/lib/Events.provider.d.ts",
+        "../../core/dist/shell/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../websocket/dist/lib/WSServer.provider.d.ts": [
+        "../../websocket/dist/types/index.d.ts",
+        "../../websocket/dist/lib/WSChannel.d.ts",
+        "../../websocket/dist/lib/WSUser.d.ts",
+        "../../../node_modules/@types/ws/index.d.ts",
+        "../../core/dist/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../websocket/dist/index.d.ts": [
+        "../../websocket/dist/lib/Packet.d.ts",
+        "../../websocket/dist/lib/WSChannel.d.ts",
+        "../../websocket/dist/lib/WSServer.provider.d.ts",
+        "../../websocket/dist/lib/WSUser.d.ts",
+        "../../websocket/dist/WSModule.module.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../core/dist/shell/types/index.d.ts": [
+        "../../core/dist/shell/providers/shell.provider.d.ts",
+        "../../../node_modules/@types/yargs/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../core/dist/shell/decorators/ShellService.d.ts": [
+        "../../core/dist/shell/types/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../core/dist/shell/decorators/index.d.ts": [
+        "../../core/dist/shell/decorators/ShellBin.d.ts",
+        "../../core/dist/shell/decorators/ShellService.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../core/dist/shell/decorators/ShellBin.d.ts": [
+        "../../core/dist/shell/types/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../core/dist/shell/providers/services.provider.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../core/dist/shell/providers/shell.provider.d.ts",
+        "../../core/dist/shell/types/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../core/dist/shell/providers/commands.provider.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../core/dist/shell/types/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../core/dist/lib/Emulator.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/pipes/validation.pipe.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/external/class-transform-options.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/external/validator-options.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/pipes/index.d.ts": [
+        "../../../node_modules/@nestjs/common/pipes/parse-int.pipe.d.ts",
+        "../../../node_modules/@nestjs/common/pipes/parse-uuid.pipe.d.ts",
+        "../../../node_modules/@nestjs/common/pipes/validation.pipe.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/pipes/parse-uuid.pipe.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/pipes/parse-int.pipe.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/decorators/http/create-route-param-metadata.decorator.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/custom-route-param-factory.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/decorators/http/index.d.ts": [
+        "../../../node_modules/@nestjs/common/decorators/http/request-mapping.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/http/route-params.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/http/http-code.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/http/create-route-param-metadata.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/http/render.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/http/header.decorator.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/decorators/index.d.ts": [
+        "../../../node_modules/@nestjs/common/decorators/core/index.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/modules/index.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/http/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/decorators/http/route-params.decorator.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/decorators/core/exception-filters.decorator.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/decorators/core/index.d.ts": [
+        "../../../node_modules/@nestjs/common/decorators/core/bind.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/core/catch.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/core/controller.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/core/dependencies.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/core/exception-filters.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/core/inject.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/core/injectable.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/core/optional.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/core/set-metadata.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/core/use-guards.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/core/use-interceptors.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/core/use-pipes.decorator.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../../../node_modules/@nestjs/common/interfaces/abstract.interface.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/index.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/abstract.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/controllers/controller-metadata.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/controllers/controller.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/exceptions/exception-filter.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/exceptions/rpc-exception-filter.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/exceptions/ws-exception-filter.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/external/validation-error.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/arguments-host.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/can-activate.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/custom-route-param-factory.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/execution-context.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/nest-interceptor.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/paramtype.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/http/http-server.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/injectable.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/middleware/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/modules/dynamic-module.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/modules/forward-reference.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/modules/module-metadata.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/modules/nest-module.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/modules/on-destroy.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/modules/on-init.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/modules/provider.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/nest-application-context.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/nest-application.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/nest-microservice.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/on-application-bootstrap.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/on-application-shutdown.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/request-mapping-metadata.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/scope-options.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/websockets/web-socket-adapter.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/serializer/class-serializer.interceptor.d.ts": [
+        "../../../node_modules/rxjs/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/external/class-transform-options.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/serializer/index.d.ts": [
+        "../../../node_modules/@nestjs/common/serializer/class-serializer.interceptor.d.ts",
+        "../../../node_modules/@nestjs/common/serializer/decorators/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/http/http.module.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/common/http/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/http/index.d.ts": [
+        "../../../node_modules/@nestjs/common/http/http.module.d.ts",
+        "../../../node_modules/@nestjs/common/http/http.service.d.ts",
+        "../../../node_modules/@nestjs/common/http/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/http/interfaces/http-module.interface.d.ts": [
+        "../../../node_modules/axios/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/http/interfaces/index.d.ts": [
+        "../../../node_modules/@nestjs/common/http/interfaces/http-module.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/decorators/core/use-pipes.decorator.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/decorators/core/use-interceptors.decorator.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/decorators/core/use-guards.decorator.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/decorators/core/catch.decorator.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/cache/interceptors/cache.interceptor.d.ts": [
+        "../../../node_modules/rxjs/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/cache/interceptors/index.d.ts": [
+        "../../../node_modules/@nestjs/common/cache/interceptors/cache.interceptor.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/cache/cache.module.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/common/cache/interfaces/cache-module.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/cache/interfaces/cache-module.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/common/cache/interfaces/cache-manager.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/cache/interfaces/index.d.ts": [
+        "../../../node_modules/@nestjs/common/cache/interfaces/cache-manager.interface.d.ts",
+        "../../../node_modules/@nestjs/common/cache/interfaces/cache-module.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/nest-application.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/external/cors-options.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/can-activate.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/nest-interceptor.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/http/http-server.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/microservices/microservice-configuration.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/nest-application-context.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/websockets/web-socket-adapter.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/features/execution-context.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/arguments-host.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/features/nest-interceptor.interface.d.ts": [
+        "../../../node_modules/rxjs/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/execution-context.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/nest-microservice.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/exceptions/exception-filter.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/can-activate.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/nest-interceptor.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/nest-application-context.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/websockets/web-socket-adapter.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/features/can-activate.interface.d.ts": [
+        "../../../node_modules/rxjs/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/execution-context.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/nest-application-context.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/enums/shutdown-signal.enum.d.ts",
+        "../../../node_modules/@nestjs/common/services/logger.service.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/abstract.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/modules/module-metadata.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/abstract.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/modules/dynamic-module.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/modules/forward-reference.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/modules/provider.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/decorators/modules/module.decorator.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/modules/module-metadata.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/decorators/modules/index.d.ts": [
+        "../../../node_modules/@nestjs/common/decorators/modules/module.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/modules/single-scope.decorator.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/modules/global.decorator.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/modules/dynamic-module.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/modules/module-metadata.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/modules/provider.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/abstract.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/scope-options.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3259,6 +3749,17 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../../../node_modules/@nestjs/common/interfaces/exceptions/ws-exception-filter.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/features/arguments-host.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/exceptions/rpc-exception-filter.interface.d.ts": [
+        "../../../node_modules/rxjs/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/features/arguments-host.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../../../node_modules/@nestjs/common/interfaces/exceptions/exception-filter.interface.d.ts": [
         "../../../node_modules/@nestjs/common/interfaces/features/arguments-host.interface.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
@@ -3266,387 +3767,6 @@
       ],
       "../../../node_modules/rxjs/internal/Subscription.d.ts": [
         "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/types.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/Subscription.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/Subscriber.d.ts": [
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/rxjs/internal/Subscription.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/Operator.d.ts": [
-        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/iif.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/throwError.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/Observable.d.ts": [
-        "../../../node_modules/rxjs/internal/Operator.d.ts",
-        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
-        "../../../node_modules/rxjs/internal/Subscription.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/rxjs/internal/observable/iif.d.ts",
-        "../../../node_modules/rxjs/internal/observable/throwError.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/Subject.d.ts": [
-        "../../../node_modules/rxjs/internal/Operator.d.ts",
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
-        "../../../node_modules/rxjs/internal/Subscription.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/ConnectableObservable.d.ts": [
-        "../../../node_modules/rxjs/internal/Subject.d.ts",
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
-        "../../../node_modules/rxjs/internal/Subscription.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/operators/groupBy.d.ts": [
-        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
-        "../../../node_modules/rxjs/internal/Subscription.d.ts",
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/Subject.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/symbol/observable.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/BehaviorSubject.d.ts": [
-        "../../../node_modules/rxjs/internal/Subject.d.ts",
-        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
-        "../../../node_modules/rxjs/internal/Subscription.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/ReplaySubject.d.ts": [
-        "../../../node_modules/rxjs/internal/Subject.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
-        "../../../node_modules/rxjs/internal/Subscription.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/AsyncSubject.d.ts": [
-        "../../../node_modules/rxjs/internal/Subject.d.ts",
-        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
-        "../../../node_modules/rxjs/internal/Subscription.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/Scheduler.d.ts": [
-        "../../../node_modules/rxjs/internal/scheduler/Action.d.ts",
-        "../../../node_modules/rxjs/internal/Subscription.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/scheduler/Action.d.ts": [
-        "../../../node_modules/rxjs/internal/Scheduler.d.ts",
-        "../../../node_modules/rxjs/internal/Subscription.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts": [
-        "../../../node_modules/rxjs/internal/Scheduler.d.ts",
-        "../../../node_modules/rxjs/internal/scheduler/Action.d.ts",
-        "../../../node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/rxjs/internal/Subscription.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/scheduler/AsyncAction.d.ts": [
-        "../../../node_modules/rxjs/internal/scheduler/Action.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/rxjs/internal/Subscription.d.ts",
-        "../../../node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/scheduler/AsapScheduler.d.ts": [
-        "../../../node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
-        "../../../node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/scheduler/asap.d.ts": [
-        "../../../node_modules/rxjs/internal/scheduler/AsapScheduler.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/scheduler/async.d.ts": [
-        "../../../node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/scheduler/QueueScheduler.d.ts": [
-        "../../../node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/scheduler/queue.d.ts": [
-        "../../../node_modules/rxjs/internal/scheduler/QueueScheduler.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/scheduler/AnimationFrameScheduler.d.ts": [
-        "../../../node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
-        "../../../node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/scheduler/animationFrame.d.ts": [
-        "../../../node_modules/rxjs/internal/scheduler/AnimationFrameScheduler.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/scheduler/VirtualTimeScheduler.d.ts": [
-        "../../../node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
-        "../../../node_modules/rxjs/internal/Subscription.d.ts",
-        "../../../node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/Notification.d.ts": [
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/util/pipe.d.ts": [
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/util/noop.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/util/identity.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/util/isObservable.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/util/ArgumentOutOfRangeError.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/util/EmptyError.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/util/ObjectUnsubscribedError.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/util/UnsubscriptionError.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/util/TimeoutError.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/bindCallback.d.ts": [
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/bindNodeCallback.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/InnerSubscriber.d.ts": [
-        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
-        "../../../node_modules/rxjs/internal/OuterSubscriber.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/OuterSubscriber.d.ts": [
-        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
-        "../../../node_modules/rxjs/internal/InnerSubscriber.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/combineLatest.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
-        "../../../node_modules/rxjs/internal/OuterSubscriber.d.ts",
-        "../../../node_modules/rxjs/internal/Operator.d.ts",
-        "../../../node_modules/rxjs/internal/InnerSubscriber.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/concat.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/defer.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/empty.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/forkJoin.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/from.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/fromEvent.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/fromEventPattern.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/observable/fromEvent.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/generate.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/interval.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/merge.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/never.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/of.d.ts": [
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/onErrorResumeNext.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/pairs.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
-        "../../../node_modules/rxjs/internal/Subscription.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/partition.d.ts": [
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/race.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/Operator.d.ts",
-        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/rxjs/internal/OuterSubscriber.d.ts",
-        "../../../node_modules/rxjs/internal/InnerSubscriber.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/range.d.ts": [
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/timer.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/using.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/observable/zip.d.ts": [
-        "../../../node_modules/rxjs/internal/Observable.d.ts",
-        "../../../node_modules/rxjs/internal/Operator.d.ts",
-        "../../../node_modules/rxjs/internal/types.d.ts",
-        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/scheduled/scheduled.d.ts": [
-        "../../../node_modules/rxjs/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/rxjs/internal/config.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3709,14 +3829,395 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/exceptions/rpc-exception-filter.interface.d.ts": [
+      "../../../node_modules/@nestjs/common/http/http.service.d.ts": [
+        "../../../node_modules/axios/index.d.ts",
         "../../../node_modules/rxjs/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/arguments-host.interface.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/exceptions/ws-exception-filter.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/features/arguments-host.interface.d.ts",
+      "../../../node_modules/@nestjs/common/interfaces/websockets/web-socket-adapter.interface.d.ts": [
+        "../../../node_modules/rxjs/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/scheduled/scheduled.d.ts": [
+        "../../../node_modules/rxjs/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/pairs.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
+        "../../../node_modules/rxjs/internal/Subscription.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/scheduler/VirtualTimeScheduler.d.ts": [
+        "../../../node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
+        "../../../node_modules/rxjs/internal/Subscription.d.ts",
+        "../../../node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/scheduler/AsyncAction.d.ts": [
+        "../../../node_modules/rxjs/internal/scheduler/Action.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/rxjs/internal/Subscription.d.ts",
+        "../../../node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/scheduler/AnimationFrameScheduler.d.ts": [
+        "../../../node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
+        "../../../node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/scheduler/animationFrame.d.ts": [
+        "../../../node_modules/rxjs/internal/scheduler/AnimationFrameScheduler.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/scheduler/AsapScheduler.d.ts": [
+        "../../../node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
+        "../../../node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/scheduler/asap.d.ts": [
+        "../../../node_modules/rxjs/internal/scheduler/AsapScheduler.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts": [
+        "../../../node_modules/rxjs/internal/Scheduler.d.ts",
+        "../../../node_modules/rxjs/internal/scheduler/Action.d.ts",
+        "../../../node_modules/rxjs/internal/scheduler/AsyncAction.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/rxjs/internal/Subscription.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/scheduler/QueueScheduler.d.ts": [
+        "../../../node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/scheduler/queue.d.ts": [
+        "../../../node_modules/rxjs/internal/scheduler/QueueScheduler.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/scheduler/async.d.ts": [
+        "../../../node_modules/rxjs/internal/scheduler/AsyncScheduler.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/scheduler/Action.d.ts": [
+        "../../../node_modules/rxjs/internal/Scheduler.d.ts",
+        "../../../node_modules/rxjs/internal/Subscription.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/Scheduler.d.ts": [
+        "../../../node_modules/rxjs/internal/scheduler/Action.d.ts",
+        "../../../node_modules/rxjs/internal/Subscription.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/AsyncSubject.d.ts": [
+        "../../../node_modules/rxjs/internal/Subject.d.ts",
+        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
+        "../../../node_modules/rxjs/internal/Subscription.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/ReplaySubject.d.ts": [
+        "../../../node_modules/rxjs/internal/Subject.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
+        "../../../node_modules/rxjs/internal/Subscription.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/BehaviorSubject.d.ts": [
+        "../../../node_modules/rxjs/internal/Subject.d.ts",
+        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
+        "../../../node_modules/rxjs/internal/Subscription.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/operators/groupBy.d.ts": [
+        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
+        "../../../node_modules/rxjs/internal/Subscription.d.ts",
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/Subject.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/ConnectableObservable.d.ts": [
+        "../../../node_modules/rxjs/internal/Subject.d.ts",
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
+        "../../../node_modules/rxjs/internal/Subscription.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/Subject.d.ts": [
+        "../../../node_modules/rxjs/internal/Operator.d.ts",
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
+        "../../../node_modules/rxjs/internal/Subscription.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/Observable.d.ts": [
+        "../../../node_modules/rxjs/internal/Operator.d.ts",
+        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
+        "../../../node_modules/rxjs/internal/Subscription.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/rxjs/internal/observable/iif.d.ts",
+        "../../../node_modules/rxjs/internal/observable/throwError.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/zip.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/Operator.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/using.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/timer.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/range.d.ts": [
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/race.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/Operator.d.ts",
+        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/rxjs/internal/OuterSubscriber.d.ts",
+        "../../../node_modules/rxjs/internal/InnerSubscriber.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/partition.d.ts": [
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/onErrorResumeNext.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/of.d.ts": [
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/never.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/merge.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/interval.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/generate.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/fromEventPattern.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/observable/fromEvent.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/fromEvent.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/from.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/forkJoin.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/empty.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/defer.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/concat.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/combineLatest.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
+        "../../../node_modules/rxjs/internal/OuterSubscriber.d.ts",
+        "../../../node_modules/rxjs/internal/Operator.d.ts",
+        "../../../node_modules/rxjs/internal/InnerSubscriber.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/bindNodeCallback.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/bindCallback.d.ts": [
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/util/isObservable.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/Notification.d.ts": [
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/throwError.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/observable/iif.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/types.d.ts": [
+        "../../../node_modules/rxjs/internal/Observable.d.ts",
+        "../../../node_modules/rxjs/internal/Subscription.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/util/pipe.d.ts": [
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/Operator.d.ts": [
+        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/Subscriber.d.ts": [
+        "../../../node_modules/rxjs/internal/types.d.ts",
+        "../../../node_modules/rxjs/internal/Subscription.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/OuterSubscriber.d.ts": [
+        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
+        "../../../node_modules/rxjs/internal/InnerSubscriber.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/InnerSubscriber.d.ts": [
+        "../../../node_modules/rxjs/internal/Subscriber.d.ts",
+        "../../../node_modules/rxjs/internal/OuterSubscriber.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/symbol/observable.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/util/noop.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/util/identity.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/util/ArgumentOutOfRangeError.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/util/EmptyError.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/util/ObjectUnsubscribedError.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/util/UnsubscriptionError.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/util/TimeoutError.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/rxjs/internal/config.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3724,33 +4225,11 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/features/execution-context.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/arguments-host.interface.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/interfaces/features/can-activate.interface.d.ts": [
-        "../../../node_modules/rxjs/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/execution-context.interface.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../../../node_modules/@nestjs/common/interfaces/features/custom-route-param-factory.interface.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/features/nest-interceptor.interface.d.ts": [
-        "../../../node_modules/rxjs/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/execution-context.interface.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../../../node_modules/@nestjs/common/interfaces/features/paramtype.interface.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3760,69 +4239,13 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/enums/request-method.enum.d.ts": [
+      "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/enums/http-status.enum.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/enums/shutdown-signal.enum.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/enums/index.d.ts": [
-        "../../../node_modules/@nestjs/common/enums/request-method.enum.d.ts",
-        "../../../node_modules/@nestjs/common/enums/http-status.enum.d.ts",
-        "../../../node_modules/@nestjs/common/enums/shutdown-signal.enum.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/interfaces/external/cors-options.interface.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/interfaces/external/https-options.interface.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/services/logger.service.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/interfaces/nest-application-context-options.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/services/logger.service.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/interfaces/nest-application-options.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/external/https-options.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/nest-application-context-options.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/external/cors-options.interface.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/interfaces/http/http-server.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/enums/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/external/cors-options.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/nest-application-options.interface.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/interfaces/injectable.interface.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/interfaces/middleware/middleware-configuration.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/enums/index.d.ts",
+      "../../../node_modules/@nestjs/common/decorators/core/injectable.decorator.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/scope-options.interface.d.ts",
         "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/interfaces/middleware/middleware-consumer.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/middleware/middleware-config-proxy.interface.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3830,10 +4253,6 @@
         "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
         "../../../node_modules/@nestjs/common/interfaces/middleware/middleware-configuration.interface.d.ts",
         "../../../node_modules/@nestjs/common/interfaces/middleware/middleware-consumer.interface.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/interfaces/middleware/nest-middleware.interface.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3845,7 +4264,107 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../../../node_modules/@nestjs/common/interfaces/middleware/middleware-consumer.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/middleware/middleware-config-proxy.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/modules/nest-module.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/middleware/middleware-consumer.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/middleware/middleware-configuration.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/enums/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/enums/request-method.enum.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/request-mapping-metadata.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/enums/request-method.enum.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/decorators/http/request-mapping.decorator.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/request-mapping-metadata.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/enums/index.d.ts": [
+        "../../../node_modules/@nestjs/common/enums/request-method.enum.d.ts",
+        "../../../node_modules/@nestjs/common/enums/http-status.enum.d.ts",
+        "../../../node_modules/@nestjs/common/enums/shutdown-signal.enum.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/http/http-server.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/enums/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/external/cors-options.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/nest-application-options.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/enums/http-status.enum.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/enums/shutdown-signal.enum.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/external/cors-options.interface.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/nest-application-options.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/external/https-options.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/nest-application-context-options.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/external/cors-options.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/external/https-options.interface.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/services/logger.service.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/services/index.d.ts": [
+        "../../../node_modules/@nestjs/common/services/logger.service.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/nest-application-context-options.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/services/logger.service.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/injectable.interface.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/middleware/nest-middleware.interface.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../../../node_modules/@nestjs/common/interfaces/modules/forward-reference.interface.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/utils/forward-ref.util.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/modules/forward-reference.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/utils/index.d.ts": [
+        "../../../node_modules/@nestjs/common/utils/forward-ref.util.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3853,30 +4372,8 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/modules/provider.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/abstract.interface.d.ts",
+      "../../../node_modules/@nestjs/common/decorators/core/controller.decorator.d.ts": [
         "../../../node_modules/@nestjs/common/interfaces/scope-options.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/interfaces/modules/module-metadata.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/abstract.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/modules/dynamic-module.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/modules/forward-reference.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/modules/provider.interface.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/interfaces/modules/dynamic-module.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/modules/module-metadata.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/interfaces/modules/nest-module.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/middleware/middleware-consumer.interface.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3888,15 +4385,14 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/nest-application-context.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/enums/shutdown-signal.enum.d.ts",
-        "../../../node_modules/@nestjs/common/services/logger.service.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/abstract.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
+      "../../../node_modules/@nestjs/common/enums/transport.enum.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/enums/transport.enum.d.ts": [
+      "../../../node_modules/@nestjs/common/interfaces/microservices/microservice-configuration.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/enums/transport.enum.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/external/mqtt-options.interface.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/microservices/custom-transport-strategy.interface.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3905,211 +4401,6 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../../../node_modules/@types/node/assert.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/async_hooks.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/buffer.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/events/index.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/child_process.d.ts": [
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/net.d.ts",
-        "../../../node_modules/@types/node/stream.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/cluster.d.ts": [
-        "../../../node_modules/@types/node/child_process.d.ts",
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/net.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/console.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/constants.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/crypto.d.ts": [
-        "../../../node_modules/@types/node/stream.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/dgram.d.ts": [
-        "../../../node_modules/@types/node/net.d.ts",
-        "../../../node_modules/@types/node/dns.d.ts",
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/dns.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/domain.d.ts": [
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/events.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/fs.d.ts": [
-        "../../../node_modules/@types/node/stream.d.ts",
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/url.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/http.d.ts": [
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/stream.d.ts",
-        "../../../node_modules/@types/node/url.d.ts",
-        "../../../node_modules/@types/node/net.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/http2.d.ts": [
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/net.d.ts",
-        "../../../node_modules/@types/node/stream.d.ts",
-        "../../../node_modules/@types/node/tls.d.ts",
-        "../../../node_modules/@types/node/url.d.ts",
-        "../../../node_modules/@types/node/http.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/https.d.ts": [
-        "../../../node_modules/@types/node/tls.d.ts",
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/http.d.ts",
-        "../../../node_modules/@types/node/url.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/inspector.d.ts": [
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/module.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/net.d.ts": [
-        "../../../node_modules/@types/node/stream.d.ts",
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/dns.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/os.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/path.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/perf_hooks.d.ts": [
-        "../../../node_modules/@types/node/async_hooks.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/process.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/punycode.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/querystring.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/readline.d.ts": [
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/stream.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/repl.d.ts": [
-        "../../../node_modules/@types/node/readline.d.ts",
-        "../../../node_modules/@types/node/vm.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/stream.d.ts": [
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/string_decoder.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/timers.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/tls.d.ts": [
-        "../../../node_modules/@types/node/crypto.d.ts",
-        "../../../node_modules/@types/node/dns.d.ts",
-        "../../../node_modules/@types/node/net.d.ts",
-        "../../../node_modules/@types/node/stream.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/trace_events.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/tty.d.ts": [
-        "../../../node_modules/@types/node/net.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/url.d.ts": [
-        "../../../node_modules/@types/node/querystring.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/util.d.ts": [
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/v8.d.ts": [
-        "../../../node_modules/@types/node/stream.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/vm.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/worker_threads.d.ts": [
-        "../../../node_modules/@types/node/vm.d.ts",
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/stream.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/zlib.d.ts": [
-        "../../../node_modules/@types/node/stream.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -4156,394 +4447,452 @@
         "../../../node_modules/@types/node/zlib.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@types/node/ts3.2/util.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../../../node_modules/@types/node/ts3.2/globals.d.ts": [
-        "../../../node_modules/@types/node/globals.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../../../node_modules/@types/node/ts3.2/index.d.ts": [
         "../../../node_modules/@types/node/base.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/globals.d.ts",
         "../../../node_modules/@types/node/util.d.ts"
       ],
+      "../../../node_modules/@types/superagent/index.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/https.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
+        "../../../node_modules/@types/cookiejar/index.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/supertest/index.d.ts": [
+        "../../../node_modules/@types/superagent/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/glob/index.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/minimatch/index.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/express-serve-static-core/index.d.ts": [
+        "../../../node_modules/@types/node/http.d.ts",
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/range-parser/index.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/express/index.d.ts": [
+        "../../../node_modules/@types/body-parser/index.d.ts",
+        "../../../node_modules/@types/serve-static/index.d.ts",
+        "../../../node_modules/@types/express-serve-static-core/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/serve-static/index.d.ts": [
+        "../../../node_modules/@types/express-serve-static-core/index.d.ts",
+        "../../../node_modules/@types/mime/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/body-parser/index.d.ts": [
+        "../../../node_modules/@types/connect/index.d.ts",
+        "../../../node_modules/@types/node/http.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/connect/index.d.ts": [
+        "../../../node_modules/@types/node/http.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/ws/index.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/http.d.ts",
+        "../../../node_modules/@types/node/https.d.ts",
+        "../../../node_modules/@types/node/net.d.ts",
+        "../../../node_modules/@types/node/zlib.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../websocket/dist/lib/WSUser.d.ts": [
+        "../../../node_modules/@types/ws/index.d.ts",
+        "../../websocket/dist/lib/Packet.d.ts",
+        "../../websocket/dist/types/index.d.ts",
+        "../../websocket/dist/lib/WSChannel.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../websocket/dist/lib/WSChannel.d.ts": [
+        "../../websocket/dist/lib/Packet.d.ts",
+        "../../websocket/dist/types/index.d.ts",
+        "../../websocket/dist/lib/WSUser.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../websocket/dist/types/index.d.ts": [
+        "../../websocket/dist/lib/WSUser.d.ts",
+        "../../websocket/dist/lib/WSChannel.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../websocket/dist/lib/Packet.d.ts": [
+        "../../../node_modules/@types/ws/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../core/dist/lib/Events.provider.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../../../node_modules/@nestjs/common/interfaces/external/mqtt-options.interface.d.ts": [
         "../../../node_modules/@types/node/ts3.2/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/microservices/custom-transport-strategy.interface.d.ts": [
+      "../../../node_modules/@types/node/async_hooks.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/microservices/microservice-configuration.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/enums/transport.enum.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/external/mqtt-options.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/microservices/custom-transport-strategy.interface.d.ts",
+      "../../../node_modules/@types/node/perf_hooks.d.ts": [
+        "../../../node_modules/@types/node/async_hooks.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/websockets/web-socket-adapter.interface.d.ts": [
-        "../../../node_modules/rxjs/index.d.ts",
+      "../../../node_modules/@types/node/buffer.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/nest-application.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/external/cors-options.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/can-activate.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/nest-interceptor.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/http/http-server.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/microservices/microservice-configuration.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/nest-application-context.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/websockets/web-socket-adapter.interface.d.ts",
+      "../../../node_modules/@types/events/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/nest-microservice.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/exceptions/exception-filter.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/can-activate.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/nest-interceptor.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/nest-application-context.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/websockets/web-socket-adapter.interface.d.ts",
+      "../../../node_modules/@types/node/child_process.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/net.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/on-application-bootstrap.interface.d.ts": [
+      "../../../node_modules/@types/node/cluster.d.ts": [
+        "../../../node_modules/@types/node/child_process.d.ts",
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/net.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/on-application-shutdown.interface.d.ts": [
+      "../../../node_modules/@types/node/console.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/request-mapping-metadata.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/enums/request-method.enum.d.ts",
+      "../../../node_modules/@types/node/constants.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/index.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/abstract.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/controllers/controller-metadata.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/controllers/controller.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/exceptions/exception-filter.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/exceptions/rpc-exception-filter.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/exceptions/ws-exception-filter.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/external/validation-error.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/arguments-host.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/can-activate.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/custom-route-param-factory.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/execution-context.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/nest-interceptor.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/paramtype.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/http/http-server.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/injectable.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/middleware/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/modules/dynamic-module.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/modules/forward-reference.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/modules/module-metadata.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/modules/nest-module.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/modules/on-destroy.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/modules/on-init.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/modules/provider.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/nest-application-context.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/nest-application.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/nest-microservice.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/on-application-bootstrap.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/on-application-shutdown.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/request-mapping-metadata.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/scope-options.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/websockets/web-socket-adapter.interface.d.ts",
+      "../../../node_modules/@types/node/crypto.d.ts": [
+        "../../../node_modules/@types/node/stream.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/cache/interfaces/cache-manager.interface.d.ts": [
+      "../../../node_modules/@types/node/tls.d.ts": [
+        "../../../node_modules/@types/node/crypto.d.ts",
+        "../../../node_modules/@types/node/dns.d.ts",
+        "../../../node_modules/@types/node/net.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/cache/interfaces/cache-module.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
-        "../../../node_modules/@nestjs/common/cache/interfaces/cache-manager.interface.d.ts",
+      "../../../node_modules/@types/node/https.d.ts": [
+        "../../../node_modules/@types/node/tls.d.ts",
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/http.d.ts",
+        "../../../node_modules/@types/node/url.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/cache/cache.module.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
-        "../../../node_modules/@nestjs/common/cache/interfaces/cache-module.interface.d.ts",
+      "../../../node_modules/@types/node/http2.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/net.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
+        "../../../node_modules/@types/node/tls.d.ts",
+        "../../../node_modules/@types/node/url.d.ts",
+        "../../../node_modules/@types/node/http.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/cache/decorators/cache-key.decorator.d.ts": [
+      "../../../node_modules/@types/node/dgram.d.ts": [
+        "../../../node_modules/@types/node/net.d.ts",
+        "../../../node_modules/@types/node/dns.d.ts",
+        "../../../node_modules/@types/node/events.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/cache/decorators/index.d.ts": [
-        "../../../node_modules/@nestjs/common/cache/decorators/cache-key.decorator.d.ts",
+      "../../../node_modules/@types/node/dns.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/cache/interceptors/cache.interceptor.d.ts": [
-        "../../../node_modules/rxjs/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+      "../../../node_modules/@types/node/net.d.ts": [
+        "../../../node_modules/@types/node/stream.d.ts",
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/dns.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/cache/interceptors/index.d.ts": [
-        "../../../node_modules/@nestjs/common/cache/interceptors/cache.interceptor.d.ts",
+      "../../../node_modules/@types/node/tty.d.ts": [
+        "../../../node_modules/@types/node/net.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/cache/interfaces/index.d.ts": [
-        "../../../node_modules/@nestjs/common/cache/interfaces/cache-manager.interface.d.ts",
-        "../../../node_modules/@nestjs/common/cache/interfaces/cache-module.interface.d.ts",
+      "../../../node_modules/@types/node/http.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
+        "../../../node_modules/@types/node/url.d.ts",
+        "../../../node_modules/@types/node/net.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/cache/index.d.ts": [
-        "../../../node_modules/@nestjs/common/cache/cache.constants.d.ts",
-        "../../../node_modules/@nestjs/common/cache/cache.module.d.ts",
-        "../../../node_modules/@nestjs/common/cache/decorators/index.d.ts",
-        "../../../node_modules/@nestjs/common/cache/interceptors/index.d.ts",
-        "../../../node_modules/@nestjs/common/cache/interfaces/index.d.ts",
+      "../../../node_modules/@types/node/domain.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/core/bind.decorator.d.ts": [
+      "../../../node_modules/@types/node/events.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/core/catch.decorator.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+      "../../../node_modules/@types/node/worker_threads.d.ts": [
+        "../../../node_modules/@types/node/vm.d.ts",
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/core/controller.decorator.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/scope-options.interface.d.ts",
+      "../../../node_modules/@types/node/stream.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/core/dependencies.decorator.d.ts": [
+      "../../../node_modules/@types/node/zlib.d.ts": [
+        "../../../node_modules/@types/node/stream.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/core/exception-filters.decorator.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
+      "../../../node_modules/@types/node/v8.d.ts": [
+        "../../../node_modules/@types/node/stream.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/core/inject.decorator.d.ts": [
+      "../../../node_modules/@types/node/readline.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/core/injectable.decorator.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/scope-options.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
+      "../../../node_modules/@types/node/repl.d.ts": [
+        "../../../node_modules/@types/node/readline.d.ts",
+        "../../../node_modules/@types/node/vm.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/core/optional.decorator.d.ts": [
+      "../../../node_modules/@types/node/fs.d.ts": [
+        "../../../node_modules/@types/node/stream.d.ts",
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/url.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/core/set-metadata.decorator.d.ts": [
+      "../../../node_modules/@types/node/inspector.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/core/use-guards.decorator.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+      "../../../node_modules/@types/node/module.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/core/use-interceptors.decorator.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+      "../../../node_modules/@types/node/os.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/core/use-pipes.decorator.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+      "../../../node_modules/@types/node/path.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/core/index.d.ts": [
-        "../../../node_modules/@nestjs/common/decorators/core/bind.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/core/catch.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/core/controller.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/core/dependencies.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/core/exception-filters.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/core/inject.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/core/injectable.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/core/optional.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/core/set-metadata.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/core/use-guards.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/core/use-interceptors.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/core/use-pipes.decorator.d.ts",
+      "../../../node_modules/@types/node/process.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/modules/module.decorator.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/modules/module-metadata.interface.d.ts",
+      "../../../node_modules/@types/node/punycode.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/modules/single-scope.decorator.d.ts": [
+      "../../../node_modules/@types/node/querystring.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/modules/global.decorator.d.ts": [
+      "../../../node_modules/@types/node/url.d.ts": [
+        "../../../node_modules/@types/node/querystring.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/modules/index.d.ts": [
-        "../../../node_modules/@nestjs/common/decorators/modules/module.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/modules/single-scope.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/modules/global.decorator.d.ts",
+      "../../../node_modules/@types/node/string_decoder.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/http/request-mapping.decorator.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/request-mapping-metadata.interface.d.ts",
+      "../../../node_modules/@types/node/timers.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/http/route-params.decorator.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+      "../../../node_modules/@types/node/trace_events.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/http/http-code.decorator.d.ts": [
+      "../../../node_modules/@types/node/util.d.ts": [
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/stack-utils/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/http/create-route-param-metadata.decorator.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/custom-route-param-factory.interface.d.ts",
+      "../../../node_modules/@types/json5/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/http/render.decorator.d.ts": [
+      "../../../node_modules/@types/jest/index.d.ts": [
+        "../../../node_modules/jest-diff/build/index.d.ts",
+        "../../../node_modules/@types/jest-diff/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/http/header.decorator.d.ts": [
+      "../../../node_modules/jest-diff/build/index.d.ts": [
+        "../../../node_modules/jest-diff/build/types.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/http/index.d.ts": [
-        "../../../node_modules/@nestjs/common/decorators/http/request-mapping.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/http/route-params.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/http/http-code.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/http/create-route-param-metadata.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/http/render.decorator.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/http/header.decorator.d.ts",
+      "../../../node_modules/jest-diff/build/types.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/decorators/index.d.ts": [
-        "../../../node_modules/@nestjs/common/decorators/core/index.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/modules/index.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/http/index.d.ts",
+      "../../../node_modules/@types/jest-diff/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts": [
+      "../../../node_modules/@types/istanbul-reports/index.d.ts": [
+        "../../../node_modules/@types/istanbul-lib-report/index.d.ts",
+        "../../../node_modules/@types/istanbul-lib-coverage/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/bad-request.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../../node_modules/@types/istanbul-lib-report/index.d.ts": [
+        "../../../node_modules/@types/istanbul-lib-coverage/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/unauthorized.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../../node_modules/@types/istanbul-lib-coverage/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/method-not-allowed.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../../node_modules/@types/minimatch/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/not-found.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../../node_modules/@types/mime/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/forbidden.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../../node_modules/@types/range-parser/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/not-acceptable.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../../node_modules/@types/cookiejar/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/request-timeout.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../../node_modules/@types/babel__core/index.d.ts": [
+        "../../../node_modules/@types/babel__generator/index.d.ts",
+        "../../../node_modules/@types/babel__traverse/index.d.ts",
+        "../../../node_modules/@types/babel__template/index.d.ts",
+        "../../../node_modules/@babel/types/lib/index.d.ts",
+        "../../../node_modules/@babel/parser/typings/babel-parser.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/conflict.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../../node_modules/@types/babel__template/index.d.ts": [
+        "../../../node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "../../../node_modules/@babel/types/lib/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/gone.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../../node_modules/@babel/parser/typings/babel-parser.d.ts": [
+        "../../../node_modules/@babel/types/lib/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/payload-too-large.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../../node_modules/@types/babel__traverse/index.d.ts": [
+        "../../../node_modules/@babel/types/lib/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/unsupported-media-type.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../../node_modules/@types/babel__generator/index.d.ts": [
+        "../../../node_modules/@babel/types/lib/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/unprocessable-entity.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../../node_modules/@babel/types/lib/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/internal-server-error.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../web-shell/dist/index.d.ts": [
+        "../../web-shell/dist/WebShell.module.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/not-implemented.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../web-shell/dist/WebShell.module.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/bad-gateway.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../websocket/dist/WSModule.module.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/service-unavailable.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../../node_modules/@types/yargs/index.d.ts": [
+        "../../../node_modules/@types/yargs-parser/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/gateway-timeout.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../../node_modules/@types/yargs-parser/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/exceptions/im-a-teapot.exception.d.ts": [
-        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
+      "../../core/dist/shell/shell.module.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/serializer/decorators/index.d.ts": [
+        "../../../node_modules/@nestjs/common/serializer/decorators/serialize-options.decorator.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/serializer/decorators/serialize-options.decorator.d.ts": [
+        "../../../node_modules/@nestjs/common/interfaces/external/class-transform-options.interface.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/external/validator-options.interface.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/interfaces/external/class-transform-options.interface.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/axios/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -4570,409 +4919,179 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/axios/index.d.ts": [
+      "../../../node_modules/@nestjs/common/exceptions/im-a-teapot.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/http/interfaces/http-module.interface.d.ts": [
-        "../../../node_modules/axios/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/gateway-timeout.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/http/interfaces/index.d.ts": [
-        "../../../node_modules/@nestjs/common/http/interfaces/http-module.interface.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/service-unavailable.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/http/http.module.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
-        "../../../node_modules/@nestjs/common/http/interfaces/index.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/bad-gateway.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/http/http.service.d.ts": [
-        "../../../node_modules/axios/index.d.ts",
-        "../../../node_modules/rxjs/index.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/not-implemented.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/http/index.d.ts": [
-        "../../../node_modules/@nestjs/common/http/http.module.d.ts",
-        "../../../node_modules/@nestjs/common/http/http.service.d.ts",
-        "../../../node_modules/@nestjs/common/http/interfaces/index.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/internal-server-error.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/pipes/parse-int.pipe.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
-        "../../../node_modules/@nestjs/common/index.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/unprocessable-entity.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/pipes/parse-uuid.pipe.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/unsupported-media-type.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/external/class-transform-options.interface.d.ts": [
+      "../../../node_modules/@nestjs/common/exceptions/payload-too-large.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/interfaces/external/validator-options.interface.d.ts": [
+      "../../../node_modules/@nestjs/common/exceptions/gone.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/pipes/validation.pipe.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/external/class-transform-options.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/external/validator-options.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/features/pipe-transform.interface.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/conflict.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/pipes/index.d.ts": [
-        "../../../node_modules/@nestjs/common/pipes/parse-int.pipe.d.ts",
-        "../../../node_modules/@nestjs/common/pipes/parse-uuid.pipe.d.ts",
-        "../../../node_modules/@nestjs/common/pipes/validation.pipe.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/request-timeout.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/serializer/class-serializer.interceptor.d.ts": [
-        "../../../node_modules/rxjs/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/external/class-transform-options.interface.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/not-acceptable.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/serializer/decorators/serialize-options.decorator.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/external/class-transform-options.interface.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/forbidden.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/serializer/decorators/index.d.ts": [
-        "../../../node_modules/@nestjs/common/serializer/decorators/serialize-options.decorator.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/not-found.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/serializer/index.d.ts": [
-        "../../../node_modules/@nestjs/common/serializer/class-serializer.interceptor.d.ts",
-        "../../../node_modules/@nestjs/common/serializer/decorators/index.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/method-not-allowed.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/services/index.d.ts": [
-        "../../../node_modules/@nestjs/common/services/logger.service.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/unauthorized.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/utils/forward-ref.util.d.ts": [
-        "../../../node_modules/@nestjs/common/interfaces/modules/forward-reference.interface.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/bad-request.exception.d.ts": [
+        "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/utils/index.d.ts": [
-        "../../../node_modules/@nestjs/common/utils/forward-ref.util.d.ts",
+      "../../../node_modules/@nestjs/common/exceptions/http.exception.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/index.d.ts": [
-        "../../../node_modules/reflect-metadata/index.d.ts",
-        "../../../node_modules/@nestjs/common/cache/index.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/index.d.ts",
-        "../../../node_modules/@nestjs/common/enums/index.d.ts",
-        "../../../node_modules/@nestjs/common/exceptions/index.d.ts",
-        "../../../node_modules/@nestjs/common/http/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
-        "../../../node_modules/@nestjs/common/pipes/index.d.ts",
-        "../../../node_modules/@nestjs/common/serializer/index.d.ts",
-        "../../../node_modules/@nestjs/common/services/index.d.ts",
-        "../../../node_modules/@nestjs/common/utils/index.d.ts",
+      "../../../node_modules/@nestjs/common/decorators/http/header.decorator.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/lib/Emulator.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
+      "../../../node_modules/@nestjs/common/decorators/http/render.decorator.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/lib/Events.provider.d.ts": [
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+      "../../../node_modules/@nestjs/common/decorators/http/http-code.decorator.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/shell/shell.module.d.ts": [
+      "../../../node_modules/@nestjs/common/decorators/modules/global.decorator.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/shell/providers/commands.provider.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../core/dist/shell/types/index.d.ts",
+      "../../../node_modules/@nestjs/common/decorators/modules/single-scope.decorator.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/shell/providers/services.provider.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../core/dist/shell/providers/shell.provider.d.ts",
-        "../../core/dist/shell/types/index.d.ts",
+      "../../../node_modules/@nestjs/common/decorators/core/set-metadata.decorator.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/shell/providers/shell.provider.d.ts": [
-        "../../../node_modules/@types/node/readline.d.ts",
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../core/dist/shell/providers/commands.provider.d.ts",
-        "../../core/dist/shell/providers/services.provider.d.ts",
-        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+      "../../../node_modules/@nestjs/common/decorators/core/optional.decorator.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@types/yargs-parser/index.d.ts": [
+      "../../../node_modules/@nestjs/common/decorators/core/inject.decorator.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@types/yargs/index.d.ts": [
-        "../../../node_modules/@types/yargs-parser/index.d.ts",
+      "../../../node_modules/@nestjs/common/decorators/core/dependencies.decorator.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/shell/types/index.d.ts": [
-        "../../core/dist/shell/providers/shell.provider.d.ts",
-        "../../../node_modules/@types/yargs/index.d.ts",
+      "../../../node_modules/@nestjs/common/decorators/core/bind.decorator.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/shell/decorators/ShellBin.d.ts": [
-        "../../core/dist/shell/types/index.d.ts",
+      "../../../node_modules/@nestjs/common/cache/decorators/index.d.ts": [
+        "../../../node_modules/@nestjs/common/cache/decorators/cache-key.decorator.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/shell/decorators/ShellService.d.ts": [
-        "../../core/dist/shell/types/index.d.ts",
+      "../../../node_modules/@nestjs/common/cache/decorators/cache-key.decorator.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/shell/decorators/index.d.ts": [
-        "../../core/dist/shell/decorators/ShellBin.d.ts",
-        "../../core/dist/shell/decorators/ShellService.d.ts",
+      "../../../node_modules/@nestjs/common/cache/interfaces/cache-manager.interface.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/shell/providers/index.d.ts": [
-        "../../core/dist/shell/providers/commands.provider.d.ts",
-        "../../core/dist/shell/providers/services.provider.d.ts",
-        "../../core/dist/shell/providers/shell.provider.d.ts",
+      "../../../node_modules/@nestjs/common/interfaces/on-application-shutdown.interface.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/shell/index.d.ts": [
-        "../../core/dist/shell/shell.module.d.ts",
-        "../../core/dist/shell/decorators/index.d.ts",
-        "../../core/dist/shell/providers/index.d.ts",
-        "../../core/dist/shell/types/index.d.ts",
+      "../../../node_modules/@nestjs/common/interfaces/on-application-bootstrap.interface.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/index.d.ts": [
-        "../../core/dist/lib/Emulator.d.ts",
-        "../../core/dist/lib/Events.provider.d.ts",
-        "../../core/dist/shell/index.d.ts",
+      "../../../node_modules/@nestjs/common/interfaces/microservices/custom-transport-strategy.interface.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@babel/types/lib/index.d.ts": [
+      "../../../node_modules/@types/node/ts3.2/globals.d.ts": [
+        "../../../node_modules/@types/node/globals.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@types/babel__generator/index.d.ts": [
-        "../../../node_modules/@babel/types/lib/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      "../../../node_modules/@types/node/ts3.2/util.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts"
       ],
-      "../../../node_modules/@types/babel__traverse/index.d.ts": [
-        "../../../node_modules/@babel/types/lib/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@babel/parser/typings/babel-parser.d.ts": [
-        "../../../node_modules/@babel/types/lib/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/babel__template/index.d.ts": [
-        "../../../node_modules/@babel/parser/typings/babel-parser.d.ts",
-        "../../../node_modules/@babel/types/lib/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/babel__core/index.d.ts": [
-        "../../../node_modules/@types/babel__generator/index.d.ts",
-        "../../../node_modules/@types/babel__traverse/index.d.ts",
-        "../../../node_modules/@types/babel__template/index.d.ts",
-        "../../../node_modules/@babel/types/lib/index.d.ts",
-        "../../../node_modules/@babel/parser/typings/babel-parser.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/connect/index.d.ts": [
-        "../../../node_modules/@types/node/http.d.ts",
-        "../../../node_modules/@types/node/ts3.2/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/body-parser/index.d.ts": [
-        "../../../node_modules/@types/connect/index.d.ts",
-        "../../../node_modules/@types/node/http.d.ts",
-        "../../../node_modules/@types/node/ts3.2/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/cookiejar/index.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/range-parser/index.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/express-serve-static-core/index.d.ts": [
-        "../../../node_modules/@types/node/http.d.ts",
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/range-parser/index.d.ts",
-        "../../../node_modules/@types/node/ts3.2/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/mime/index.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/serve-static/index.d.ts": [
-        "../../../node_modules/@types/express-serve-static-core/index.d.ts",
-        "../../../node_modules/@types/mime/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/express/index.d.ts": [
-        "../../../node_modules/@types/body-parser/index.d.ts",
-        "../../../node_modules/@types/serve-static/index.d.ts",
-        "../../../node_modules/@types/express-serve-static-core/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/minimatch/index.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/glob/index.d.ts": [
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/minimatch/index.d.ts",
-        "../../../node_modules/@types/node/ts3.2/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/istanbul-lib-coverage/index.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/istanbul-lib-report/index.d.ts": [
-        "../../../node_modules/@types/istanbul-lib-coverage/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/istanbul-reports/index.d.ts": [
-        "../../../node_modules/@types/istanbul-lib-report/index.d.ts",
-        "../../../node_modules/@types/istanbul-lib-coverage/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/jest-diff/index.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/jest-diff/build/types.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/jest-diff/build/index.d.ts": [
-        "../../../node_modules/jest-diff/build/types.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/jest/index.d.ts": [
-        "../../../node_modules/jest-diff/build/index.d.ts",
-        "../../../node_modules/@types/jest-diff/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/json5/index.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/stack-utils/index.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/superagent/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/https.d.ts",
-        "../../../node_modules/@types/node/stream.d.ts",
-        "../../../node_modules/@types/cookiejar/index.d.ts",
-        "../../../node_modules/@types/node/ts3.2/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/supertest/index.d.ts": [
-        "../../../node_modules/@types/superagent/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/ws/index.d.ts": [
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/http.d.ts",
-        "../../../node_modules/@types/node/https.d.ts",
-        "../../../node_modules/@types/node/net.d.ts",
-        "../../../node_modules/@types/node/zlib.d.ts",
-        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+      "../../../node_modules/@types/node/vm.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
-      "../node_modules/typescript/lib/lib.es5.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.d.ts",
-      "../node_modules/typescript/lib/lib.es2016.d.ts",
-      "../node_modules/typescript/lib/lib.es2017.d.ts",
-      "../node_modules/typescript/lib/lib.es2018.d.ts",
-      "../node_modules/typescript/lib/lib.dom.d.ts",
-      "../node_modules/typescript/lib/lib.dom.iterable.d.ts",
-      "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
-      "../node_modules/typescript/lib/lib.scripthost.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.core.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.collection.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.generator.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.iterable.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.promise.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.proxy.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.reflect.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.symbol.d.ts",
-      "../node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
-      "../node_modules/typescript/lib/lib.es2016.array.include.d.ts",
-      "../node_modules/typescript/lib/lib.es2017.object.d.ts",
-      "../node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
-      "../node_modules/typescript/lib/lib.es2017.string.d.ts",
-      "../node_modules/typescript/lib/lib.es2017.intl.d.ts",
-      "../node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
-      "../node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts",
-      "../node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
-      "../node_modules/typescript/lib/lib.es2018.intl.d.ts",
-      "../node_modules/typescript/lib/lib.es2018.promise.d.ts",
-      "../node_modules/typescript/lib/lib.es2018.regexp.d.ts",
-      "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
-      "../node_modules/typescript/lib/lib.esnext.bigint.d.ts",
-      "../node_modules/typescript/lib/lib.es2017.full.d.ts",
       "../../../node_modules/reflect-metadata/index.d.ts",
       "../../../node_modules/@nestjs/common/cache/cache.constants.d.ts",
       "../../../node_modules/@nestjs/common/interfaces/abstract.interface.d.ts",
@@ -5224,6 +5343,17 @@
       "../../core/dist/shell/providers/index.d.ts",
       "../../core/dist/shell/index.d.ts",
       "../../core/dist/index.d.ts",
+      "../../../node_modules/@types/ws/index.d.ts",
+      "../../websocket/dist/lib/Packet.d.ts",
+      "../../websocket/dist/lib/WSUser.d.ts",
+      "../../websocket/dist/types/index.d.ts",
+      "../../websocket/dist/lib/WSChannel.d.ts",
+      "../../websocket/dist/lib/WSServer.provider.d.ts",
+      "../../websocket/dist/WSModule.module.d.ts",
+      "../../websocket/dist/index.d.ts",
+      "../../web-shell/dist/WebShell.module.d.ts",
+      "../../web-shell/dist/index.d.ts",
+      "../src/main.ts",
       "../../../node_modules/@babel/types/lib/index.d.ts",
       "../../../node_modules/@types/babel__generator/index.d.ts",
       "../../../node_modules/@types/babel__traverse/index.d.ts",
@@ -5251,20 +5381,38 @@
       "../../../node_modules/@types/stack-utils/index.d.ts",
       "../../../node_modules/@types/superagent/index.d.ts",
       "../../../node_modules/@types/supertest/index.d.ts",
-      "../../../node_modules/@types/ws/index.d.ts",
-      [
-        "../src/main.ts",
-        [
-          {
-            "file": "../src/main.ts",
-            "start": 75,
-            "length": 29,
-            "messageText": "Cannot find module '@open-hotel/orion-websocket'.",
-            "category": 1,
-            "code": 2307
-          }
-        ]
-      ]
+      "../node_modules/typescript/lib/lib.es2015.d.ts",
+      "../node_modules/typescript/lib/lib.es2016.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.full.d.ts",
+      "../node_modules/typescript/lib/lib.esnext.bigint.d.ts",
+      "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "../node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "../node_modules/typescript/lib/lib.scripthost.d.ts",
+      "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+      "../node_modules/typescript/lib/lib.dom.iterable.d.ts",
+      "../node_modules/typescript/lib/lib.dom.d.ts",
+      "../node_modules/typescript/lib/lib.es5.d.ts"
     ]
   },
   "version": "3.6.3"

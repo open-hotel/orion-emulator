@@ -1,0 +1,45 @@
+{
+  "name": "@open-hotel/orion-webshell",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Salomão Neto <salomaosnff@yahoo.com>",
+  "homepage": "https://github.com/open-hotel/sirius-emulator#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/open-hotel/sirius-emulator.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "client:build": "rimraf public/ && parcel build client/index.html -d ./public",
+    "client:dev": "parcel client/index.html -d ./public",
+    "build:lib": "rimraf dist/ && tsc -p tsconfig.json",
+    "build": "yarn build:lib && yarn client:build",
+    "dev": "tsc -w -p tsconfig.json",
+    "start:dev": "tsc -w",
+    "prepare": "yarn build"
+  },
+  "bugs": {
+    "url": "https://github.com/open-hotel/sirius-emulator/issues"
+  },
+  "dependencies": {
+    "@nestjs/serve-static": "^1.0.1",
+    "@open-hotel/orion-core": "^0.0.0",
+    "@open-hotel/orion-websocket": "^0.0.0",
+    "ws": "^7.1.2",
+    "xterm": "^4.0.2",
+    "xterm-addon-attach": "^0.2.1",
+    "xterm-addon-fit": "^0.2.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  }
+}
