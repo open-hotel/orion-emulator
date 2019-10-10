@@ -1,0 +1,23 @@
+{
+  "program": {
+    "fileInfos": {},
+    "options": {
+      "module": 1,
+      "declaration": true,
+      "removeComments": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "esModuleInterop": true,
+      "target": 4,
+      "sourceMap": true,
+      "outDir": "./",
+      "incremental": true,
+      "project": "../tsconfig.build.json",
+      "configFilePath": "../tsconfig.build.json"
+    },
+    "referencedMap": {},
+    "exportedModulesMap": {},
+    "semanticDiagnosticsPerFile": []
+  },
+  "version": "3.6.3"
+}

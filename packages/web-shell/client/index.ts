@@ -4,7 +4,7 @@ import { Terminal } from 'xterm'
 import { AttachAddon } from 'xterm-addon-attach'
 import { FitAddon } from 'xterm-addon-fit'
 
-const ws = new WebSocket('wss://orion.serveo.net')
+const ws = new WebSocket('ws://localhost:23456')
 ws.binaryType = 'arraybuffer';
 
 const term = new Terminal()

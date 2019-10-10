@@ -15,7 +15,8 @@
   "scripts": {
     "build": "rimraf dist/ && tsc -p tsconfig.build.json",
     "build:w": "tsc -w -p tsconfig.build.json",
-    "dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/main.js\""
+    "dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/main.js\"",
+    "start": "node dist/main.js"
   },
   "dependencies": {
     "@open-hotel/orion-core": "^0.0.0",

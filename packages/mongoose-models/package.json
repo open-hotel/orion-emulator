@@ -1,0 +1,33 @@
+{
+  "name": "@open-hotel/orion-mongoose-models",
+  "version": "0.0.0",
+  "description": "Mongoose Models for Orion Emulator",
+  "author": "Salomão Neto <salomaosnff@yahoo.com>",
+  "homepage": "https://github.com/open-hotel/sirius-emulator#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/open-hotel/sirius-emulator.git"
+  },
+  "scripts": {
+    "build:models": "rimraf dist/ && tsc -p tsconfig.build.json",
+    "dev": "tsc -w -p tsconfig.build.json",
+    "prepare": "yarn build"
+  },
+  "bugs": {
+    "url": "https://github.com/open-hotel/sirius-emulator/issues"
+  },
+  "dependencies": {
+    "@open-hotel/common": "^0.0.1"
+  }
+}

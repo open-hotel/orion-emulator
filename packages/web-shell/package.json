@@ -20,7 +20,7 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "client:build": "rimraf public/ && parcel build client/index.html -d ./public",
-    "client:dev": "parcel client/index.html -d ./public",
+    "client:dev": "parcel client/index.html -d ./public --open",
     "build:lib": "rimraf dist/ && tsc -p tsconfig.json",
     "build": "yarn build:lib && yarn client:build",
     "dev": "tsc -w -p tsconfig.json",

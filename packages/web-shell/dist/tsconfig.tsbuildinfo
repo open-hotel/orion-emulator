@@ -1237,17 +1237,17 @@
         "version": "01b14a88a026c9f710a8b709794ce4623f45a65db44f84bcb71c9cf6c2ec2e31",
         "signature": "01b14a88a026c9f710a8b709794ce4623f45a65db44f84bcb71c9cf6c2ec2e31"
       },
-      "../../core/dist/shell/providers/commands.provider.d.ts": {
-        "version": "f5a4cb8e9bd4918cd2f4491b9b7855b77637b9b5ea9cb35d66be12b7c7b45f85",
-        "signature": "f5a4cb8e9bd4918cd2f4491b9b7855b77637b9b5ea9cb35d66be12b7c7b45f85"
+      "../../core/dist/shell/providers/bin.provider.d.ts": {
+        "version": "b6667cd61bae5dd3e39ba453e2fd35f9c21c810d9cc3319cfad34436a6aea0ca",
+        "signature": "b6667cd61bae5dd3e39ba453e2fd35f9c21c810d9cc3319cfad34436a6aea0ca"
       },
       "../../core/dist/shell/providers/services.provider.d.ts": {
-        "version": "c286185ba37e7d9c0ddd118f0d0449ca972250c4de34ac8b2546056c299c6935",
-        "signature": "c286185ba37e7d9c0ddd118f0d0449ca972250c4de34ac8b2546056c299c6935"
+        "version": "f55280072610f90ec2196feecc053a1fed8f3d267d83e42dc591b4eb687646b0",
+        "signature": "f55280072610f90ec2196feecc053a1fed8f3d267d83e42dc591b4eb687646b0"
       },
       "../../core/dist/shell/providers/shell.provider.d.ts": {
-        "version": "6ff346182861142d90bebe59adf7cf494f5451155e525a4bd42c552de7f292f7",
-        "signature": "6ff346182861142d90bebe59adf7cf494f5451155e525a4bd42c552de7f292f7"
+        "version": "f5d04d6b5ed3903cf0349d42ed6a6c352eca8e25ed1aaec8686f61638cbb0409",
+        "signature": "f5d04d6b5ed3903cf0349d42ed6a6c352eca8e25ed1aaec8686f61638cbb0409"
       },
       "../../../node_modules/@types/yargs-parser/index.d.ts": {
         "version": "7b48555954a556ad80cc5fda89473d339f570eeac7a7b4d99c88ff5e646c24f7",
@@ -1258,8 +1258,8 @@
         "signature": "6f15cf4b24659aa2b9f957dc0b4254b89f35a77978f9da1f161587b66ef75663"
       },
       "../../core/dist/shell/types/index.d.ts": {
-        "version": "808be64ea33d08553019e8af54dbe31030febe20ac578121f78dc5e6c01f738b",
-        "signature": "808be64ea33d08553019e8af54dbe31030febe20ac578121f78dc5e6c01f738b"
+        "version": "de6d82b6516f00de502443ab4aadbeed461b761ab5ebae83fbb0cc52a36d83a3",
+        "signature": "de6d82b6516f00de502443ab4aadbeed461b761ab5ebae83fbb0cc52a36d83a3"
       },
       "../../core/dist/shell/decorators/ShellBin.d.ts": {
         "version": "9c54ab02d7c0c06e9ff521faf5da77ffceaa4397d48474ae1d66a30c9328fe21",
@@ -1274,8 +1274,8 @@
         "signature": "c2ae29074d89ce63b0cec564b9cc96de34a24a22f4ef06a52693cd68a68ff8f2"
       },
       "../../core/dist/shell/providers/index.d.ts": {
-        "version": "cb06f41b772378c8e557099635d9088e94fa8955abacdda4e3b745d7a02c5045",
-        "signature": "cb06f41b772378c8e557099635d9088e94fa8955abacdda4e3b745d7a02c5045"
+        "version": "ffdd79ce8f3b782b9dade4013e43443acdc7f4fc8e85dbf19d05c5f18ca48088",
+        "signature": "ffdd79ce8f3b782b9dade4013e43443acdc7f4fc8e85dbf19d05c5f18ca48088"
       },
       "../../core/dist/shell/index.d.ts": {
         "version": "9a1c756b6255d5f90fe7ace7787eba46a90f54e45cadd15dc59985b224c09008",
@@ -1290,7 +1290,7 @@
         "signature": "edf9f7a505ebd55d49ef0a6ab571b131480f558498c4141b736bdbd80ce98311"
       },
       "../src/WebShell.provider.ts": {
-        "version": "0e29799d7505f6b4d68ee6ae2507742b7f01cbc944ec4fcdc58c8b414671848d",
+        "version": "9293f9a6933c32e97644027e9cc0a2f2d6a0351398588be1eb906ce91348995b",
         "signature": "d9efee9b1619619635e05daeb64ecace31427ba419f7b6bffeadda82510b97b0"
       },
       "../src/WebShell.module.ts": {
@@ -3283,7 +3283,7 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/shell/providers/commands.provider.d.ts": [
+      "../../core/dist/shell/providers/bin.provider.d.ts": [
         "../../../node_modules/@nestjs/common/index.d.ts",
         "../../core/dist/shell/types/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
@@ -3299,7 +3299,7 @@
       "../../core/dist/shell/providers/shell.provider.d.ts": [
         "../../../node_modules/@types/node/readline.d.ts",
         "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../core/dist/shell/providers/commands.provider.d.ts",
+        "../../core/dist/shell/providers/bin.provider.d.ts",
         "../../core/dist/shell/providers/services.provider.d.ts",
         "../../../node_modules/@types/node/ts3.2/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
@@ -3317,6 +3317,8 @@
       "../../core/dist/shell/types/index.d.ts": [
         "../../core/dist/shell/providers/shell.provider.d.ts",
         "../../../node_modules/@types/yargs/index.d.ts",
+        "../../../node_modules/@types/node/readline.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3337,7 +3339,7 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../../core/dist/shell/providers/index.d.ts": [
-        "../../core/dist/shell/providers/commands.provider.d.ts",
+        "../../core/dist/shell/providers/bin.provider.d.ts",
         "../../core/dist/shell/providers/services.provider.d.ts",
         "../../core/dist/shell/providers/shell.provider.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
@@ -3713,14 +3715,14 @@
       "../../core/dist/shell/providers/shell.provider.d.ts": [
         "../../../node_modules/@types/node/readline.d.ts",
         "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../core/dist/shell/providers/commands.provider.d.ts",
+        "../../core/dist/shell/providers/bin.provider.d.ts",
         "../../core/dist/shell/providers/services.provider.d.ts",
         "../../../node_modules/@types/node/ts3.2/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../../core/dist/shell/providers/index.d.ts": [
-        "../../core/dist/shell/providers/commands.provider.d.ts",
+        "../../core/dist/shell/providers/bin.provider.d.ts",
         "../../core/dist/shell/providers/services.provider.d.ts",
         "../../core/dist/shell/providers/shell.provider.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
@@ -3744,6 +3746,8 @@
       "../../core/dist/shell/types/index.d.ts": [
         "../../core/dist/shell/providers/shell.provider.d.ts",
         "../../../node_modules/@types/yargs/index.d.ts",
+        "../../../node_modules/@types/node/readline.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3770,7 +3774,7 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/shell/providers/commands.provider.d.ts": [
+      "../../core/dist/shell/providers/bin.provider.d.ts": [
         "../../../node_modules/@nestjs/common/index.d.ts",
         "../../core/dist/shell/types/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
@@ -5919,7 +5923,7 @@
       "../../core/dist/lib/Emulator.d.ts",
       "../../core/dist/lib/Events.provider.d.ts",
       "../../core/dist/shell/shell.module.d.ts",
-      "../../core/dist/shell/providers/commands.provider.d.ts",
+      "../../core/dist/shell/providers/bin.provider.d.ts",
       "../../core/dist/shell/providers/services.provider.d.ts",
       "../../core/dist/shell/providers/shell.provider.d.ts",
       "../../../node_modules/@types/yargs-parser/index.d.ts",

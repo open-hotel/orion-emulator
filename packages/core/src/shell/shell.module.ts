@@ -1,6 +1,6 @@
 import { Module, Global } from "@nestjs/common";
 import { ShellProvider } from "./providers/shell.provider";
-import { ShellCommandProvider } from "./providers/commands.provider";
+import { ShellCommandProvider } from "./providers/bin.provider";
 import { ShellServicesProvider } from "./providers/services.provider";
 import { DefaultCommands } from "../shell/commands";
 

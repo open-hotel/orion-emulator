@@ -63,7 +63,6 @@ export class WSServer {
       );
 
       this.server.on('connection', socket => {
-        console.log('USER')
         socket.on('message', data => {
           const packet = Packet.from(data);
           socket.send(packet.sign('123').toBuffer());
@@ -71,7 +70,6 @@ export class WSServer {
       });
 
       this.server.on('connection:web-shell', socket => {
-        console.log('WEB SHELL', socket)
         socket.on('message', data => {
           socket.send('shell-command');
         });
@@ -101,6 +99,7 @@ export class WSServer {
   }
 
   stop() {
+    if (!this.server) return 0
     return new Promise((resolve, reject) => {
       this.server.close(err => {
         this.users = {};

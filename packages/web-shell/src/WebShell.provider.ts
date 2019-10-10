@@ -13,10 +13,13 @@ export class WebShellProvider implements OnApplicationBootstrap {
   constructor(private sh: ShellProvider) {}
 
   onApplicationBootstrap() {
-    this.ws.on('connection', ws => {
+    this.ws.on('connection', async ws => {
       // @ts-ignore
       const stream: Duplex = WebSocket.createWebSocketStream(ws);
-      this.sh.startTTY(stream, stream, () => ws.close())
+      const session = this.sh.createTTY(stream, stream)
+      await this.sh.startTTY(session)
+      ws.terminate()
     });
   }
 }
+

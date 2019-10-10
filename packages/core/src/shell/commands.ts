@@ -3,6 +3,7 @@ import CliTable3 = require('cli-table3');
 import { Injectable } from '@nestjs/common';
 import { getApp } from '../lib/nest.app';
 import { ShellSession } from './providers';
+import yargs from 'yargs-parser';
 
 @Injectable()
 export class DefaultCommands {
@@ -18,6 +19,14 @@ export class DefaultCommands {
     alias: ['web'],
     description: 'Controls API status',
     usage: 'api <start|stop|restart>',
+    completer: line => {
+      const {
+        _: [bin, action],
+      } = yargs(line);
+      const actions = ['start', 'stop', 'restart']
+      const hits = !action ? actions : actions.filter(a => a.startsWith(action))
+      return [hits.map(action => [bin, action].join(' ')), line]
+    },
   })
   api({ _: [bin, command] }, session: ShellSession) {
     const app = getApp();
@@ -58,9 +67,8 @@ export class DefaultCommands {
     alias: ['logout'],
     description: 'Destroy current session',
   })
-  async exit(args, session: ShellSession) {
-    await session.destroy();
-    return 0;
+  exit(args, session: ShellSession) {
+    return session.exit()
   }
 
   @ShellCommand({
@@ -70,12 +78,14 @@ export class DefaultCommands {
   })
   async msg({ _: [bin, message], users = null }, session: ShellSession) {
     if (!message) return session.run(`help ${bin}`);
-    if (typeof users === 'string') users = users.split(',')
+    if (typeof users === 'string') users = users.split(',');
 
     const sessions = Array.isArray(users)
       ? session.sh.sessions.filter(s => users.includes(s.user))
       : session.sh.sessions;
 
-    sessions.forEach(s => s.print(`Message From ${session.user}: ${message}`, '\n', true))
+    sessions.forEach(s =>
+      s.println(`Message From ${session.user}: ${message}`),
+    );
   }
 }

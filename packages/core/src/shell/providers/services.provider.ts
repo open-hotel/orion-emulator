@@ -1,6 +1,6 @@
 import { performance } from 'perf_hooks';
 import { Injectable, OnApplicationBootstrap } from '@nestjs/common';
-import { ShellProvider } from './shell.provider';
+import { ShellProvider, ShellSession } from './shell.provider';
 import ora = require('ora');
 import ms from 'ms';
 import { ShellServiceBin } from '../types';
@@ -41,7 +41,7 @@ export class ShellServicesProvider implements OnApplicationBootstrap {
     return command;
   }
 
-  async boot(sh: ShellProvider, shutdown = false) {
+  async boot(session: ShellSession, shutdown = false) {
     const loader = ora()
 
     const services = Object.values(this.services)
@@ -58,8 +58,8 @@ export class ShellServicesProvider implements OnApplicationBootstrap {
 
       for (let service of services) {
         const start = performance.now();
-        await sh
-          .run(sh.sessions[0], service.main, false, { _: [service.name, 'stop'] })
+        await session
+          .run(service.main, false, { _: [service.name, 'stop'] })
           .then(() => {
             const time = Math.round(performance.now() - start);
             loader.succeed(`Stopped ${service.title}\t+${ms(time)}`);
@@ -80,8 +80,8 @@ export class ShellServicesProvider implements OnApplicationBootstrap {
     for (let service of services) {
       const start = performance.now();
       loader.start(`\x1b[2mStarting ${service.title}...\x1b[0m`);
-      const execution = sh
-        .run(sh.sessions[0], service.main, false, { _: [service.name, 'start'] })
+      const execution = session
+        .run(service.main, false, { _: [service.name, 'start'] })
         .then(() => {
           const time = Math.round(performance.now() - start);
           loader.succeed(`\x1b[32mStarted ${service.title}\x1b[0m\t+${ms(time)}`);
@@ -108,8 +108,10 @@ export class ShellServicesProvider implements OnApplicationBootstrap {
     description: 'Shutdown Emulator',
     usage: ['shutdown', 'poweroff'].join('\n'),
   })
-  async shutdown (args: any, sh: ShellProvider) {
-    await this.boot(sh, true)
+  async shutdown (args: any, session: ShellSession) {
+    session.sh.sessions.forEach(s => s !== session && s.destroy())
+    await this.boot(session, true)
+    session.destroy()
     process.exit()
   }
 }

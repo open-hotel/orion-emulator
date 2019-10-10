@@ -1,4 +1,4 @@
-import { ShellCommandProvider } from '../providers/commands.provider';
+import { ShellCommandProvider } from '../providers/bin.provider';
 import { ShellBin } from '../types';
 import { getApp } from '../../lib/nest.app';
 

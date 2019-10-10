@@ -21,9 +21,11 @@ let WebShellProvider = class WebShellProvider {
         });
     }
     onApplicationBootstrap() {
-        this.ws.on('connection', ws => {
+        this.ws.on('connection', async (ws) => {
             const stream = WebSocket.createWebSocketStream(ws);
-            this.sh.startTTY(stream, stream, () => ws.close());
+            const session = this.sh.createTTY(stream, stream);
+            await this.sh.startTTY(session);
+            ws.terminate();
         });
     }
 };

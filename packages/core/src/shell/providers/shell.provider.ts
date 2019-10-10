@@ -1,12 +1,13 @@
 import * as readline from 'readline';
 import YargsParser from 'yargs-parser';
 import { Injectable, OnApplicationBootstrap } from '@nestjs/common';
-import { ShellCommandProvider } from './commands.provider';
+import { ShellCommandProvider } from './bin.provider';
 import { ShellServicesProvider } from './services.provider';
+import yargs from 'yargs-parser';
 
 const users = {
   root: 'root',
-  salomaosnff: 'salomaosnff'
+  salomaosnff: 'salomaosnff',
 };
 
 export class ShellSession {
@@ -15,28 +16,48 @@ export class ShellSession {
   alive = false;
 
   constructor(
-    input: NodeJS.ReadStream,
-    output: NodeJS.WriteStream,
-    public sh: ShellProvider,
-    private onDestroy = () => {}
+    public stdin: NodeJS.ReadStream,
+    public stdout: NodeJS.WriteStream,
+    public sh: ShellProvider
   ) {
     this.rl = readline.createInterface({
-      input,
-      output,
+      input: stdin,
+      output: stdout,
       prompt: `\x1b[36;1mOrion > \x1b[0m`,
       terminal: true,
       removeHistoryDuplicates: true,
+      completer: line => {
+        const args = yargs(line);
+        const bin = args._[0];
+        const bins = Object.keys(this.sh.bin.bins);
+        const hits = bins.filter(b => b.startsWith(bin));
+
+        if (
+          bin &&
+          hits.length === 1 &&
+          hits[0] === bin &&
+          this.sh.bin.hasCompleter(bin)
+        ) {
+          return this.sh.bin.completer(bin, line);
+        }
+
+        return [hits.length ? hits : bins, line];
+      },
     });
 
     this.rl.on('SIGINT', () => this.exit());
   }
 
   run(cmd: string | Function, catchErrors = true, args?) {
-    return this.sh.run(this, cmd, catchErrors, args)
+    return this.sh.run(this, cmd, catchErrors, args);
   }
 
-  exit() {
-    this.destroy();
+  async exit() {
+    if (this.sh.sessions.length === 1) {
+      await this.run('shutdown');
+    } else {
+      this.destroy();
+    }
   }
 
   async login() {
@@ -48,15 +69,13 @@ export class ShellSession {
       return this.login();
     }
 
-    this.user = user
+    this.user = user;
     this.alive = true;
 
     return true;
   }
 
   destroy() {
-    this.rl.write('\n')
-    this.onDestroy()
     this.rl.close();
     this.sh.removeSession(this);
     this.alive = false;
@@ -76,10 +95,14 @@ export class ShellSession {
     });
   }
 
-  print(data: string | Buffer, end = '\n', ignoreCommand = true) {
-    this.sh.ignoreNextCommand = ignoreCommand
-    this.rl.write(data);
-    this.rl.write(end);
+  print(data: string | Buffer) {
+    this.stdout.write(data);
+
+    return this;
+  }
+  println(data: string | Buffer) {
+    this.stdout.write(data);
+    this.stdout.write('\n\r');
 
     return this;
   }
@@ -87,7 +110,11 @@ export class ShellSession {
   error(errorOrString: string | Error) {
     const message =
       typeof errorOrString === 'string' ? errorOrString : errorOrString.message;
-    this.print(`\x1b[31mError: ${message}\x1b[0m`);
+    this.print(
+      `\x1b[31mError: ${message}\x1b[0m\n\x1b[31m${
+        errorOrString instanceof Error ? errorOrString.stack : ''
+      }\x1b[0m`,
+    );
     return 1;
   }
 }
@@ -98,8 +125,8 @@ export class ShellProvider implements OnApplicationBootstrap {
   public sessions: ShellSession[] = [];
 
   constructor(
-    private bin: ShellCommandProvider,
-    private service: ShellServicesProvider,
+    public bin: ShellCommandProvider,
+    public service: ShellServicesProvider,
   ) {
     process.on('uncaughtException', error => {
       this.ignoreNextCommand = true;
@@ -111,19 +138,19 @@ export class ShellProvider implements OnApplicationBootstrap {
       .on('SIGINT', () => this.run(this.sessions[0], 'shutdown'));
   }
 
-  async startTTY(input: NodeJS.ReadStream, output: NodeJS.WriteStream, onDestroy?) {
-    const session = new ShellSession(input, output, this, onDestroy);
-
+  createTTY(input: NodeJS.ReadStream, output: NodeJS.WriteStream) {
+    const session = new ShellSession(input, output, this);
     this.sessions.push(session);
+    return session;
+  }
 
+  async startTTY(session: ShellSession) {
     await session.login();
 
     while (session.alive) {
       const cmd = await session.prompt();
       await session.run(cmd);
     }
-
-    if (this.sessions.length < 1) await session.run('shutdown');
   }
 
   removeSession(session: ShellSession) {
@@ -169,8 +196,9 @@ export class ShellProvider implements OnApplicationBootstrap {
   }
 
   async start() {
-    await this.service.boot(this);
-    await this.startTTY(process.stdin, process.stdout);
+    const session = await this.createTTY(process.stdin, process.stdout);
+    await this.service.boot(session);
+    await this.startTTY(session);
   }
 
   async onApplicationBootstrap() {
