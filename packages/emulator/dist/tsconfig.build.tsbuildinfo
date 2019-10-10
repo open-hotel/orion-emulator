@@ -129,6 +129,14 @@
         "version": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594",
         "signature": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594"
       },
+      "../../../node_modules/@types/yargs-parser/index.d.ts": {
+        "version": "7b48555954a556ad80cc5fda89473d339f570eeac7a7b4d99c88ff5e646c24f7",
+        "signature": "7b48555954a556ad80cc5fda89473d339f570eeac7a7b4d99c88ff5e646c24f7"
+      },
+      "../../../node_modules/@types/yargs/index.d.ts": {
+        "version": "6f15cf4b24659aa2b9f957dc0b4254b89f35a77978f9da1f161587b66ef75663",
+        "signature": "6f15cf4b24659aa2b9f957dc0b4254b89f35a77978f9da1f161587b66ef75663"
+      },
       "../../../node_modules/reflect-metadata/index.d.ts": {
         "version": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
         "signature": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90"
@@ -1097,14 +1105,6 @@
         "version": "f5d04d6b5ed3903cf0349d42ed6a6c352eca8e25ed1aaec8686f61638cbb0409",
         "signature": "f5d04d6b5ed3903cf0349d42ed6a6c352eca8e25ed1aaec8686f61638cbb0409"
       },
-      "../../../node_modules/@types/yargs-parser/index.d.ts": {
-        "version": "7b48555954a556ad80cc5fda89473d339f570eeac7a7b4d99c88ff5e646c24f7",
-        "signature": "7b48555954a556ad80cc5fda89473d339f570eeac7a7b4d99c88ff5e646c24f7"
-      },
-      "../../../node_modules/@types/yargs/index.d.ts": {
-        "version": "6f15cf4b24659aa2b9f957dc0b4254b89f35a77978f9da1f161587b66ef75663",
-        "signature": "6f15cf4b24659aa2b9f957dc0b4254b89f35a77978f9da1f161587b66ef75663"
-      },
       "../../core/dist/shell/types/index.d.ts": {
         "version": "de6d82b6516f00de502443ab4aadbeed461b761ab5ebae83fbb0cc52a36d83a3",
         "signature": "de6d82b6516f00de502443ab4aadbeed461b761ab5ebae83fbb0cc52a36d83a3"
@@ -1173,8 +1173,68 @@
         "version": "a688881db270d57a49837859592e93fb75a46ad1bfa4d8cd6b8ec71eaecd64e0",
         "signature": "a688881db270d57a49837859592e93fb75a46ad1bfa4d8cd6b8ec71eaecd64e0"
       },
+      "../../common/dist/models/Furniture.d.ts": {
+        "version": "c2f95576633e4ec505791b328c08fb6a2f17b8fd2a9206752193aab8cec48a8c",
+        "signature": "c2f95576633e4ec505791b328c08fb6a2f17b8fd2a9206752193aab8cec48a8c"
+      },
+      "../../common/dist/models/User.d.ts": {
+        "version": "866de788b496a7b0e5472f7f0ad044810ba0002c884de914a92021fd9f68b83d",
+        "signature": "866de788b496a7b0e5472f7f0ad044810ba0002c884de914a92021fd9f68b83d"
+      },
+      "../../common/dist/models/Room.d.ts": {
+        "version": "0e1f080c1ef51b8bee2bfda1d99ea306620a4e327b127e8537959e19c9a93594",
+        "signature": "0e1f080c1ef51b8bee2bfda1d99ea306620a4e327b127e8537959e19c9a93594"
+      },
+      "../../common/dist/models/index.d.ts": {
+        "version": "bd986bd12759d3b4a274df9f801d604d9cea8815eebf592a6be40b36f14ce386",
+        "signature": "bd986bd12759d3b4a274df9f801d604d9cea8815eebf592a6be40b36f14ce386"
+      },
+      "../../../node_modules/@types/bson/index.d.ts": {
+        "version": "64118c8a43189b10dfe9d96a9478bcf7cd5b01c9d0f7838ee1454ece8a687253",
+        "signature": "64118c8a43189b10dfe9d96a9478bcf7cd5b01c9d0f7838ee1454ece8a687253"
+      },
+      "../../../node_modules/@types/mongodb/index.d.ts": {
+        "version": "a7cb6ce8f6bccab20f5802f360908c20194aa5aec43b9c2e2ff3add53c6cd5fc",
+        "signature": "a7cb6ce8f6bccab20f5802f360908c20194aa5aec43b9c2e2ff3add53c6cd5fc"
+      },
+      "../../../node_modules/@types/mongoose/index.d.ts": {
+        "version": "648c669390df827ae140632a4c67484dc3db2949a4f72114147063e5e21c57f6",
+        "signature": "648c669390df827ae140632a4c67484dc3db2949a4f72114147063e5e21c57f6"
+      },
+      "../../mongoose/dist/user/User.schema.d.ts": {
+        "version": "3f2ca330be43ae8eaf5e60fca2e08782fd06c62661eaafecbecca80a3077cc81",
+        "signature": "3f2ca330be43ae8eaf5e60fca2e08782fd06c62661eaafecbecca80a3077cc81"
+      },
+      "../../mongoose/dist/util/ModelService.d.ts": {
+        "version": "cb8d62de2caa1ba1515d3cc4da44ad6a3466f99d8cf68f30b6ad0d600c50505a",
+        "signature": "cb8d62de2caa1ba1515d3cc4da44ad6a3466f99d8cf68f30b6ad0d600c50505a"
+      },
+      "../../mongoose/dist/user/User.service.d.ts": {
+        "version": "418d7cffe95ee4bca493b76e8d8c2b2566dd5f71c8e516cfccaf461ebe02fd0f",
+        "signature": "418d7cffe95ee4bca493b76e8d8c2b2566dd5f71c8e516cfccaf461ebe02fd0f"
+      },
+      "../../mongoose/dist/user/User.module.d.ts": {
+        "version": "482b8f0d35a3d453500a15b6c6057c1e4c40baa4329b39da9e1026d8e1de4329",
+        "signature": "482b8f0d35a3d453500a15b6c6057c1e4c40baa4329b39da9e1026d8e1de4329"
+      },
+      "../../mongoose/dist/user/index.d.ts": {
+        "version": "9b91c8a30e28b2a9bfd1be24105adf50a0eca03fe351d67db9ac56601e4b0b50",
+        "signature": "9b91c8a30e28b2a9bfd1be24105adf50a0eca03fe351d67db9ac56601e4b0b50"
+      },
+      "../../mongoose/dist/util/index.d.ts": {
+        "version": "5e720349b9b3cd34911a264325b5bdd98b7130987ae1e6d5c46c5d03334b90a1",
+        "signature": "5e720349b9b3cd34911a264325b5bdd98b7130987ae1e6d5c46c5d03334b90a1"
+      },
+      "../../mongoose/dist/MongooseModule.module.d.ts": {
+        "version": "19f167fcbf3b2f635085d8f23f80397a4dc9abd0f38ed8560532b2013f00294a",
+        "signature": "19f167fcbf3b2f635085d8f23f80397a4dc9abd0f38ed8560532b2013f00294a"
+      },
+      "../../mongoose/dist/index.d.ts": {
+        "version": "20c8c301bcc2c47d431859be49822f19bfb8711995acab91ffd1b16f56036e2b",
+        "signature": "20c8c301bcc2c47d431859be49822f19bfb8711995acab91ffd1b16f56036e2b"
+      },
       "../src/main.ts": {
-        "version": "64c87f09924e30caa11ac6eaca9b215d3b45392393e708cd7059ed6db5376fcc",
+        "version": "0d43118ca9575bcd9cabcd42978a402b91cd96cad69ebbe785321737f35caf06",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "../../../node_modules/@babel/types/lib/index.d.ts": {
@@ -1272,6 +1332,10 @@
       "../../../node_modules/@types/json5/index.d.ts": {
         "version": "96d14f21b7652903852eef49379d04dbda28c16ed36468f8c9fa08f7c14c9538",
         "signature": "96d14f21b7652903852eef49379d04dbda28c16ed36468f8c9fa08f7c14c9538"
+      },
+      "../../../node_modules/@types/q/index.d.ts": {
+        "version": "57427a9a368f8f0ee4ce03c36a762e19166756b95ab688948b29be553b24a78a",
+        "signature": "57427a9a368f8f0ee4ce03c36a762e19166756b95ab688948b29be553b24a78a"
       },
       "../../../node_modules/@types/stack-utils/index.d.ts": {
         "version": "41422586881bcd739b4e62d9b91cd29909f8572aa3e3cdf316b7c50f14708d49",
@@ -1426,6 +1490,15 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../node_modules/typescript/lib/lib.es2017.full.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/yargs-parser/index.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/yargs/index.d.ts": [
+        "../../../node_modules/@types/yargs-parser/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -2923,15 +2996,6 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@types/yargs-parser/index.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/yargs/index.d.ts": [
-        "../../../node_modules/@types/yargs-parser/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../../core/dist/shell/types/index.d.ts": [
         "../../core/dist/shell/providers/shell.provider.d.ts",
         "../../../node_modules/@types/yargs/index.d.ts",
@@ -3045,12 +3109,102 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../../common/dist/models/Furniture.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../common/dist/models/User.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../common/dist/models/Room.d.ts": [
+        "../../common/dist/models/User.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../common/dist/models/index.d.ts": [
+        "../../common/dist/models/Furniture.d.ts",
+        "../../common/dist/models/Room.d.ts",
+        "../../common/dist/models/User.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/bson/index.d.ts": [
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/mongodb/index.d.ts": [
+        "../../../node_modules/@types/bson/index.d.ts",
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
+        "../../../node_modules/@types/node/tls.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/mongoose/index.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/mongodb/index.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
+        "../../../node_modules/@types/mongoose/index.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../mongoose/dist/user/User.schema.d.ts": [
+        "../../common/dist/models/index.d.ts",
+        "../../../node_modules/@types/mongoose/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../mongoose/dist/util/ModelService.d.ts": [
+        "../../../node_modules/@types/mongoose/index.d.ts",
+        "../../../node_modules/@types/mongodb/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../mongoose/dist/user/User.service.d.ts": [
+        "../../mongoose/dist/util/ModelService.d.ts",
+        "../../mongoose/dist/user/User.schema.d.ts",
+        "../../../node_modules/@types/mongoose/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../mongoose/dist/user/User.module.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../mongoose/dist/user/index.d.ts": [
+        "../../mongoose/dist/user/User.schema.d.ts",
+        "../../mongoose/dist/user/User.service.d.ts",
+        "../../mongoose/dist/user/User.module.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../mongoose/dist/util/index.d.ts": [
+        "../../mongoose/dist/util/ModelService.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../mongoose/dist/MongooseModule.module.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../mongoose/dist/index.d.ts": [
+        "../../mongoose/dist/user/index.d.ts",
+        "../../mongoose/dist/util/index.d.ts",
+        "../../mongoose/dist/MongooseModule.module.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/main.ts": [
+        "../../../node_modules/@types/yargs/index.d.ts",
+        "../../../node_modules/@types/node/path.d.ts",
         "../../core/dist/index.d.ts",
         "../../websocket/dist/index.d.ts",
-        "../../../node_modules/@types/node/path.d.ts",
-        "../../../node_modules/@types/yargs/index.d.ts",
         "../../web-shell/dist/index.d.ts",
+        "../../mongoose/dist/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3180,6 +3334,10 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../../../node_modules/@types/json5/index.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/q/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3331,51 +3489,20 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/reflect-metadata/index.d.ts": [
+      "../../../node_modules/@types/yargs-parser/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/cache/cache.constants.d.ts": [
+      "../../../node_modules/@types/yargs/index.d.ts": [
+        "../../../node_modules/@types/yargs-parser/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@nestjs/common/cache/index.d.ts": [
-        "../../../node_modules/@nestjs/common/cache/cache.constants.d.ts",
-        "../../../node_modules/@nestjs/common/cache/cache.module.d.ts",
-        "../../../node_modules/@nestjs/common/cache/decorators/index.d.ts",
-        "../../../node_modules/@nestjs/common/cache/interceptors/index.d.ts",
-        "../../../node_modules/@nestjs/common/cache/interfaces/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@nestjs/common/index.d.ts": [
-        "../../../node_modules/reflect-metadata/index.d.ts",
-        "../../../node_modules/@nestjs/common/cache/index.d.ts",
-        "../../../node_modules/@nestjs/common/decorators/index.d.ts",
-        "../../../node_modules/@nestjs/common/enums/index.d.ts",
-        "../../../node_modules/@nestjs/common/exceptions/index.d.ts",
-        "../../../node_modules/@nestjs/common/http/index.d.ts",
-        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
-        "../../../node_modules/@nestjs/common/pipes/index.d.ts",
-        "../../../node_modules/@nestjs/common/serializer/index.d.ts",
-        "../../../node_modules/@nestjs/common/services/index.d.ts",
-        "../../../node_modules/@nestjs/common/utils/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../core/dist/shell/providers/shell.provider.d.ts": [
-        "../../../node_modules/@types/node/readline.d.ts",
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../core/dist/shell/providers/bin.provider.d.ts",
-        "../../core/dist/shell/providers/services.provider.d.ts",
-        "../../../node_modules/@types/node/ts3.2/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../core/dist/shell/providers/index.d.ts": [
-        "../../core/dist/shell/providers/bin.provider.d.ts",
-        "../../core/dist/shell/providers/services.provider.d.ts",
+      "../../core/dist/shell/types/index.d.ts": [
         "../../core/dist/shell/providers/shell.provider.d.ts",
+        "../../../node_modules/@types/yargs/index.d.ts",
+        "../../../node_modules/@types/node/readline.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -3412,14 +3539,6 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../core/dist/shell/types/index.d.ts": [
-        "../../core/dist/shell/providers/shell.provider.d.ts",
-        "../../../node_modules/@types/yargs/index.d.ts",
-        "../../../node_modules/@types/node/readline.d.ts",
-        "../../../node_modules/@types/node/ts3.2/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../../core/dist/shell/decorators/ShellService.d.ts": [
         "../../core/dist/shell/types/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
@@ -3443,9 +3562,57 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../../core/dist/shell/providers/index.d.ts": [
+        "../../core/dist/shell/providers/bin.provider.d.ts",
+        "../../core/dist/shell/providers/services.provider.d.ts",
+        "../../core/dist/shell/providers/shell.provider.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../core/dist/shell/providers/shell.provider.d.ts": [
+        "../../../node_modules/@types/node/readline.d.ts",
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../core/dist/shell/providers/bin.provider.d.ts",
+        "../../core/dist/shell/providers/services.provider.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../../core/dist/shell/providers/bin.provider.d.ts": [
         "../../../node_modules/@nestjs/common/index.d.ts",
         "../../core/dist/shell/types/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/reflect-metadata/index.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/cache/cache.constants.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/cache/index.d.ts": [
+        "../../../node_modules/@nestjs/common/cache/cache.constants.d.ts",
+        "../../../node_modules/@nestjs/common/cache/cache.module.d.ts",
+        "../../../node_modules/@nestjs/common/cache/decorators/index.d.ts",
+        "../../../node_modules/@nestjs/common/cache/interceptors/index.d.ts",
+        "../../../node_modules/@nestjs/common/cache/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/index.d.ts": [
+        "../../../node_modules/reflect-metadata/index.d.ts",
+        "../../../node_modules/@nestjs/common/cache/index.d.ts",
+        "../../../node_modules/@nestjs/common/decorators/index.d.ts",
+        "../../../node_modules/@nestjs/common/enums/index.d.ts",
+        "../../../node_modules/@nestjs/common/exceptions/index.d.ts",
+        "../../../node_modules/@nestjs/common/http/index.d.ts",
+        "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/common/pipes/index.d.ts",
+        "../../../node_modules/@nestjs/common/serializer/index.d.ts",
+        "../../../node_modules/@nestjs/common/services/index.d.ts",
+        "../../../node_modules/@nestjs/common/utils/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -4512,6 +4679,67 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../../../node_modules/@types/mongoose/index.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/mongodb/index.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
+        "../../../node_modules/@types/mongoose/index.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../mongoose/dist/user/User.service.d.ts": [
+        "../../mongoose/dist/util/ModelService.d.ts",
+        "../../mongoose/dist/user/User.schema.d.ts",
+        "../../../node_modules/@types/mongoose/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../mongoose/dist/user/index.d.ts": [
+        "../../mongoose/dist/user/User.schema.d.ts",
+        "../../mongoose/dist/user/User.service.d.ts",
+        "../../mongoose/dist/user/User.module.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../mongoose/dist/index.d.ts": [
+        "../../mongoose/dist/user/index.d.ts",
+        "../../mongoose/dist/util/index.d.ts",
+        "../../mongoose/dist/MongooseModule.module.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../mongoose/dist/util/ModelService.d.ts": [
+        "../../../node_modules/@types/mongoose/index.d.ts",
+        "../../../node_modules/@types/mongodb/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../mongoose/dist/util/index.d.ts": [
+        "../../mongoose/dist/util/ModelService.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../mongoose/dist/user/User.schema.d.ts": [
+        "../../common/dist/models/index.d.ts",
+        "../../../node_modules/@types/mongoose/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/mongodb/index.d.ts": [
+        "../../../node_modules/@types/bson/index.d.ts",
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
+        "../../../node_modules/@types/node/tls.d.ts",
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/bson/index.d.ts": [
+        "../../../node_modules/@types/node/ts3.2/index.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../../../node_modules/@types/ws/index.d.ts": [
         "../../../node_modules/@types/node/events.d.ts",
         "../../../node_modules/@types/node/http.d.ts",
@@ -4764,6 +4992,10 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../../../node_modules/@types/q/index.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../../../node_modules/@types/json5/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
@@ -4852,6 +5084,34 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../../mongoose/dist/MongooseModule.module.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../mongoose/dist/user/User.module.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../common/dist/models/index.d.ts": [
+        "../../common/dist/models/Furniture.d.ts",
+        "../../common/dist/models/Room.d.ts",
+        "../../common/dist/models/User.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../common/dist/models/Room.d.ts": [
+        "../../common/dist/models/User.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../common/dist/models/User.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../common/dist/models/Furniture.d.ts": [
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../../web-shell/dist/index.d.ts": [
         "../../web-shell/dist/WebShell.module.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
@@ -4862,15 +5122,6 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../../websocket/dist/WSModule.module.d.ts": [
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/yargs/index.d.ts": [
-        "../../../node_modules/@types/yargs-parser/index.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/yargs-parser/index.d.ts": [
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -5096,6 +5347,8 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
+      "../../../node_modules/@types/yargs-parser/index.d.ts",
+      "../../../node_modules/@types/yargs/index.d.ts",
       "../../../node_modules/reflect-metadata/index.d.ts",
       "../../../node_modules/@nestjs/common/cache/cache.constants.d.ts",
       "../../../node_modules/@nestjs/common/interfaces/abstract.interface.d.ts",
@@ -5338,8 +5591,6 @@
       "../../core/dist/shell/providers/bin.provider.d.ts",
       "../../core/dist/shell/providers/services.provider.d.ts",
       "../../core/dist/shell/providers/shell.provider.d.ts",
-      "../../../node_modules/@types/yargs-parser/index.d.ts",
-      "../../../node_modules/@types/yargs/index.d.ts",
       "../../core/dist/shell/types/index.d.ts",
       "../../core/dist/shell/decorators/ShellBin.d.ts",
       "../../core/dist/shell/decorators/ShellService.d.ts",
@@ -5357,6 +5608,21 @@
       "../../websocket/dist/index.d.ts",
       "../../web-shell/dist/WebShell.module.d.ts",
       "../../web-shell/dist/index.d.ts",
+      "../../common/dist/models/Furniture.d.ts",
+      "../../common/dist/models/User.d.ts",
+      "../../common/dist/models/Room.d.ts",
+      "../../common/dist/models/index.d.ts",
+      "../../../node_modules/@types/bson/index.d.ts",
+      "../../../node_modules/@types/mongodb/index.d.ts",
+      "../../../node_modules/@types/mongoose/index.d.ts",
+      "../../mongoose/dist/user/User.schema.d.ts",
+      "../../mongoose/dist/util/ModelService.d.ts",
+      "../../mongoose/dist/user/User.service.d.ts",
+      "../../mongoose/dist/user/User.module.d.ts",
+      "../../mongoose/dist/user/index.d.ts",
+      "../../mongoose/dist/util/index.d.ts",
+      "../../mongoose/dist/MongooseModule.module.d.ts",
+      "../../mongoose/dist/index.d.ts",
       "../src/main.ts",
       "../../../node_modules/@babel/types/lib/index.d.ts",
       "../../../node_modules/@types/babel__generator/index.d.ts",
@@ -5382,6 +5648,7 @@
       "../../../node_modules/jest-diff/build/index.d.ts",
       "../../../node_modules/@types/jest/index.d.ts",
       "../../../node_modules/@types/json5/index.d.ts",
+      "../../../node_modules/@types/q/index.d.ts",
       "../../../node_modules/@types/stack-utils/index.d.ts",
       "../../../node_modules/@types/superagent/index.d.ts",
       "../../../node_modules/@types/supertest/index.d.ts",

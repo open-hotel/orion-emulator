@@ -16,30 +16,30 @@ export interface UserConfig {
 
 export interface UserCredits {
   credits: number
-  belcredits: number
-  seasonal_credits: number
+  duckets: number
+  diamonds: number
 }
 
 export interface UserProfile {
-  uuid: string
-  username: string
   real_name: string
-  password: string
-  email: string
-  rank: number
   look: string
   gender: UserGender
   motto: string
-  last_online: Date
-  last_login: Date
-  created_at: Date
-  online: boolean
-  ip_last: string
-  ip_reg: string
   respect: number
-  mail_verified: boolean
-  vip: boolean
-  auth_ticket: string
 }
 
-export interface User extends UserProfile, UserProfile, UserConfig {}
+export interface UserAccount {
+  username: string
+  password: string
+  email: string
+  rank: number
+  last_online: Date
+  last_login: Date
+  ip_last: string
+  ip_reg: string
+  mail_verified: boolean
+  vip: boolean
+  online: boolean
+}
+
+export interface User extends UserProfile, UserProfile, UserConfig, UserAccount {}

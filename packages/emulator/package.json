@@ -20,9 +20,11 @@
   },
   "dependencies": {
     "@open-hotel/orion-core": "^0.0.0",
+    "@open-hotel/orion-mongoose": "^0.0.0",
     "@open-hotel/orion-webshell": "^0.0.0",
     "@open-hotel/orion-websocket": "^0.0.0",
-    "dotenv": "^8.1.0"
+    "dotenv": "^8.1.0",
+    "mongoose": "^5.7.4"
   },
   "devDependencies": {
     "tsc-watch": "^4.0.0",
