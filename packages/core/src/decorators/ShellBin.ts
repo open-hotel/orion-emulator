@@ -1,5 +1,5 @@
 import { ShellBin } from '../shell/types';
-import { ShellCommandProvider } from '../shell/providers/commands.provider';
+import { ShellCommandProvider } from '../shell/providers/bin.provider';
 
 export const ShellCommand = (command: ShellBin) => (target, key, descriptor) => {
     // @ts-ignore

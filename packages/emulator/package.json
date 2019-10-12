@@ -13,16 +13,21 @@
     "lib"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
-    "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/main.js\""
+    "build": "rimraf dist/ && tsc -p tsconfig.build.json",
+    "build:w": "tsc -w -p tsconfig.build.json",
+    "dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/main.js\"",
+    "start": "node dist/main.js"
   },
   "dependencies": {
     "@open-hotel/orion-core": "^0.0.0",
+    "@open-hotel/orion-mongoose": "^0.0.0",
+    "@open-hotel/orion-webshell": "^0.0.0",
     "@open-hotel/orion-websocket": "^0.0.0",
-    "dotenv": "^8.1.0"
+    "dotenv": "^8.1.0",
+    "mongoose": "^5.7.4"
   },
   "devDependencies": {
-    "typescript": "^3.6.3",
-    "tsc-watch": "^4.0.0"
+    "tsc-watch": "^4.0.0",
+    "typescript": "^3.6.3"
   }
 }

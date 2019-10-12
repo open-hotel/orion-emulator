@@ -1,13 +1,11 @@
 import { createHmac } from 'crypto';
 import uuid4 from 'uuid';
 import WebSocket from 'ws';
-import MsgPack from 'what-the-pack';
-
-const { encode, decode } = MsgPack.initialize(2 ** 22);
+import MsgPack from 'msgpack-js';
 
 export class Packet {
   static from(data: WebSocket.Data) {
-    const [uuid, event, payload, signature] = decode(data)
+    const [uuid, event, payload, signature] = MsgPack.decode(data)
     return new Packet(event, payload, uuid, signature)
   }
 
@@ -35,6 +33,6 @@ export class Packet {
 
   toBuffer() {
     const payload = [this.uuid, this.event, this.payload, this.signature];
-    return encode(payload);
+    return MsgPack.encode(payload);
   }
 }

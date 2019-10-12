@@ -1,5 +1,6 @@
-import { ShellProvider } from '../providers/shell.provider';
+import { ShellSession } from '../providers/shell.provider';
 import { Arguments } from 'yargs';
+import { Completer, AsyncCompleter } from 'readline';
 
 export type PromiseOr<T> = Promise<T> | T;
 
@@ -7,11 +8,12 @@ export interface GenericBin {
   name: string;
   alias?: string[];
   description?: string;
-  main?: (args: Arguments, shell: ShellProvider) => PromiseOr<number | void>;
+  completer?: Completer | AsyncCompleter,
+  main?: (args: Arguments, session: ShellSession) => PromiseOr<number | void>;
 }
 
 export interface ShellBin extends GenericBin {
-  usage?: string;
+  usage?: string | string[];
 }
 
 export interface ShellServiceBin extends GenericBin {

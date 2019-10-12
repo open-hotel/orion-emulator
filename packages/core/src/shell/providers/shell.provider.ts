@@ -1,36 +1,91 @@
 import * as readline from 'readline';
 import YargsParser from 'yargs-parser';
 import { Injectable, OnApplicationBootstrap } from '@nestjs/common';
-import { ShellCommandProvider } from './commands.provider';
+import { ShellCommandProvider } from './bin.provider';
 import { ShellServicesProvider } from './services.provider';
+import yargs from 'yargs-parser';
 
-@Injectable()
-export class ShellProvider implements OnApplicationBootstrap {
-  private ignoreNextCommand = false
+const users = {
+  root: 'root',
+  salomaosnff: 'salomaosnff',
+};
 
-  constructor (
-    private bin: ShellCommandProvider,
-    private service: ShellServicesProvider,
+export class ShellSession {
+  rl: readline.Interface;
+  user: string;
+  alive = false;
+
+  constructor(
+    public stdin: NodeJS.ReadStream,
+    public stdout: NodeJS.WriteStream,
+    public sh: ShellProvider
   ) {
-    process.on('uncaughtException', (error) => {
-      this.ignoreNextCommand = true
-      this.error(error)
-    })
+    this.rl = readline.createInterface({
+      input: stdin,
+      output: stdout,
+      prompt: `\x1b[36;1mOrion > \x1b[0m`,
+      terminal: true,
+      removeHistoryDuplicates: true,
+      completer: line => {
+        const args = yargs(line);
+        const bin = args._[0];
+        const bins = Object.keys(this.sh.bin.bins);
+        const hits = bins.filter(b => b.startsWith(bin));
 
-    process
-    .on('exit', () => this.run('shutdown'))
-    .on('SIGINT', () => this.run('shutdown'))
+        if (
+          bin &&
+          hits.length === 1 &&
+          hits[0] === bin &&
+          this.sh.bin.hasCompleter(bin)
+        ) {
+          return this.sh.bin.completer(bin, line);
+        }
 
-    this.rl.on('SIGINT', () => this.run('shutdown'))
+        return [hits.length ? hits : bins, line];
+      },
+    });
+
+    this.rl.on('SIGINT', () => this.exit());
   }
 
-  public rl: readline.Interface = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-    prompt: `\x1b[36;1mOrion > \x1b[0m`,
-    terminal: true,
-    removeHistoryDuplicates: true,
-  });
+  run(cmd: string | Function, catchErrors = true, args?) {
+    return this.sh.run(this, cmd, catchErrors, args);
+  }
+
+  async exit() {
+    if (this.sh.sessions.length === 1) {
+      await this.run('shutdown');
+    } else {
+      this.destroy();
+    }
+  }
+
+  async login() {
+    const user = await this.question('User: ');
+    const password = await this.question('Password: ');
+
+    if (!(user in users) || password !== users[user]) {
+      this.error('Invalid Credentials!');
+      return this.login();
+    }
+
+    this.user = user;
+    this.alive = true;
+
+    return true;
+  }
+
+  destroy() {
+    this.rl.close();
+    this.sh.removeSession(this);
+    this.alive = false;
+  }
+
+  question(question: string): Promise<string> {
+    return new Promise(resolve => {
+      this.rl.question(question, resolve);
+    });
+  }
 
   prompt(prompt?: string): Promise<string> {
     return new Promise(resolve => {
@@ -40,54 +95,110 @@ export class ShellProvider implements OnApplicationBootstrap {
     });
   }
 
-  print(data: string | Buffer, newLine = true) {
-    this.rl.write(data);
-    newLine && this.rl.write('\n');
+  print(data: string | Buffer) {
+    this.stdout.write(data);
+
+    return this;
+  }
+  println(data: string | Buffer) {
+    this.stdout.write(data);
+    this.stdout.write('\n\r');
+
+    return this;
   }
 
   error(errorOrString: string | Error) {
     const message =
       typeof errorOrString === 'string' ? errorOrString : errorOrString.message;
-    this.print(`\x1b[31mError: ${message}\x1b[0m`);
+    this.print(
+      `\x1b[31mError: ${message}\x1b[0m\n\x1b[31m${
+        errorOrString instanceof Error ? errorOrString.stack : ''
+      }\x1b[0m`,
+    );
     return 1;
   }
+}
 
-  async run(cmd: string|Function, catchErrors = true, args?): Promise<number> {
-    if (this.ignoreNextCommand) {
-      cmd = ''
-      this.ignoreNextCommand = false
+@Injectable()
+export class ShellProvider implements OnApplicationBootstrap {
+  public ignoreNextCommand = false;
+  public sessions: ShellSession[] = [];
+
+  constructor(
+    public bin: ShellCommandProvider,
+    public service: ShellServicesProvider,
+  ) {
+    process.on('uncaughtException', error => {
+      this.ignoreNextCommand = true;
+      this.sessions.forEach(session => session.error(error));
+    });
+
+    process
+      .on('exit', () => this.run(this.sessions[0], 'shutdown'))
+      .on('SIGINT', () => this.run(this.sessions[0], 'shutdown'));
+  }
+
+  createTTY(input: NodeJS.ReadStream, output: NodeJS.WriteStream) {
+    const session = new ShellSession(input, output, this);
+    this.sessions.push(session);
+    return session;
+  }
+
+  async startTTY(session: ShellSession) {
+    await session.login();
+
+    while (session.alive) {
+      const cmd = await session.prompt();
+      await session.run(cmd);
     }
-    if (!cmd) return 0;
+  }
 
-    let result = null
+  removeSession(session: ShellSession) {
+    const index = this.sessions.indexOf(session);
+    if (index > -1) this.sessions.splice(index, 1);
+    return this;
+  }
+
+  async run(
+    session: ShellSession,
+    cmd: string | Function,
+    catchErrors = true,
+    args?,
+  ): Promise<number> {
+    if (!cmd || this.ignoreNextCommand) {
+      this.ignoreNextCommand = false;
+      return 0;
+    }
+
+    let result = null;
 
     try {
       if (typeof cmd === 'string') {
         const args = YargsParser(cmd);
         const [binName] = args._;
-        const command = this.bin.get(binName)
-  
-        result = command.main(args, this)
+        const command = this.bin.get(binName);
+
+        result = command.main(args, session);
       } else if (typeof cmd === 'function') {
-        result = cmd(args, this)
+        result = cmd(args, session);
       }
 
-      const exitCode = await result
+      const exitCode = await result;
 
       return typeof exitCode === 'number' ? result : 0;
     } catch (err) {
-      if (catchErrors) return this.error(err)
-      throw err
+      if (catchErrors) {
+        this.sessions.forEach(session => session.error(err));
+        return;
+      }
+      throw err;
     }
   }
 
   async start() {
-    await this.service.boot(this)
-
-    while (true) {
-      const cmd = await this.prompt();
-      await this.run(cmd);
-    }
+    const session = await this.createTTY(process.stdin, process.stdout);
+    await this.service.boot(session);
+    await this.startTTY(session);
   }
 
   async onApplicationBootstrap() {
