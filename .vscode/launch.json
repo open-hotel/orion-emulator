@@ -13,6 +13,13 @@
             "address": "127.0.0.1:9229",
             "localRoot": "${workspaceFolder}",
             "protocol": "inspector"
+        },
+        {
+            "name": "Local",
+            "type": "node",
+            "request": "attach",
+            "port": 9229,
+            "protocol": "inspector"
         }
     ]
 }
