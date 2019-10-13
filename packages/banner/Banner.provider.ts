@@ -2,7 +2,7 @@ import { Injectable } from "@nestjs/common";
 import { ShellService, ShellSession, ShellCommand } from "../core";
 import png from 'console-png'
 import path from 'path'
-import { readFileSync, writeFile } from 'fs'
+import { readFileSync } from 'fs'
 
 @Injectable()
 export class BannerProvider {
@@ -21,6 +21,7 @@ export class BannerProvider {
   })
   async start (args, session:ShellSession) {
     const banner = await this.getImage()
+    session.println('')
     session.println(banner)
     session.println('Orion Emulator v0.0.0')
   }

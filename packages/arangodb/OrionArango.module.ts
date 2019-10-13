@@ -32,8 +32,6 @@ export class OrionArangoModule {
       ...options as Object
     });
 
-    console.log(url, database, password)
-
     DB.useDatabase(database);
     DB.useBasicAuth(user, password);
 

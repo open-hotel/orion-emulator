@@ -1,22 +1,35 @@
 import { Matrix } from "../core"
 
 export class RoomState {
-  public map: Matrix<number>
+  public map: number[][]
   public mobis = {}
-  public users: {
-    [id:string]: {
-      id: string,
-      position: [number, number]
-    }
-  } = {}
+  public users: Map<any, UserState>
 
   public door: [number, number] = [0, 0]
 
+  constructor (
+    {
+      map = [],
+      mobis = {},
+      users = new Map()
+    }
+  ) {
+    this.map = map
+    this.mobis = mobis
+    this.users = users
+  }
+
   toJSON () {
     return {
-      map: this.map.$matrix,
-      mobis: this.mobis,
-      users: this.users
+      map: this.map,
+      mobis: Object.values(this.mobis),
+      users: Array.from(this.users.values())
     }
   }
+}
+
+export interface UserState {
+  position: [number, number]
+  socketId: string,
+  pathBeingFollowed: [number, number][]
 }

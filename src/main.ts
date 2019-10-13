@@ -8,9 +8,11 @@ import { Emulator } from '../packages/core';
 // import { WebShellModule } from '@orion/webshell';
 import { BannerModule } from '../packages/banner';
 import { OrionArangoModule } from '../packages/arangodb';
+import { RoomModule } from '../packages/rooms/Room.module';
 
 Emulator
   // .register(WebShellModule)
   .register(OrionArangoModule.configure())
   .register(BannerModule)
+  .register(RoomModule)
   .boot();
