@@ -1,0 +1,34 @@
+{
+  "name": "@open-hotel/orion-rooms",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Salomão Neto <salomaosnff@yahoo.com>",
+  "homepage": "https://github.com/open-hotel/sirius-emulator#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/open-hotel/sirius-emulator.git"
+  },
+  "scripts": {
+    "build": "rimraf dist/ && tsc -p tsconfig.build.json",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/open-hotel/sirius-emulator/issues"
+  },
+  "dependencies": {
+    "@open-hotel/orion-core": "^0.0.0",
+    "@open-hotel/orion-websocket": "^0.0.0"
+  }
+}

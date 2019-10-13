@@ -10,10 +10,14 @@ require('dotenv').config({ path: envFile });
 const orion_core_1 = require("@open-hotel/orion-core");
 const orion_websocket_1 = require("@open-hotel/orion-websocket");
 const orion_webshell_1 = require("@open-hotel/orion-webshell");
-const orion_mongoose_1 = require("@open-hotel/orion-mongoose");
-orion_core_1.Emulator
-    .register(orion_websocket_1.WSModule)
+const orion_banner_1 = require("@open-hotel/orion-banner");
+const orion_arangodb_1 = require("@open-hotel/orion-arangodb");
+const gateway1_gateway_1 = require("./gateway1.gateway");
+const gateway2_gateway_1 = require("./gateway2.gateway");
+orion_core_1.Emulator.mainModule.providers.push(gateway1_gateway_1.Gateway1, gateway2_gateway_1.Gateway2);
+orion_core_1.Emulator.register(orion_websocket_1.WSModule)
     .register(orion_webshell_1.WebShellModule)
-    .register(orion_mongoose_1.OrionMongooseModule)
+    .register(orion_arangodb_1.OrionArangoModule.configure())
+    .register(orion_banner_1.BannerModule)
     .boot();
 //# sourceMappingURL=main.js.map

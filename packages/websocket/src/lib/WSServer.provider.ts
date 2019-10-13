@@ -12,9 +12,11 @@ import { Packet } from './Packet';
 import * as url from 'url';
 import { IncomingMessage } from 'http';
 import { Socket } from 'net';
+import { EventEmitter } from 'events'
+import uuid from 'uuid'
 
 @Injectable()
-export class WSServer {
+export class WSServer extends EventEmitter {
   server: Server;
   users: WSUsersList;
   channels: WSChannelList;
@@ -65,7 +67,9 @@ export class WSServer {
       this.server.on('connection', socket => {
         socket.on('message', data => {
           const packet = Packet.from(data);
-          socket.send(packet.sign('123').toBuffer());
+          if (packet.validate('123')) {
+            super.emit(packet.event, ...packet.payload)
+          }
         });
       });
 
