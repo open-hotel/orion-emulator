@@ -4,6 +4,7 @@ import { ShellModule } from "../shell"
 import { EventsProvider } from "./Events.provider"
 import { getApp, setApp } from "./nest.app"
 import helmet from 'helmet'
+import cors from 'cors'
 import RateLimiter from 'express-rate-limit'
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
 
@@ -28,6 +29,8 @@ export class Emulator {
     
     app = await NestFactory.create(this.mainModule)
 
+    app.use(cors())
+
     app.useGlobalPipes(new ValidationPipe({
       validationError: {
         target: false
@@ -39,7 +42,7 @@ export class Emulator {
 
     app.use(RateLimiter({
       windowMs: 60 * 1000, // 1 minute
-      max: 30, // limit each IP to 30 requests per windowMs
+      max: 70, // limit each IP to 30 requests per windowMs
     }))
 
     app.use(helmet())

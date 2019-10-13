@@ -30,19 +30,25 @@ export class DatabaseModule {
     }
   }) : DynamicModule {
     const databases = Object.keys(database).map<Provider>(name => {
-      const { url, database:db, options = {}, password, user } = database[name]
-      console.log(url, db, user, password)
-      const DB = new Database({
-        url,
-        ...options as Object
-      });
-
-      DB.useDatabase(db);
-      DB.useBasicAuth(user, password);
+      const { url, database: db, options = {}, password, user } = database[name]
       
       return {
         provide: `ARANGO_DB#${name}`,
-        useValue: DB,
+        useFactory: async () => {
+          const DB = new Database({
+            url,
+            ...options as Object
+          });
+
+          DB.useBasicAuth(user, password);
+          if (!(await DB.listDatabases()).includes(db)) {
+            await DB.createDatabase(db)
+          }
+
+          DB.useDatabase(db)
+          
+          return DB
+        }
       }
     })
 

@@ -33,6 +33,7 @@
     "class-validator": "^0.10.1",
     "cli-table3": "^0.5.1",
     "console-png": "^1.2.1",
+    "cors": "^2.8.5",
     "dotenv": "^8.1.0",
     "express-rate-limit": "^5.0.0",
     "helmet": "^3.21.1",

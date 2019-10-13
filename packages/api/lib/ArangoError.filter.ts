@@ -8,6 +8,7 @@ export class ArangoErrorFilter extends BaseExceptionFilter {
   catch(exception: any, host: ArgumentsHost) {
     if (exception.isArangoError) {
       if (exception.errorNum === 1210) {
+        console.dir(exception)
         const field = exception.message.match(/over\s'(.+)'/)[1]
         exception = new BadRequestException(`duplicated:${field}`)
       }
