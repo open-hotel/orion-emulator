@@ -23,6 +23,7 @@
   "dependencies": {
     "@nestjs/common": "^6.7.2",
     "@nestjs/core": "^6.7.2",
+    "@nestjs/jwt": "^6.1.1",
     "@nestjs/platform-express": "^6.7.2",
     "@nestjs/platform-socket.io": "^6.8.3",
     "@nestjs/serve-static": "^1.0.1",
@@ -40,6 +41,7 @@
     "lodash": "^4.17.15",
     "ms": "^2.1.2",
     "msgpack-js": "^0.3.0",
+    "oauth2-server": "^3.0.1",
     "ora": "^3.4.0",
     "reflect-metadata": "^0.1.13",
     "request-ip": "^2.1.3",
@@ -62,6 +64,7 @@
     "@types/jest": "24.0.11",
     "@types/lodash": "^4.14.144",
     "@types/node": "11.13.4",
+    "@types/oauth2-server": "^3.0.12",
     "@types/socket.io": "^2.1.4",
     "@types/supertest": "2.0.7",
     "@types/ws": "^6.0.3",
