@@ -9,7 +9,12 @@
     "target": "es2017",
     "sourceMap": true,
     "outDir": "./dist",
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "@open-hotel/*": [
+        "packages/"
+      ]
+    }
   },
   "exclude": ["node_modules", "dist"]
 }
