@@ -1,7 +1,6 @@
 import { Injectable } from "@nestjs/common";
-import { WSServer, Packet } from '@open-hotel/orion-websocket'
 import { RoomState } from "./RoomState";
-import { Matrix } from "@open-hotel/orion-core";
+import { Matrix } from "../core";
 
 @Injectable()
 export class RoomProvider {
@@ -10,22 +9,22 @@ export class RoomProvider {
   } = {}
 
   constructor (
-    private readonly ws: WSServer
+    // private readonly ws: WSServer
   ) {
-    ws.on('room:join', async (roomId, socket) => {
-      let roomState = this.rooms[roomId]
+    // ws.on('room:join', async (roomId, socket) => {
+    //   let roomState = this.rooms[roomId]
 
-      if (!roomState) {
-        roomState = this.rooms[roomId] = await this.getInitialRoomState()
-      }
+    //   if (!roomState) {
+    //     roomState = this.rooms[roomId] = await this.getInitialRoomState()
+    //   }
 
-      // roomState.users[userId] = {
-      //   id: userId,
-      //   position: roomState.door
-      // }
+    //   // roomState.users[userId] = {
+    //   //   id: userId,
+    //   //   position: roomState.door
+    //   // }
 
-      // this.ws.users[userId].emit('room:state', roomState)
-    })
+    //   // this.ws.users[userId].emit('room:state', roomState)
+    // })
   }
 
   getInitialRoomState () {

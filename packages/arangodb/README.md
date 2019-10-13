@@ -1,11 +1,11 @@
-# `@open-hotel/orion-arangodb`
+# `@orion/arangodb`
 
 > TODO: description
 
 ## Usage
 
 ```
-const orionArangodb = require('@open-hotel/orion-arangodb');
+const orionArangodb = require('@orion/arangodb');
 
 // TODO: DEMONSTRATE API
 ```

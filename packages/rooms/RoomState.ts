@@ -1,4 +1,4 @@
-import { Matrix } from "@open-hotel/orion-core"
+import { Matrix } from "../core"
 
 export class RoomState {
   public map: Matrix<number>

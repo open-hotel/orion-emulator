@@ -1,5 +1,5 @@
 {
-  "name": "@open-hotel/orion-webshell",
+  "name": "@orion/webshell",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Salomão Neto <salomaosnff@yahoo.com>",
@@ -19,8 +19,8 @@
   },
   "dependencies": {
     "@nestjs/serve-static": "^1.0.1",
-    "@open-hotel/orion-core": "^0.0.0",
-    "@open-hotel/orion-websocket": "^0.0.0",
+    "@orion/core": "^0.0.0",
+    "@orion/websocket": "^0.0.0",
     "ws": "^7.1.2",
     "xterm": "^4.0.2",
     "xterm-addon-attach": "^0.2.1",

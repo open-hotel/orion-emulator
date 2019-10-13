@@ -1,5 +1,4 @@
 import * as readline from 'readline';
-import YargsParser from 'yargs-parser';
 import { Injectable, OnApplicationBootstrap } from '@nestjs/common';
 import { ShellCommandProvider } from './bin.provider';
 import { ShellServicesProvider } from './services.provider';
@@ -174,7 +173,7 @@ export class ShellProvider implements OnApplicationBootstrap {
 
     try {
       if (typeof cmd === 'string') {
-        const args = YargsParser(cmd);
+        const args = yargs(cmd);
         const [binName] = args._;
         const command = this.bin.get(binName);
 

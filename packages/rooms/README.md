@@ -1,11 +1,11 @@
-# `@open-hotel/orion-rooms`
+# `@orion/rooms`
 
 > TODO: description
 
 ## Usage
 
 ```
-const orionRooms = require('@open-hotel/orion-rooms');
+const orionRooms = require('@orion/rooms');
 
 // TODO: DEMONSTRATE API
 ```

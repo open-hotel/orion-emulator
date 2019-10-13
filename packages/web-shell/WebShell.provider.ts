@@ -1,4 +1,4 @@
-import { ShellProvider } from '@open-hotel/orion-core';
+import { ShellProvider } from '../core';
 import { Injectable, OnApplicationBootstrap } from '@nestjs/common';
 import WebSocket = require('ws');
 import { Duplex } from 'stream';

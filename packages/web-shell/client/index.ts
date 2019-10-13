@@ -11,7 +11,6 @@ const term = new Terminal()
 const fit = new FitAddon()
 const attach = new AttachAddon(ws, {
   bidirectional: true,
-  inputUtf8: true
 })
 
 term.loadAddon(fit)

@@ -1,10 +1,10 @@
 import { Module, Global } from '@nestjs/common'
-// import { ShellModule } from '@open-hotel/orion-core'
-// import { WSModule } from '@open-hotel/orion-websocket'
+// import { ShellModule } from '@orion/core'
+// import { WSModule } from '@orion/websocket'
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { resolve } from 'path'
 import { WebShellProvider } from './WebShell.provider';
-import { ShellModule } from '@open-hotel/orion-core';
+import { ShellModule } from '../core';
 
 @Global()
 @Module({

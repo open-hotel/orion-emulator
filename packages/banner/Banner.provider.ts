@@ -1,12 +1,14 @@
 import { Injectable } from "@nestjs/common";
-import { ShellService, ShellSession, ShellCommand } from "@open-hotel/orion-core";
+import { ShellService, ShellSession, ShellCommand } from "../core";
 import png from 'console-png'
-import { readFileSync } from 'fs'
+import path from 'path'
+import { readFileSync, writeFile } from 'fs'
 
 @Injectable()
 export class BannerProvider {
   @ShellService({
     name: 'banner',
+    title: 'Zingulei',
     boot: true
   })
   service (args, session:ShellSession) {
@@ -25,7 +27,7 @@ export class BannerProvider {
 
   getImage (): Promise<string> {
     return new Promise((resolve, reject) => {
-      png(readFileSync(__dirname + '/../banner.png'), (e, str) => {
+      png(readFileSync(path.resolve(__dirname, '../../../packages/banner/banner2.png')), (e, str) => {
         if (e) return reject(e)
         resolve(str)
       })
