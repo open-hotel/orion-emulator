@@ -102,7 +102,7 @@ export class ShellSession {
   }
   println(data: string | Buffer) {
     this.stdout.write(data);
-    this.stdout.write('\n\r');
+    this.stdout.write('\n\n');
 
     return this;
   }

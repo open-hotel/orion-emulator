@@ -43,4 +43,8 @@ export class WSUser {
       this.socket.send(packet.sign(this.secret).toBuffer(), (err) => err ? reject(err) : resolve())
     })
   }
+
+  emit (event:string, ...payload) {
+    return this.send(new Packet(event, payload).sign(this.secret))
+  }
 }
