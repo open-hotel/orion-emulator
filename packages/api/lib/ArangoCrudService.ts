@@ -8,7 +8,7 @@ export class ArangoCrudService<T extends object = any> {
     this.collection = db.collection(name);
   }
 
-  save(data: T, options: InsertOptions = { returnNew: true }): Promise<T> {
+  save(data: T): Promise<T> {
     return this.db
       .query(`INSERT @data INTO ${this.collection.name} RETURN NEW`, { data })
       .then(cursor => cursor.next());

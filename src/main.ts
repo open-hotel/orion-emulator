@@ -1,18 +1,20 @@
-import Yargs from 'yargs-parser';
+import Yargs from 'yargs';
 import { resolve } from 'path';
 
-const envFile = Yargs(process.argv).config || resolve(__dirname, '../config.env');
+const envFile = Yargs.parse().config || resolve(__dirname, '../../config.env');
 require('dotenv').config({ path: envFile });
 
+
+console.log(envFile)
 import { Emulator } from '../packages/core';
 // import { WebShellModule } from '@orion/webshell';
 import { BannerModule } from '../packages/banner';
-import { OrionArangoModule } from '../packages/arangodb';
+import { OpenApiModule } from '../packages/api';
 import { RoomModule } from '../packages/rooms/Room.module';
 
 Emulator
   // .register(WebShellModule)
-  .register(OrionArangoModule.configure())
+  .register(OpenApiModule.configure())
   .register(BannerModule)
   .register(RoomModule)
   .boot();
