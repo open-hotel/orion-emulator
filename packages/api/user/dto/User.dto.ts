@@ -1,5 +1,6 @@
 import { ApiModelProperty } from "@nestjs/swagger";
 import { DeepPartial } from "../../../core/lib/DeepPartial";
+import { Client } from "oauth2-server";
 
 export type UserGender = 'M' | 'F'
 
@@ -56,6 +57,15 @@ export class UserAccountDTO {
   
   @ApiModelProperty()
   online: boolean = false;
+
+  @ApiModelProperty()
+  oauth: {
+    access_token: string;
+    refresh_token: string;
+    access_token_expire_timestamp: number;
+    refresh_token_expire_timestamp: number;
+    client: Client & { secret: string }
+  }
 }
 
 export class UserConfigDTO {
