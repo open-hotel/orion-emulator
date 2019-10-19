@@ -2,21 +2,25 @@ import { Module, DynamicModule } from '@nestjs/common';
 import { Database } from 'arangojs';
 import { Config } from 'arangojs/lib/cjs/connection';
 import { UserModule } from './user/User.module';
-import { ModuleOptions } from './lib/ApiResourceMixin';
-import { DatabaseModule } from './database/database.module';
+import { DatabaseModule, DatabaseConnections } from './database/database.module';
 import { ArangoErrorFilter } from './lib/ArangoError.filter';
 import { APP_FILTER } from '@nestjs/core';
+import { OauthModule } from './oauth/oauth.module';
 
-const modules = [
-  UserModule
+const resources = [
+  UserModule,
+  OauthModule
 ]
 
 @Module({})
 export class OpenApiModule {
-  static configure(oprions?:ModuleOptions): DynamicModule {
+  static configure(databases?:DatabaseConnections): DynamicModule {
     return {
       module: OpenApiModule,
-      imports: [].concat(DatabaseModule, modules).map(mod => mod.configure(oprions)),
+      imports: [
+        DatabaseModule.configure(databases),
+        ...resources
+      ],
       providers: [
         {
           provide: APP_FILTER,

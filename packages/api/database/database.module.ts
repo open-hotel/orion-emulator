@@ -10,27 +10,21 @@ interface DatabaseConnection {
   password: string
 }
 
-type DatabaseConnections = Record<string,DatabaseConnection>
-
-interface DatabaseModuleOptions {
-  database: DatabaseConnections
-}
+export type DatabaseConnections = Record<string,DatabaseConnection>
 
 @Global()
 @Module({})
 export class DatabaseModule {
-  static configure ({ database }: DatabaseModuleOptions = {
-    database: {
-      default: {
-        database: process.env.ARANGODB_DATABASE,
-        url: process.env.ARANGODB_URL,
-        user: process.env.ARANGODB_USER,
-        password: process.env.ARANGODB_PASSWORD,
-      }
+  static configure (connections: DatabaseConnections = {
+    default: {
+      database: process.env.ARANGODB_DATABASE,
+      url: process.env.ARANGODB_URL,
+      user: process.env.ARANGODB_USER,
+      password: process.env.ARANGODB_PASSWORD,
     }
   }) : DynamicModule {
-    const databases = Object.keys(database).map<Provider>(name => {
-      const { url, database: db, options = {}, password, user } = database[name]
+    const databases = Object.keys(connections).map<Provider>(name => {
+      const { url, database: db, options = {}, password, user } = connections[name]
       
       return {
         provide: `ARANGO_DB#${name}`,

@@ -69,9 +69,19 @@ export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
     )
     {
         const roomState = this.rooms.get(socket.currentRoom)
-        const pathFinder = new PathFinder(roomState.map)
-
         const user = roomState.users.get(socket.id)
+        const grid = roomState.map 
+        const pathFinder = new PathFinder(grid, (cell, curr) => {
+            const a = grid[cell.y][cell.x]
+            const b = grid[curr.y][curr.x]
+      
+            // if (!this.canWalkTo(cell.x, cell.y)) {
+            //   return false
+            // }
+      
+            return a === b || Math.abs(a - b) === 1
+          })
+
         const [x, y] = user.position
         const [toX, toY] = position
 
@@ -98,15 +108,11 @@ export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
         }
         const room = `rooms/${socket.currentRoom}`
         const roomState = this.rooms.get(socket.currentRoom)
-        console.log('disconnect', socket.id, socket.currentRoom)
         roomState.users.delete(socket.id)
         this.server.to(room).emit('user:leave', { socketId: socket.id })
     }
 
     afterInit (server: Server) {
         this.server = server
-        // setInterval(() => {
-        //     server.emit('speak', 'Hello World')
-        // }, 2000)
     }
 }

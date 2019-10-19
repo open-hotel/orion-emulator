@@ -1,10 +1,12 @@
 import { Database, DocumentCollection, aql } from 'arangojs';
 import { InsertOptions } from 'arangojs/lib/cjs/util/types';
+import { QueryOptions } from 'arangojs/lib/cjs/database';
+import { AqlLiteral } from 'arangojs/lib/cjs/aql-query';
 
 export class ArangoCrudService<T extends object = any> {
   public readonly collection: DocumentCollection<T>;
 
-  constructor(public readonly db: Database, public readonly name: string) {
+  constructor(protected readonly db: Database, public readonly name: string) {
     this.collection = db.collection(name);
   }
 

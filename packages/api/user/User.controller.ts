@@ -12,13 +12,6 @@ export class UserController {
     private readonly userService: UserService
   ) {}
 
-  @Post()
-  async getTicket (
-    @Body() dto: UserRegisterDTO
-  ) {
-
-  }
-
   @ApiResponse({
     status: 201,
     type: UserDTO

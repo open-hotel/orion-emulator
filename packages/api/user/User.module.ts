@@ -1,15 +1,15 @@
-import { ApiResourceMixin } from "../lib/ApiResourceMixin";
 import { UserController } from "./User.controller";
 import { UserService } from "./User.service";
-import { OnModuleInit } from "@nestjs/common";
+import { OnModuleInit, Module } from "@nestjs/common";
 import { Database } from "arangojs";
 import { InjectArango } from "../lib/injectArango.decorator";
-import { IndexHandle } from "arangojs/lib/cjs/collection";
 
-export class UserModule extends ApiResourceMixin({
+@Module({
   controllers: [UserController],
-  providers: [UserService]
-}) implements OnModuleInit {
+  providers: [UserService],
+  exports: [UserService],
+})
+export class UserModule implements OnModuleInit {
   @InjectArango()
   private readonly db: Database
 

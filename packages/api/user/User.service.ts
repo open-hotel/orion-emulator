@@ -13,4 +13,16 @@ export class UserService extends ArangoCrudService<UserDTO> {
   ) {
     super(db, 'users');
   }
+
+  async findByUsernameAndPassword (username:string, password: string) {
+    const user: UserDTO = await this.db.query(`
+      FOR user in ${this.collection.name}
+        FILTER user.account.username == @username
+        LIMIT 1
+        RETURN user
+    `, { username }).then(c => c.next())
+
+    if (user && user.account.password === password) return user
+    return null
+  }
 }
