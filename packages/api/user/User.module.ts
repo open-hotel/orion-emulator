@@ -3,6 +3,8 @@ import { UserService } from "./User.service";
 import { OnModuleInit, Module } from "@nestjs/common";
 import { Database } from "arangojs";
 import { InjectArango } from "../lib/injectArango.decorator";
+import { CreateIfNotExists } from "../lib/ArangoDDL";
+import { UserDTO } from "./dto/User.dto";
 
 @Module({
   controllers: [UserController],
@@ -14,12 +16,8 @@ export class UserModule implements OnModuleInit {
   private readonly db: Database
 
   async onModuleInit () {
-    const users = this.db.collection('users')
-    if (!await users.exists()) {
-      await users.create()
-    }
-    if (!(await users.indexes()).includes('index_username')) {
-      await users.createPersistentIndex('account.username', { unique: true })
-    }
+    const users = this.db.collection<UserDTO>('users')
+    await CreateIfNotExists.collection(users)
+    await CreateIfNotExists.uniqueIndex(users, 'index_username', 'account.username')
   }
 }
