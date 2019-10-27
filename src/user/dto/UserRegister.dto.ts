@@ -1,6 +1,6 @@
 import { IsString, IsNotEmpty, IsEmail, IsISO8601, IsEnum, IsIn } from 'class-validator'
 import { ApiModelProperty } from '@nestjs/swagger'
-import { UserGender } from '../../../common'
+import { UserGender } from '../../common'
 
 export class UserRegisterDTO {
   @ApiModelProperty()

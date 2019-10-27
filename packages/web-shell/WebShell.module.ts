@@ -4,7 +4,7 @@ import { Module, Global } from '@nestjs/common'
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { resolve } from 'path'
 import { WebShellProvider } from './WebShell.provider';
-import { ShellModule } from '../core';
+import { ShellModule } from '../../src/core';
 
 @Global()
 @Module({

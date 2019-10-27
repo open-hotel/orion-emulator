@@ -1,5 +1,5 @@
 import { IsString, IsNotEmpty, IsNumber, IsBoolean } from "class-validator"
-import { DeepPartial } from "../../../core/lib/DeepPartial"
+import { DeepPartial } from "../../core/lib"
 
 export class FurnitureDTO {
   @IsNotEmpty()

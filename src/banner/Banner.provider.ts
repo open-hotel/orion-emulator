@@ -28,7 +28,7 @@ export class BannerProvider {
 
   getImage (): Promise<string> {
     return new Promise((resolve, reject) => {
-      png(readFileSync(path.resolve(__dirname, '../../../packages/banner/banner2.png')), (e, str) => {
+      png(readFileSync(path.resolve(__dirname, '../../../src/banner/banner2.png')), (e, str) => {
         if (e) return reject(e)
         resolve(str)
       })

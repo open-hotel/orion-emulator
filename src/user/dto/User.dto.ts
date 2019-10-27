@@ -1,5 +1,5 @@
 import { ApiModelProperty } from "@nestjs/swagger";
-import { DeepPartial } from "../../../core/lib/DeepPartial";
+import { DeepPartial } from "../../core/lib";
 import { Client } from "oauth2-server";
 
 export type UserGender = 'M' | 'F'

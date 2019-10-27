@@ -1,15 +1,15 @@
 import { Module, DynamicModule } from '@nestjs/common';
-import { Database } from 'arangojs';
-import { Config } from 'arangojs/lib/cjs/connection';
-import { UserModule } from './user/User.module';
-import { DatabaseModule, DatabaseConnections } from './database/database.module';
-import { ArangoErrorFilter } from './lib/ArangoError.filter';
+import { UserModule } from '../user';
+import { DatabaseModule, DatabaseConnections } from '../database';
+import { ArangoErrorFilter } from '../lib/ArangoError.filter';
 import { APP_FILTER } from '@nestjs/core';
-import { OauthModule } from './oauth/oauth.module';
+import { OauthModule } from '../oauth';
+import { RoomModule } from '../rooms';
 
 const resources = [
+  OauthModule,
   UserModule,
-  OauthModule
+  RoomModule,
 ]
 
 @Module({})

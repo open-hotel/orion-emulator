@@ -3,7 +3,7 @@ import { UserService } from "./User.service";
 import { UserRegisterDTO } from "./dto/UserRegister.dto";
 import { ApiUseTags, ApiResponse } from "@nestjs/swagger";
 import { UserDTO } from "./dto/User.dto";
-import { UserIp } from "../../core/lib/UserIp.decorator";
+import { UserIp } from "../core/lib";
 
 @ApiUseTags('Users')
 @Controller('users')
