@@ -38,7 +38,6 @@ export class Emulator {
       whitelist: true
     }));
     
-    app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)))
 
     app.use(RateLimiter({
       windowMs: 60 * 1000, // 1 minute

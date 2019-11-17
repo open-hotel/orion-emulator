@@ -1,18 +1,23 @@
 import { RoomService } from "./RoomService";
 import { Controller, Post, Body, Get } from "@nestjs/common";
-import { ApiUseTags, ApiCreatedResponse } from "@nestjs/swagger";
+import { ApiUseTags, ApiCreatedResponse, ApiOkResponse } from "@nestjs/swagger";
 import { RoomRegisterDTO } from "./dto/RoomRegister.dto";
 import { RoomDTO } from "./dto/Room.dto";
+import { Database } from "arangojs";
+import { InjectArango } from "../lib/injectArango.decorator";
 
 @ApiUseTags('Rooms')
 @Controller('rooms')
 export class RoomController {
   constructor (
-    public roomService: RoomService
+    public roomService: RoomService,
+    @InjectArango()
+    public db: Database
   ) {}
 
   @ApiCreatedResponse({
-    type: RoomDTO
+    type: RoomDTO,
+    description: 'Create a new room'
   })
   @Post()
   register (@Body() dto: RoomRegisterDTO) {
@@ -24,8 +29,13 @@ export class RoomController {
     return this.roomService.save(data)
   }
 
+  @ApiOkResponse({
+    type: RoomDTO,
+    isArray: true,
+    description: 'List all popular rooms'
+  })
   @Get()
-  list () {
-    return this.roomService.popularRooms()
+  getPopular () {
+    return this.roomService.getPopular()
   }
 }

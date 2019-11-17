@@ -1,15 +1,17 @@
-import { Post, Body, Controller } from "@nestjs/common";
+import { Post, Body, Controller, Get, Param, UseInterceptors, ClassSerializerInterceptor } from "@nestjs/common";
 import { UserService } from "./User.service";
 import { UserRegisterDTO } from "./dto/UserRegister.dto";
 import { ApiUseTags, ApiResponse } from "@nestjs/swagger";
 import { UserDTO } from "./dto/User.dto";
 import { UserIp } from "../core/lib";
+import { RoomService } from "../rooms/RoomService";
 
 @ApiUseTags('Users')
 @Controller('users')
 export class UserController {
   constructor (
-    private readonly userService: UserService
+    private readonly userService: UserService,
+    private readonly roomService: RoomService,
   ) {}
 
   @ApiResponse({
@@ -34,9 +36,19 @@ export class UserController {
       }
     })
 
-    console.log(user)
     return this.userService.save(
       user
     )
+  }
+
+  @UseInterceptors(ClassSerializerInterceptor)
+  @Get()
+  getUsers () {
+    return this.userService.findAll()
+  }
+
+  @Get(':user/rooms')
+  getRooms (@Param('user') userId:string) {
+    return this.roomService.getByOwner(userId)
   }
 }

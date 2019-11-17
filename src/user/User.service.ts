@@ -25,4 +25,9 @@ export class UserService extends ArangoCrudService<UserDTO> {
     if (user && user.account.password === password) return user
     return null
   }
+
+  async findAll () {
+    const cursor = await this.collection.all()
+    return cursor.map(item => new UserDTO(item))
+  }
 }

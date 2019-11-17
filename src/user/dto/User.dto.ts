@@ -1,6 +1,8 @@
 import { ApiModelProperty } from "@nestjs/swagger";
 import { DeepPartial } from "../../core/lib";
 import { Client } from "oauth2-server";
+import { Exclude } from 'class-transformer'
+import { merge } from 'lodash'
 
 export type UserGender = 'M' | 'F'
 
@@ -28,6 +30,7 @@ export class UserAccountDTO {
   @ApiModelProperty()
   username: string;
   
+  @Exclude()
   @ApiModelProperty({ format: 'password' })
   password: string;
   
@@ -134,6 +137,6 @@ export class UserDTO {
   auth_ticket: string;
 
   constructor (data:DeepPartial<UserDTO>) {
-    Object.assign(this, data)
+    merge(this, data)
   }
 }

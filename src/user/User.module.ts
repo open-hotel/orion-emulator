@@ -5,8 +5,10 @@ import { Database } from "arangojs";
 import { InjectArango } from "../lib/injectArango.decorator";
 import { CreateIfNotExists } from "../lib/ArangoDDL";
 import { UserDTO } from "./dto/User.dto";
+import { RoomModule } from "../rooms";
 
 @Module({
+  imports: [RoomModule],
   controllers: [UserController],
   providers: [UserService],
   exports: [UserService],

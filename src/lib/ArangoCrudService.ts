@@ -2,6 +2,7 @@ import { Database, DocumentCollection, aql } from 'arangojs';
 import { InsertOptions } from 'arangojs/lib/cjs/util/types';
 import { QueryOptions } from 'arangojs/lib/cjs/database';
 import { AqlLiteral } from 'arangojs/lib/cjs/aql-query';
+import Aqb from 'aqb'
 
 interface Keyable {
   _key: number
@@ -13,6 +14,7 @@ export class ArangoCrudService<T extends object = Keyable> {
   constructor(protected readonly db: Database, public readonly name: string) {
     this.collection = db.collection(name);
   }
+
 
   filterBy(field: string, value: any): Promise<T> {
     return this.db

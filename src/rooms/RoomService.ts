@@ -1,24 +1,38 @@
-import { ArangoCrudService } from "../lib/ArangoCrudService";
-import { RoomDTO } from "./dto/Room.dto";
-import { InjectArango } from "../lib/injectArango.decorator";
-import { Database } from "arangojs";
-import { Injectable } from "@nestjs/common";
+import { ArangoCrudService } from '../lib/ArangoCrudService';
+import { RoomDTO } from './dto/Room.dto';
+import { InjectArango } from '../lib/injectArango.decorator';
+import { Database, aql } from 'arangojs';
+import { Injectable } from '@nestjs/common';
+import { UserDTO } from '../user/dto/User.dto';
 
 @Injectable()
 export class RoomService extends ArangoCrudService<RoomDTO> {
-  constructor (
+  constructor(
     @InjectArango()
-    db: Database
+    db: Database,
   ) {
-    super(db, 'rooms')
+    super(db, 'rooms');
   }
 
-  popularRooms () {
-    return this.db.query(`
+  async getPopular() {
+    const cursor = await this.db.query(`
       FOR room in rooms
-        SORT room.users_now
-        FILTER room.state == 'open'
+        FILTER room.users_now > 0 AND room.state == 'open'
+        SORT room.users_now DESC
         RETURN room
-    `).then(c => c.all())
+    `);
+    return cursor.map(item => new RoomDTO(item))
+  }
+
+  async getByOwner(ownerId: string) {
+    const cursor = await this.db.query(
+      aql`
+      FOR room in rooms
+        FILTER room.owner == ${'users/'+ownerId}
+        FILTER room.state == 'open'
+        SORT room.created_at DESC
+        RETURN room
+    `);
+    return cursor.map(item => new RoomDTO(item))
   }
 }

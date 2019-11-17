@@ -6,7 +6,8 @@ import {
   IsNumber,
   IsEnum,
   IsBoolean,
-  IsArray
+  IsArray,
+  IsISO8601
 } from 'class-validator';
 import { DeepPartial } from '../../core/lib';
 import { ApiModelProperty } from '@nestjs/swagger';
@@ -68,6 +69,10 @@ export class RoomDTO {
   @ApiModelProperty()
   @IsArray()
   bans: RoomBan[] = [];
+
+  @ApiModelProperty()
+  @IsISO8601()
+  created_at: Date;
 
   constructor(data: DeepPartial<RoomDTO>) {
     Object.assign(this, data);

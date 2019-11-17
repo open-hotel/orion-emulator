@@ -2,7 +2,7 @@ import { Module, DynamicModule } from '@nestjs/common';
 import { UserModule } from '../user';
 import { DatabaseModule, DatabaseConnections } from '../database';
 import { ArangoErrorFilter } from '../lib/ArangoError.filter';
-import { APP_FILTER } from '@nestjs/core';
+import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
 import { OauthModule } from '../oauth';
 import { RoomModule } from '../rooms';
 
@@ -26,6 +26,10 @@ export class OpenApiModule {
           provide: APP_FILTER,
           useClass: ArangoErrorFilter,
         },
+        // {
+        //   provide: APP_INTERCEPTOR,
+        //   useClass: CrudRequestInterceptor,
+        // },
       ],
     };
   }
