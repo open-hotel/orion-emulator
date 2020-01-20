@@ -2,9 +2,9 @@ import { ShellCommand, ShellService } from './decorators';
 import CliTable3 = require('cli-table3');
 import { Injectable } from '@nestjs/common';
 import { getApp } from '../lib/nest.app';
-import { ShellSession } from './providers';
 import yargs from 'yargs-parser';
 import { clearScreenDown } from 'readline'
+import { ShellSession } from './providers/session';
 
 @Injectable()
 export class DefaultCommands {

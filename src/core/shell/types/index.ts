@@ -1,6 +1,6 @@
-import { ShellSession } from '../providers/shell.provider';
 import { Arguments } from 'yargs';
 import { Completer, AsyncCompleter } from 'readline';
+import { ShellSession } from '../providers/session';
 
 export type PromiseOr<T> = Promise<T> | T;
 

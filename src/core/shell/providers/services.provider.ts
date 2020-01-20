@@ -1,11 +1,11 @@
 import { performance } from 'perf_hooks';
 import { Injectable, OnApplicationBootstrap } from '@nestjs/common';
-import { ShellProvider, ShellSession } from './shell.provider';
 import ora = require('ora');
 import ms from 'ms';
 import { ShellServiceBin } from '../types';
 import { ShellCommand } from '../decorators';
 import CliTable3 = require('cli-table3');
+import { ShellSession } from './session';
 
 @Injectable()
 export class ShellServicesProvider implements OnApplicationBootstrap {

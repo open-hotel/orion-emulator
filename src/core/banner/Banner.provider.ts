@@ -1,22 +1,13 @@
 import { Injectable } from "@nestjs/common";
-import { ShellService, ShellSession, ShellCommand } from "..";
+import { ShellService, ShellCommand } from "..";
 import png from 'console-png'
 import path from 'path'
 import { readFileSync } from 'fs'
 import { version } from "../../../package.json";
+import { ShellSession } from "../shell/providers/session";
 
 @Injectable()
 export class BannerProvider {
-  @ShellService({
-    name: 'banner',
-    title: 'Banner',
-    boot: true,
-    quiet: true
-  })
-  service (args, session:ShellSession) {
-    if (args._[1] === 'start') return this.start(args, session)
-  }
-
   @ShellCommand({
     name: 'about',
     description: 'About Emulator',
