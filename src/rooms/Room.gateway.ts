@@ -56,11 +56,11 @@ export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
   @SubscribeMessage('user:speak')
   speak(
     @MessageBody()
-    msgBody: { text: string; roomId: string },
+    msgBody: { text: string; },
     @ConnectedSocket()
     socket: Socket,
   ) {
-    const room = `rooms/${msgBody.roomId}`;
+    const room = `rooms/${socket.currentRoom}`;
     const payload = {
       from: socket.id,
       text: msgBody.text,

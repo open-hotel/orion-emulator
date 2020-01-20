@@ -102,7 +102,7 @@ class Grid {
 }
 
 function getPath(node: PNode) {
-  let path = [];
+  let path:[number, number][] = [];
 
   while (node.parent) {
     path.unshift([node.x, node.y]);
