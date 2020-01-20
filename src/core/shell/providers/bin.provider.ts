@@ -47,9 +47,7 @@ export class ShellCommandProvider implements OnApplicationBootstrap {
   }
 
   get(name: string) {
-    const command = this.bin[name];
-    if (!command) throw new Error('Command Not Found!');
-    return command;
+    return this.bin[name];
   }
 
   hasCompleter (bin:string) {

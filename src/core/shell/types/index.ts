@@ -19,6 +19,7 @@ export interface ShellBin extends GenericBin {
 export interface ShellServiceBin extends GenericBin {
   title?: string;
   boot?: boolean;
+  quiet?: boolean;
   async?: boolean;
   before?: string | string[];
   after?: string | string[];

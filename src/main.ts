@@ -6,7 +6,7 @@ require('dotenv').config({ path: envFile });
 
 import { Emulator } from './core';
 // import { WebShellModule } from '@orion/webshell';
-import { BannerModule } from './banner';
+import { BannerModule } from './core/banner';
 import { OpenApiModule } from './api';
 import { RoomModule } from './rooms';
 

@@ -99,6 +99,7 @@ export class ShellSession {
 
     return this;
   }
+
   println(data: string | Buffer) {
     this.stdout.write(data);
     this.stdout.write('\r\n');
@@ -176,6 +177,11 @@ export class ShellProvider implements OnApplicationBootstrap {
         const args = yargs(cmd);
         const [binName] = args._;
         const command = this.bin.get(binName);
+
+        if (!command) {
+          session.error(`Command not found!`)
+          return 1
+        }
 
         result = command.main(args, session);
       } else if (typeof cmd === 'function') {

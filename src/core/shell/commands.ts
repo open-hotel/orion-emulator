@@ -4,12 +4,22 @@ import { Injectable } from '@nestjs/common';
 import { getApp } from '../lib/nest.app';
 import { ShellSession } from './providers';
 import yargs from 'yargs-parser';
+import { clearScreenDown } from 'readline'
 
 @Injectable()
 export class DefaultCommands {
+
+  @ShellCommand({
+    name: 'clear',
+    alias: ['cls'],
+  })
+  clear (args, session: ShellSession) {
+    session.print('\x1bc')
+  }
+
   @ShellService({
     name: 'api',
-    title: 'Habbo API',
+    title: 'Open API',
     alias: ['web'],
     description: 'Controls API status',
     boot: true,
@@ -40,18 +50,25 @@ export class DefaultCommands {
     usage: 'help [command]',
   })
   help({ _: [bin, command] }, session: ShellSession) {
+    const commands = session.sh.bin.binsWithoutAliases
+    .filter(b =>
+      command
+        ? b.name === command || (b.alias || []).includes(command)
+        : true,
+    )
+
+    if (command && commands.length) session.println(` Help for ${command}`)
+    if (!commands.length) {
+      return session.error(`Command Not Found!\nType help for all commands.`)
+    }
+    
     const t = new CliTable3({
       head: ['Command', 'Description', 'Usage'],
     });
 
     t.push(
       //@ts-ignore
-      ...session.sh.bin.binsWithoutAliases
-        .filter(b =>
-          command
-            ? b.name === command || (b.alias || []).includes(command)
-            : true,
-        )
+      ...commands
         .map(b => [
           b.alias ? [b.name].concat(b.alias).join('\n') : b.name,
           b.description,
@@ -59,7 +76,7 @@ export class DefaultCommands {
         ])
         .sort((a: string[], b: string[]) => (a[0] < b[0] ? -1 : 1)),
     );
-    session.print(t.toString());
+    session.println(t.toString());
   }
 
   @ShellCommand({
