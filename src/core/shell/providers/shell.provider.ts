@@ -1,10 +1,10 @@
-import * as readline from 'readline';
 import { Injectable, OnApplicationBootstrap } from '@nestjs/common';
 import { ShellCommandProvider } from './bin.provider';
 import { ShellServicesProvider } from './services.provider';
 import yargs from 'yargs-parser';
 import { ShellSession } from './session';
 import { Stdout } from '../../lib/Stdout';
+import { version } from '../../../../package.json'
 
 @Injectable()
 export class ShellProvider implements OnApplicationBootstrap {
@@ -32,6 +32,7 @@ export class ShellProvider implements OnApplicationBootstrap {
   }
 
   async startTTY(session: ShellSession) {
+    session.println(`\nOrion Emulator v${version}\n`)
     await session.login();
 
     while (session.alive) {

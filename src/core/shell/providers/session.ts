@@ -1,7 +1,6 @@
 import { Interface, createInterface } from "readline";
 import yargs from 'yargs-parser';
 import { ShellProvider } from "./shell.provider";
-import { version } from '../../../../package.json'
 import { Stdout } from "../../lib/Stdout";
 
 const users = {
@@ -22,7 +21,6 @@ export class ShellSession {
     this.rl = createInterface({
       input: stdin,
       output: stdout,
-      prompt: `\x1b[36;1mOrion > \x1b[0m`,
       terminal: true,
       removeHistoryDuplicates: true,
       completer: line => {
@@ -60,12 +58,11 @@ export class ShellSession {
   }
 
   async login() {
-    await this.run('cls')
-    this.println(`Orion Emulator v${version}`)
     const user = await this.question('User: ');
     const password = await this.password('Password: ');
 
     if (!(user in users) || password !== users[user]) {
+      this.print('\x1b[F\x1b[K\x1b[F\x1b[K\x1b[F\x1b[K')
       this.error('Invalid Credentials!');
       return this.login();
     }
@@ -73,6 +70,7 @@ export class ShellSession {
     this.user = user;
     this.alive = true;
 
+    this.print('\x1b[F\x1b[F\x1b[F\x1b[K')
     await this.run('about')
 
     return true;
@@ -97,10 +95,11 @@ export class ShellSession {
     })
     const password = await this.question(question)
     this.stdout.mode = mode
+    this.stdout.write('\n')
     return password
   }
 
-  prompt(prompt?: string): Promise<string> {
+  prompt(prompt = `\x1b[36;1morion (${this.user}) > \x1b[0m`): Promise<string> {
     return new Promise(resolve => {
       if (prompt) this.rl.setPrompt(prompt);
       this.rl.prompt();
