@@ -37,7 +37,7 @@ function processNeighbors(
   const possibleNeighbors = [top, left, right, bottom];
 
   if (instance.diagonalEnabled) {
-    possibleNeighbors.push(topLeft, topRight, bottomRight, bottomLeft);
+    possibleNeighbors.unshift(topLeft, topRight, bottomRight, bottomLeft);
   }
 
   for (const block of possibleNeighbors) {
@@ -115,7 +115,7 @@ function getPath(node: PNode) {
 const { abs, sqrt, SQRT2 } = Math;
 
 export class PathFinder {
-  static DIAGONAL_COST = SQRT2;
+  static DIAGONAL_COST = 1; //SQRT2
   static STRAIGHT_COST = 1;
   static Heuristic = {
     Manhattan: (a: PNode, b: PNode) => abs(a.y - b.y) + abs(a.x - b.x),

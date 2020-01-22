@@ -96,7 +96,8 @@ export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
     const path = pathFinder.find({ x, y }, { x: toX, y: toY });
     user.pathBeingFollowed = path;
     const room = `rooms/${socket.currentRoom}`;
-    this.server.in(room).emit('user:walk', { path, socketId: socket.id });
+
+    return { path, socketId: socket.id }
   }
 
   @SubscribeMessage('user:step')
@@ -104,9 +105,11 @@ export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
     @ConnectedSocket()
     socket: Socket,
   ) {
+    const room = `rooms/${socket.currentRoom}`;
     const roomState = this.rooms.get(socket.currentRoom);
     const user = roomState.users.get(socket.id);
     user.position = user.pathBeingFollowed.shift();
+    this.server.in(room).emit('user:walk', user);
   }
 
   handleDisconnect(socket: Socket) {
