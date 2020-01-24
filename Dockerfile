@@ -7,4 +7,4 @@ RUN apk --no-cache add --virtual builds-deps build-base python && \
 
 FROM base as prod
 RUN yarn build
-CMD [ "node", "dist/main.js" ]
+CMD [ "sh", "start.sh" ]

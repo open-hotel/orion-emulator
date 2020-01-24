@@ -2,6 +2,7 @@
 !assets/
 !src/
 !.env
+!start.sh
 !nest-cli.json
 !package.json
 !tsconfig.build.json
