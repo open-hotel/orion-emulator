@@ -1,4 +1,8 @@
-FROM node:10.16
-COPY . /sirius
-RUN cd /sirius && yarn
-CMD node /sirius/dist/main.js
+FROM node:10.18.0-alpine as base
+WORKDIR /orion
+COPY . .
+RUN apk --no-cache add --virtual builds-deps build-base python && yarn
+
+FROM base as prod
+RUN yarn build
+CMD [ "node", "dist/main.js" ]

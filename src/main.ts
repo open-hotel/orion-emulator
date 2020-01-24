@@ -1,9 +1,4 @@
-import Yargs from 'yargs';
-import { resolve } from 'path';
-
-const envFile = Yargs.parse().config || resolve(__dirname, '../../config.env');
-require('dotenv').config({ path: envFile });
-
+import 'dotenv/config';
 import { Emulator } from './core';
 // import { WebShellModule } from '@orion/webshell';
 import { BannerModule } from './core/banner';

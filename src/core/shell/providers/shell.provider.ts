@@ -4,7 +4,7 @@ import { ShellServicesProvider } from './services.provider';
 import yargs from 'yargs-parser';
 import { ShellSession } from './session';
 import { Stdout } from '../../lib/Stdout';
-import { version } from '../../../../package.json'
+import { VERSION } from '../../lib/constants';
 
 @Injectable()
 export class ShellProvider implements OnApplicationBootstrap {
@@ -33,7 +33,7 @@ export class ShellProvider implements OnApplicationBootstrap {
   }
 
   async startTTY(session: ShellSession) {
-    session.println(`\nOrion Emulator v${version}\n`)
+    session.println(`\nOrion Emulator v${VERSION}\n`)
     await session.login();
 
     while (session.alive) {
