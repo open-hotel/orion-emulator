@@ -5,6 +5,7 @@ import { ApiUseTags, ApiResponse } from "@nestjs/swagger";
 import { UserDTO } from "./dto/User.dto";
 import { UserIp } from "../core/lib";
 import { RoomService } from "../rooms/RoomService";
+import { Public } from "../oauth/decorators/public.decorator";
 
 @ApiUseTags('Users')
 @Controller('users')
@@ -14,6 +15,7 @@ export class UserController {
     private readonly roomService: RoomService,
   ) {}
 
+  @Public()
   @ApiResponse({
     status: 201,
     type: UserDTO

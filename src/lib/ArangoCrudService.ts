@@ -5,10 +5,11 @@ import { AqlLiteral } from 'arangojs/lib/cjs/aql-query';
 import Aqb from 'aqb'
 
 interface Keyable {
-  _key: number
+  _id: string,
+  _key: string
 }
 
-export class ArangoCrudService<T extends object = Keyable> {
+export class ArangoCrudService<T extends Keyable> {
   public readonly collection: DocumentCollection<T>;
 
   constructor(protected readonly db: Database, public readonly name: string) {
@@ -22,10 +23,12 @@ export class ArangoCrudService<T extends object = Keyable> {
       .then(cursor => cursor.all())
   }
 
-  getByKey(keyOrId: string | number) {
+  getByKey(keyOrId: string): Promise<any> {
+    const id = [this.collection.name, keyOrId].join('/')
+    const q = aql`RETURN DOCUMENT(${id})`;
     return this.db
-      .query(`RETURN DOCUMENT(${this.collection.name}/${keyOrId})`)
-      .then(cursor => cursor.all())
+      .query(q)
+      .then(c => c.next())
   }
 
   save(data: T): Promise<T> {
@@ -35,8 +38,8 @@ export class ArangoCrudService<T extends object = Keyable> {
   }
 
   update(data: T) {
-    return this.db
-      .query(`UPDATE @data IN collection ${this.collection.name}`, { data })
-      .then(cursor => cursor.all())
+    return this.db.collection(this.collection.name).update({
+      _key: data._key
+    }, data)
   }
 }

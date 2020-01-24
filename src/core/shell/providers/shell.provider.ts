@@ -16,6 +16,7 @@ export class ShellProvider implements OnApplicationBootstrap {
     public service: ShellServicesProvider,
   ) {
     process.on('uncaughtException', error => {
+      console.error(error);
       this.ignoreNextCommand = true;
       this.sessions.forEach(session => session.error(error));
     });

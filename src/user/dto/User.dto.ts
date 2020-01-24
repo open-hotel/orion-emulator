@@ -1,112 +1,113 @@
-import { ApiModelProperty } from "@nestjs/swagger";
-import { DeepPartial } from "../../core/lib";
-import { Client } from "oauth2-server";
-import { Exclude } from 'class-transformer'
-import { merge } from 'lodash'
+import { ApiModelProperty } from '@nestjs/swagger';
+import { DeepPartial } from '../../core/lib';
+import { Exclude, Expose } from 'class-transformer';
+import { merge } from 'lodash';
+import { classToPlain } from 'class-transformer';
 
-export type UserGender = 'M' | 'F'
+export type UserGender = 'M' | 'F';
 
 export class UserProfileDTO {
   @ApiModelProperty()
-  real_name: string;
-  
+  real_name: string = null;
+
   @ApiModelProperty()
-  look: string;
-  
+  figure: string = 'hd-180-1.hr-828-61.ch-215-63.lg-270-110.sh-3089-62';
+
   @ApiModelProperty()
-  gender: UserGender;
-  
+  gender: UserGender = 'M';
+
   @ApiModelProperty()
-  motto: string = '';
-  
+  motto: string = null;
+
+  @Expose({ groups: ['user'] })
   @ApiModelProperty()
   respect: number = 10;
-  
+
+  @Expose({ groups: ['user', 'admin'] })
   @ApiModelProperty({ type: 'string', format: 'date' })
-  birthday: Date
+  birthday: Date = new Date();
 }
 
 export class UserAccountDTO {
   @ApiModelProperty()
-  username: string;
-  
-  @Exclude()
+  username: string = null;
+
+  @Expose({ groups: ['app'] })
   @ApiModelProperty({ format: 'password' })
-  password: string;
-  
+  password: string = null;
+
+  @Expose({ groups: ['user', 'admin'] })
   @ApiModelProperty()
-  email: string;
-  
-  @ApiModelProperty()
-  rank: number = 0;
-  
-  @ApiModelProperty({ type: 'string', format: 'date-time' })
-  last_online: Date;
-  
-  @ApiModelProperty({ type: 'string', format: 'date-time' })
-  last_login: Date;
-  
-  @ApiModelProperty()
-  ip_last: string;
-  
-  @ApiModelProperty()
-  ip_reg: string;
-  
-  @ApiModelProperty()
-  mail_verified: boolean = false;
-  
-  @ApiModelProperty()
-  vip: boolean = false;
-  
-  @ApiModelProperty()
-  online: boolean = false;
+  email: string = null;
 
   @ApiModelProperty()
-  oauth: {
-    access_token: string;
-    refresh_token: string;
-    access_token_expire_timestamp: number;
-    refresh_token_expire_timestamp: number;
-    client: Client & { secret: string }
-  }
+  rank: number = 0;
+
+  @ApiModelProperty({ type: 'string', format: 'date-time' })
+  last_online: Date = new Date();
+
+  @ApiModelProperty({ type: 'string', format: 'date-time' })
+  last_login: Date = new Date();
+
+  @Expose({ groups: ['admin'] })
+  @ApiModelProperty()
+  ip_last: string = null;
+
+  @Expose({ groups: ['admin'] })
+  @ApiModelProperty()
+  ip_reg: string = null;
+
+  @Expose({ groups: ['admin'] })
+  @ApiModelProperty()
+  mail_verified: boolean = false;
+
+  @ApiModelProperty()
+  vip: boolean = false;
+
+  @ApiModelProperty()
+  online: boolean = false;
 }
 
 export class UserConfigDTO {
+  @Expose({ groups: ['admin'] })
   @ApiModelProperty()
-  daily_respect_points: number = 10; 
-  
+  daily_respect_points: number = 10;
+
+  @Expose({ groups: ['admin'] })
   @ApiModelProperty()
   daily_pet_respect_points: number = 10;
-  
+
   @ApiModelProperty()
   is_muted: boolean = false;
-  
+
   @ApiModelProperty()
   block_new_friends: boolean = false;
-  
+
   @ApiModelProperty()
   hide_online: boolean = false;
-  
+
   @ApiModelProperty()
   block_follow: boolean = false;
-  
+
   @ApiModelProperty()
   hide_inroom: boolean = false;
-  
+
+  @Expose({ groups: ['user'] })
   @ApiModelProperty()
   client_volume: number = 1;
-  
+
   @ApiModelProperty()
   accept_trading: boolean = true;
-  
+
   @ApiModelProperty()
   whisper_enabled: boolean = true;
-  
+
+  @Expose({ groups: ['admin'] })
   @ApiModelProperty()
   can_change_name: boolean = false;
 }
 
-export class UserCreditsDTO {
+export class UserBalanceDTO {
   @ApiModelProperty()
   credits: number = 0;
 
@@ -119,24 +120,35 @@ export class UserCreditsDTO {
 
 export class UserDTO {
   @ApiModelProperty()
-  _key: number
+  _id: string;
 
   @ApiModelProperty()
-  profile: UserProfileDTO = new UserProfileDTO;
-  
-  @ApiModelProperty()
-  account: UserAccountDTO = new UserAccountDTO;
-  
-  @ApiModelProperty()
-  config: UserConfigDTO = new UserConfigDTO;
-  
-  @ApiModelProperty()
-  credits: UserCreditsDTO = new UserCreditsDTO;
+  _key: string;
 
   @ApiModelProperty()
-  auth_ticket: string;
+  profile: UserProfileDTO = new UserProfileDTO();
 
-  constructor (data:DeepPartial<UserDTO>) {
-    merge(this, data)
+  @ApiModelProperty()
+  account: UserAccountDTO = new UserAccountDTO();
+
+  @ApiModelProperty()
+  config: UserConfigDTO = new UserConfigDTO();
+
+  @Expose({ groups: ['user', 'admin'] })
+  @ApiModelProperty()
+  balance: UserBalanceDTO = new UserBalanceDTO();
+
+  @Expose({ groups: ['app', 'admin'] })
+  @ApiModelProperty()
+  auth_ticket: string = null;
+
+  constructor(data: DeepPartial<UserDTO>) {
+    merge(this, data);
+  }
+
+  toJSON(groups = []): Partial<UserDTO> {
+    return classToPlain(this, {
+      groups,
+    }) as any;
   }
 }

@@ -21,5 +21,6 @@ export class UserModule implements OnModuleInit {
     const users = this.db.collection<UserDTO>('users')
     await CreateIfNotExists.collection(users)
     await CreateIfNotExists.uniqueIndex(users, 'index_username', 'account.username')
+    await CreateIfNotExists.uniqueIndex(users, 'index_auth_ticket', 'auth_ticket')
   }
 }

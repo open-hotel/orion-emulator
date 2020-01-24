@@ -19,38 +19,62 @@ type MatrixReduceFunction<A, T = any> = (
   matrix?: Matrix<T>
 ) => A;
 
-export enum MatrixTypes {
-  number = "0",
-  string = "1"
-}
-
 export const MatrixDeserializers = {
+  json: v => {
+    try {
+      return JSON.parse(v)
+    } catch (e) {
+      return v
+    }
+  },
   number: v => Number(v),
   string: v => v
 };
 export const MatrixSerializer = {
   number: (v: number) => String(v),
-  string: (v: string) => v
+  string: (v: string) => v,
+  json: (v) => {
+    if (typeof v === 'number' || typeof v === 'string') return v;
+    try {
+      return JSON.parse(v)
+    } catch (e) {
+      return v
+    }
+  },
 };
 
 const defaultSerializeOptions = {
-  headerDelimiter: ";",
-  metaDelimiter: ":",
-  delimiter: ",",
-  deserializer: MatrixDeserializers.string,
-  serializer: MatrixSerializer.string
+  headerDelimiter: ",",
+  metaDelimiter: ";",
+  delimiter: "",
+  deserializer: MatrixDeserializers.json,
+  serializer: MatrixSerializer.json
 };
 
 type SerializeOptions = typeof defaultSerializeOptions;
 
+const HEIGHTS = "x0123456789abcdefghijklmnopqrstuvwyz";
+
 export class Matrix<T = any> {
   constructor(
-    public cols: number = 0,
-    public rows: number = 0,
-    public data?: T[],
+    public width: number = 3,
+    public height: number = width,
+    public data: T[] = new Array(width * height).fill(null),
     public meta = []
   ) {
-    this.data = data || new Array(cols * rows).fill(null);
+    this.data = data.slice(0, width * height);
+  }
+
+  *rowsEntries(start = 0, end = this.height - 1): Generator<[number, T[]]> {
+    for (let i = start; i <= end; i++) {
+      yield [i, this.getRow(i)];
+    }
+  }
+
+  *columnsEntries(): Generator<[number, T[]]> {
+    for (let i = 0; i < this.width; i++) {
+      yield [i, this.getCol(i)];
+    }
   }
 
   /**
@@ -59,7 +83,7 @@ export class Matrix<T = any> {
    * @param y Linha
    */
   getIndexOf(x: number, y: number) {
-    return y * this.cols + x;
+    return y * this.width + x;
   }
 
   /**
@@ -68,8 +92,8 @@ export class Matrix<T = any> {
    */
   getCoords(index: number) {
     return {
-      x: index % this.cols,
-      y: Math.floor(index / this.cols)
+      x: index % this.width,
+      y: Math.floor(index / this.width)
     };
   }
 
@@ -80,7 +104,8 @@ export class Matrix<T = any> {
    * @param defaultValue Valor padrão caso não seja definido
    */
   get(x: number, y: number, defaultValue: any = null): T {
-    if (x >= this.cols || y >= this.rows) return defaultValue;
+    if (x < 0 || (y < 0 && x >= this.width) || y >= this.height)
+      return defaultValue;
     const index = this.getIndexOf(x, y);
     return index >= this.data.length ? defaultValue : this.data[index];
   }
@@ -102,9 +127,9 @@ export class Matrix<T = any> {
    * @param x Índice da coluna
    */
   getCol(x: number): T[] {
-    if (x >= this.cols) throw new Error(`Invalid column!`);
+    if (x >= this.width) throw new Error(`Invalid column!`);
     return this.data.filter((_, index) => {
-      return (index - x) % this.cols === 0;
+      return (index - x) % this.width === 0;
     });
   }
 
@@ -113,10 +138,10 @@ export class Matrix<T = any> {
    * @param y Índice da linha
    */
   getRow(y: number): T[] {
-    if (y >= this.rows) throw new Error(`Invalid row!`);
+    if (y >= this.height) throw new Error(`Invalid row!`);
 
-    const start = y * this.cols;
-    const end = start + this.cols;
+    const start = y * this.width;
+    const end = start + this.width;
 
     return this.data.slice(start, end);
   }
@@ -126,7 +151,7 @@ export class Matrix<T = any> {
    * @param value valor a ser preenchido
    */
   fill(value = null) {
-    this.data = new Array(this.cols * this.rows).fill(value);
+    this.data = new Array(this.width * this.height).fill(value);
     return this;
   }
 
@@ -137,7 +162,7 @@ export class Matrix<T = any> {
   mapRows<R>(cb: MatrixMapAxisFunction<T[], R, T>): R[] {
     const maped = [];
 
-    for (let y = 0; y < this.rows; y++) {
+    for (let y = 0; y < this.height; y++) {
       maped[y] = cb(this.getRow(y), y, this);
     }
 
@@ -151,7 +176,7 @@ export class Matrix<T = any> {
   mapCols<C>(cb: MatrixMapAxisFunction<T[], C, T>): C[] {
     const maped = [];
 
-    for (let x = 0; x < this.cols; x++) {
+    for (let x = 0; x < this.width; x++) {
       maped[x] = cb(this.getCol(x), x, this);
     }
 
@@ -168,8 +193,8 @@ export class Matrix<T = any> {
         const { x, y } = this.getCoords(index);
         return cb(value, x, y, this);
       }),
-      this.cols,
-      this.rows
+      this.width,
+      this.height
     );
   }
 
@@ -177,7 +202,7 @@ export class Matrix<T = any> {
    * Cria uma nova matriz apartir desta
    */
   clone(): Matrix<T> {
-    return Matrix.from<T>(this.data, this.cols, this.rows);
+    return Matrix.from<T>(this.data, this.width, this.height);
   }
 
   /**
@@ -205,6 +230,30 @@ export class Matrix<T = any> {
   }
 
   /**
+   * Retorna se algumas linhas passaram em um teste
+   * @param cb Callback de teste
+   */
+  someRows(cb: (values: T[], y: number, matrix: this) => boolean): boolean {
+    for (let i = 0; i < this.height; i++) {
+      if (cb(this.getRow(i), i, this)) return true;
+    }
+
+    return false;
+  }
+
+  /**
+   * Retorna se algumas colunas passaram em um teste
+   * @param cb Callback de teste
+   */
+  someColuns(cb: (values: T[], y: number, matrix: this) => boolean): boolean {
+    for (let i = 0; i < this.width; i++) {
+      if (cb(this.getCol(i), i, this)) return true;
+    }
+
+    return false;
+  }
+
+  /**
    * Executa uma função para cada elemento
    * @param cb Callback a ser executado para cada item
    */
@@ -215,12 +264,20 @@ export class Matrix<T = any> {
     });
   }
 
+  *entries(): Generator<[[number, number], T]> {
+    for (let y = 0; y < this.height; y++) {
+      for (let x = 0; x < this.width; x++) {
+        yield [[x, y], this.get(x, y)];
+      }
+    }
+  }
+
   /**
    * Executa uma função para cada linha
    * @param cb Callback a ser executado para cada linha
    */
   forEachRow(cb: MatrixMapAxisFunction<T[], void, any>): void {
-    for (let y = 0; y < this.rows; y++) {
+    for (let y = 0; y < this.height; y++) {
       cb(this.getRow(y), +y, this);
     }
   }
@@ -243,26 +300,17 @@ export class Matrix<T = any> {
    * @param y Linha
    */
   neighborsOf(x: number, y: number): Matrix<T> {
-    const prevX = x - 1;
-    const nextX = x + 1;
-    const prevY = y - 1;
-    const nextY = y + 1;
-
-    return Matrix.from<T>(
-      [
-        this.get(prevX, prevY),
-        this.get(x, prevY),
-        this.get(nextX, prevY),
-        this.get(prevX, y),
-        this.get(x, y),
-        this.get(nextX, y),
-        this.get(prevX, nextY),
-        this.get(x, nextY),
-        this.get(nextX, nextY)
-      ],
-      3,
-      3
-    );
+    return new Matrix<T>(3, 3, [
+      this.get(x - 1, y - 1),
+      this.get(x, y - 1),
+      this.get(x + 1, y - 1),
+      this.get(x - 1, y + 0),
+      this.get(x, y + 0),
+      this.get(x + 1, y + 0),
+      this.get(x - 1, y + 1),
+      this.get(x, y + 1),
+      this.get(x + 1, y + 1)
+    ]);
   }
 
   /**
@@ -273,17 +321,17 @@ export class Matrix<T = any> {
   static parse<T>(
     encodedMatrix: string,
     {
-      metaDelimiter,
-      headerDelimiter,
-      deserializer,
-      delimiter
-    }: SerializeOptions = defaultSerializeOptions
+      metaDelimiter = defaultSerializeOptions.metaDelimiter,
+      headerDelimiter = defaultSerializeOptions.headerDelimiter,
+      deserializer = defaultSerializeOptions.deserializer,
+      delimiter = defaultSerializeOptions.delimiter
+    } = {}
   ): Matrix<T> {
     const [encodedHeader, encodedData] = encodedMatrix.split(metaDelimiter);
     const [cols, rows, ...meta] = encodedHeader.split(headerDelimiter);
     deserializer = deserializer || MatrixDeserializers.string;
     const data = encodedData.split(delimiter).map<T>(deserializer);
-    return this.fromArray<T>(data, +cols, +rows, meta);
+    return this.fromArray<T>(data, +cols, +rows, meta.map(MatrixDeserializers.json));
   }
 
   /**
@@ -363,19 +411,47 @@ export class Matrix<T = any> {
    * @param param0 Opções de codificação
    */
   stringify({
-    headerDelimiter = ";",
+    headerDelimiter = ",",
     metaDelimiter = ":",
-    delimiter = ","
+    delimiter = ",",
+    serializer = v => v
   } = {}) {
     return [
-      [this.cols, this.rows, ...this.meta].join(headerDelimiter),
-      this.data.join(delimiter)
+      [this.width, this.height, ...this.meta.map(MatrixSerializer.json)].join(headerDelimiter),
+      this.data.map(serializer).join(delimiter)
     ].join(metaDelimiter);
   }
 
   toString() {
-    return `[Matrix ${this.cols}x${this.rows}] {\n  ${this.mapRows(v =>
-      v.join("  ")
+    return `[Matrix ${this.width}x${this.height}] {\n  ${this.mapRows(v =>
+      v.map(v => String(v || 0)).join(" ")
     ).join("\n  ")}\n}`;
+  }
+
+  static fromLegacyString<T extends number>(map: string) {
+    map = map.replace(new RegExp(`[^${HEIGHTS}\n]|^\n+|\n+$`, "gm"), "");
+    const { data, cols, rows } = [...map].reduce(
+      (acc, char) => {
+        if (char === "\n") {
+          acc.rowCol = 0;
+          acc.rows++;
+        } else {
+          const i = HEIGHTS.indexOf(char) as T;
+
+          acc.data.push(i);
+          acc.cols = Math.max(acc.cols, ++acc.rowCol);
+          acc.rows = Math.max(1, acc.rows);
+        }
+        return acc;
+      },
+      {
+        data: [] as T[],
+        cols: 0,
+        rowCol: 0,
+        rows: 0
+      }
+    );
+
+    return Matrix.from<T>(data, cols, rows);
   }
 }

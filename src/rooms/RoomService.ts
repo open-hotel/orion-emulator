@@ -3,7 +3,6 @@ import { RoomDTO } from './dto/Room.dto';
 import { InjectArango } from '../lib/injectArango.decorator';
 import { Database, aql } from 'arangojs';
 import { Injectable } from '@nestjs/common';
-import { UserDTO } from '../user/dto/User.dto';
 
 @Injectable()
 export class RoomService extends ArangoCrudService<RoomDTO> {
@@ -34,5 +33,16 @@ export class RoomService extends ArangoCrudService<RoomDTO> {
         RETURN room
     `);
     return cursor.map(item => new RoomDTO(item))
+  }
+
+  async getRoom (roomId:string): Promise<RoomDTO> {
+    return this.db.query(
+      aql`
+        FOR room in rooms
+          LIMIT 1
+          FILTER room._key == ${roomId}
+          return merge(room, { owner: DOCUMENT(room.owner) })
+      `
+    ).then(async (c) => new RoomDTO(await c.next()))
   }
 }

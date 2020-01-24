@@ -1,120 +1,35 @@
 import { Injectable } from '@nestjs/common';
 import OAuth2Server from 'oauth2-server';
 import { JwtService } from '@nestjs/jwt';
+import { classToPlain } from 'class-transformer';
 import { UserService } from '../user';
 
 const client = {
-  grants: ['password', 'refresh_token'],
   id: process.env.OAUTH_CLIENT_ID,
-  accessTokenLifetime: +process.env.OAUTH_ACCESS_TOKEN_LIFETIME,
-  refreshTokenLifetime: +process.env.OAUTH_REFRESH_TOKEN_LIFETIME,
+  grants: ['refresh_token', 'password'],
+  accessTokenLifetime: Number(process.env.OAUTH_ACCESS_TOKEN_LIFETIME),
+  refreshTokenLifetime: Number(process.env.OAUTH_REFRESH_TOKEN_LIFETIME),
 };
 
 @Injectable()
-export class OauthService
+export class OAuthServerProvider
   implements OAuth2Server.PasswordModel, OAuth2Server.RefreshTokenModel {
-  public readonly server: OAuth2Server = new OAuth2Server({
+  server: OAuth2Server = new OAuth2Server({
     model: this,
   });
 
-  constructor(
-    private jwtService: JwtService,
-    private userService: UserService,
-  ) {}
+  constructor(public jwt: JwtService, public usuarioService: UserService) {}
 
-  // TODO: Verificar se o token não está na lista negra
-  async getRefreshToken(
-    refreshToken: string,
-  ): Promise<OAuth2Server.RefreshToken> {
-    const payload = this.jwtService.verify(refreshToken);
-    return {
-      refreshToken: refreshToken,
-      refreshTokenExpiresAt: new Date(payload.exp),
-      client: client,
-      user: {},
-    };
-  }
-
-  // TODO: Colocar Token na lista negra
-  async revokeToken(token: OAuth2Server.RefreshToken): Promise<boolean> {
-    return true;
-  }
-
-  async generateRefreshToken?(
-    client: OAuth2Server.Client,
+  async validateScope(
     user: OAuth2Server.User,
+    client: OAuth2Server.Client,
     scope: string | string[],
-  ): Promise<string> {
-    return this.jwtService.sign(
-      {
-        sub: user._key,
-        aud: client.id,
-      },
-      {
-        expiresIn: client.refreshTokenLifetime,
-      },
-    );
-  }
+  ): Promise<string | string[] | false> {
+    return scope;
+    // scope = Array.isArray(scope) ? scope : scope.split(',');
+    // scope = scope.filter(s => user.permissoes.includes(s));
 
-  async getUser(username: string, password: string): Promise<OAuth2Server.User> {
-    return this.userService.findByUsernameAndPassword(username, password)
-  }
-
-  async generateAccessToken?(
-    client: OAuth2Server.Client,
-    user: OAuth2Server.User,
-    scope: string | string[],
-  ): Promise<string> {
-    return this.jwtService.sign(
-      {
-        sub: user._key,
-        aud: client.id,
-        user: {
-          key: user._key,
-          email: user.account.email,
-          username: user.account.username,
-        },
-      },
-      {
-        expiresIn: client.accessTokenLifetime,
-      },
-    );
-  }
-
-  // TODO: Retornar clientes OAuth Cadastrados no "Open Habbo API"
-  async getClient(
-    clientId: string,
-    clientSecret: string,
-  ): Promise<OAuth2Server.Client> {
-    if (
-      clientId !== client.id ||
-      clientSecret !== process.env.OAUTH_CLIENT_SECRET
-    )
-      return null;
-    return client;
-  }
-
-  // TODO: Salvar tokens gerados para ter controle sobre as sessões
-  async saveToken(
-    token: OAuth2Server.Token,
-    client: OAuth2Server.Client,
-    user: OAuth2Server.User,
-  ): Promise<OAuth2Server.Token> {
-    return {
-      ...token,
-      client,
-      user,
-    };
-  }
-
-  async getAccessToken(accessToken: string): Promise<OAuth2Server.Token> {
-    const payload = this.jwtService.verify(accessToken);
-    return {
-      accessToken: accessToken,
-      accessTokenExpiresAt: new Date(payload.exp),
-      client: client,
-      user: payload.user,
-    };
+    // return scope.length > 0 ? scope : false;
   }
 
   async verifyScope(
@@ -122,5 +37,124 @@ export class OauthService
     scope: string | string[],
   ): Promise<boolean> {
     return true;
+    // if (token.user.permissoes.includes('root')) return true;
+
+    // scope = Array.isArray(scope) ? scope : scope.split(',');
+    // const tokenScope = Array.isArray(token.scope)
+    //   ? token.scope
+    //   : token.scope.split(',');
+
+    // return scope.some(t => tokenScope.includes(t));
+  }
+
+  generateRefreshToken(
+    client: OAuth2Server.Client,
+    user: OAuth2Server.User,
+    scope: string | string[],
+  ): Promise<string> {
+    return this.jwt.signAsync(
+      {
+        sub: user.id,
+        aud: client.id,
+        scope: Array.isArray(scope) ? scope.join(',') : scope,
+      },
+      {
+        expiresIn: client.refreshTokenLifetime,
+      },
+    );
+  }
+
+  generateAccessToken(
+    client: OAuth2Server.Client,
+    user: OAuth2Server.User,
+    scope: string | string[],
+  ): Promise<string> {
+    return this.jwt.signAsync(
+      {
+        sub: user.id,
+        aud: client.id,
+        scope: Array.isArray(scope) ? scope.join(',') : scope,
+        user: classToPlain(user),
+      },
+      {
+        expiresIn: client.accessTokenLifetime,
+      },
+    );
+  }
+
+  async getUser(
+    username: string,
+    password: string,
+  ): Promise<OAuth2Server.User> {
+    return this.usuarioService.findByUsernameAndPassword(username, password);
+  }
+
+  async getRefreshToken(
+    refreshToken: string,
+  ): Promise<OAuth2Server.RefreshToken> {
+    const payload = await this.jwt.verifyAsync(refreshToken).catch(e => {
+      throw new OAuth2Server.UnauthorizedRequestError('Invalid RefreshToken', {
+        name: 'invalid_refresh_token',
+      });
+    });
+
+    return {
+      client,
+      refreshToken,
+      refreshTokenExpiresAt: new Date(payload.exp * 1000),
+      user: await this.usuarioService.getByKey(payload.sub),
+    };
+  }
+
+  async revokeToken(
+    token: OAuth2Server.Token | OAuth2Server.RefreshToken,
+  ): Promise<boolean> {
+    return true;
+  }
+
+  async getClient(
+    clientId: string,
+    clientSecret: string,
+  ): Promise<OAuth2Server.Client> {
+    if (
+      clientId === client.id &&
+      clientSecret === process.env.OAUTH_CLIENT_SECRET
+    ) {
+      return client;
+    }
+
+    return null;
+  }
+
+  async saveToken(
+    token: OAuth2Server.Token,
+    client: OAuth2Server.Client,
+    user: OAuth2Server.User,
+  ): Promise<OAuth2Server.Token> {
+    return {
+      accessToken: token.accessToken,
+      client: client,
+      user: user,
+      accessTokenExpiresAt: token.accessTokenExpiresAt,
+      refreshToken: token.refreshToken,
+      refreshTokenExpiresAt: token.refreshTokenExpiresAt,
+      scope: token.scope,
+    };
+  }
+
+  async getAccessToken(accessToken: string): Promise<OAuth2Server.Token> {
+    const payload = await this.jwt.verifyAsync(accessToken).catch(e => {
+      throw new OAuth2Server.UnauthorizedRequestError('Invalid AccessToken', {
+        name: 'invalid_access_token',
+      });
+    });
+
+    return {
+      client,
+      accessToken,
+      scope: payload.scope.split(','),
+      accessTokenExpiresAt: new Date(payload.exp * 1000),
+      user: payload.user,
+    };
   }
 }

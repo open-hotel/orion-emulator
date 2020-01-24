@@ -1,3 +1,5 @@
+import { Matrix } from './Matrix';
+
 interface Vector2 {
   x: number;
   y: number;
@@ -11,7 +13,7 @@ type PathFinderHeuristic = (
 type CanWalkFunction = (cell: PNode, current: PNode) => boolean;
 
 function processNeighbors(
-  grid: PNode[][],
+  grid: Grid,
   current: PNode,
   start: PNode,
   goal: PNode,
@@ -24,15 +26,15 @@ function processNeighbors(
   const prevY = current.y - 1;
   const nextY = current.y + 1;
 
-  const top = grid[prevY] && grid[prevY][current.x];
-  const left = grid[current.y] && grid[current.y][prevX];
-  const right = grid[current.y] && grid[current.y][nextX];
-  const bottom = grid[nextY] && grid[nextY][current.x];
+  const top = grid.get(prevY, current.x);
+  const left = grid.get(current.y, prevX);
+  const right = grid.get(current.y, nextX);
+  const bottom = grid.get(nextY, current.x);
 
-  const topLeft = grid[prevY] && grid[prevY][prevX];
-  const topRight = grid[prevY] && grid[prevY][nextX];
-  const bottomLeft = grid[nextY] && grid[nextY][prevX];
-  const bottomRight = grid[nextY] && grid[nextY][nextX];
+  const topLeft = grid.get(prevY, prevX);
+  const topRight = grid.get(prevY, nextX);
+  const bottomLeft = grid.get(nextY, prevX);
+  const bottomRight = grid.get(nextY, nextX);
 
   const possibleNeighbors = [top, left, right, bottom];
 
@@ -81,28 +83,32 @@ class PNode {
   }
 }
 
-class Grid {
-  public readonly nodes: PNode[][] = [];
+class Grid extends Matrix<PNode> {
+  constructor(grid: Matrix<number> | number[][] = []) {
+    let height: number, width: number, grd: Matrix<number>
 
-  constructor(public readonly grid: number[][] = []) {
-    let rows = grid.length;
-    let cols = grid[0].length;
-
-    for (let y = 0; y < rows; y++) {
-      this.nodes[y] = [];
-      for (let x = 0; x < cols; x++) {
-        this.nodes[y][x] = new PNode(x, y, grid[y][x], grid[y][x] !== 0);
-      }
+    if (grid instanceof Matrix) {
+      height = grid.height
+      width = grid.width
+      grd = Matrix.from(grid)
+    } else {
+      height = grid.length
+      width = grid[0].length
+      grd = Matrix.from(grid)
     }
-  }
 
-  clone() {
-    return new Grid(Array.from(this.grid));
+    super(width, height)
+
+    this.forEach((_, x, y) => {
+      const tile = grd.get(x, y)
+      const node = new PNode(x, y, tile, tile !== 0);
+      this.set(x, y, node)
+    })
   }
 }
 
 function getPath(node: PNode) {
-  let path:[number, number][] = [];
+  let path: [number, number][] = [];
 
   while (node.parent) {
     path.unshift([node.x, node.y]);
@@ -120,7 +126,7 @@ export class PathFinder {
   static Heuristic = {
     Manhattan: (a: PNode, b: PNode) => abs(a.y - b.y) + abs(a.x - b.x),
     Euclidean: (a: PNode, b: PNode) =>
-      sqrt((a.x - b.x) ** 2 + (a.x - b.x) ** 2)
+      sqrt((a.x - b.x) ** 2 + (a.x - b.x) ** 2),
   };
 
   public heuristic: PathFinderHeuristic = PathFinder.Heuristic.Manhattan;
@@ -140,22 +146,24 @@ export class PathFinder {
     const cost = this.costs
       .filter(item => item.test(block))
       .reduce((sum, item) => sum + item.cost, 1);
-    
-    return diagonal ? PathFinder.DIAGONAL_COST * cost : cost
+
+    return diagonal ? PathFinder.DIAGONAL_COST * cost : cost;
   }
 
   constructor(
-    grid: Grid | number[][] = [],
+    grid: Grid | Matrix<number> | number[][] = [],
     public canWalk: CanWalkFunction = () => true,
   ) {
     if (grid instanceof Grid) this.grid = grid;
-    else if (Array.isArray(grid)) this.grid = new Grid(grid);
+    else if (grid instanceof Matrix || Array.isArray(grid)) {
+      this.grid = new Grid(grid);
+    }
   }
 
   find(start: Vector2, end: Vector2): any[] {
-    const { nodes } = this.grid.clone();
-    const startNode = nodes[start.y] && nodes[start.y][start.x];
-    const goalNode = nodes[end.y] && nodes[end.y][end.x];
+    const grid = this.grid.clone();
+    const startNode = grid.get(start.x, start.y);
+    const goalNode = grid.get(end.x, end.y);
 
     if (!startNode || !goalNode) return null;
     if (startNode === goalNode) return [];
@@ -167,7 +175,7 @@ export class PathFinder {
 
     while ((currentNode = opened.shift())) {
       const neighbors = processNeighbors(
-        nodes,
+        grid,
         currentNode,
         startNode,
         goalNode,

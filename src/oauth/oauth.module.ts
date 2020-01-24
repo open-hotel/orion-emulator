@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { OauthService } from './oauth.service';
+import { OAuthServerProvider } from './oauth.service';
 import { JwtModule } from '@nestjs/jwt'
 import { OAuthController } from './oauth.controller';
 import { UserModule } from '../user/User.module';
@@ -18,6 +18,7 @@ import { UserModule } from '../user/User.module';
     UserModule
   ],
   controllers: [OAuthController],
-  providers: [OauthService]
+  providers: [OAuthServerProvider],
+  exports: [OAuthServerProvider],
 })
 export class OauthModule { }

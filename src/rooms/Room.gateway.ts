@@ -7,13 +7,15 @@ import {
   OnGatewayDisconnect,
 } from '@nestjs/websockets';
 import { Socket, Server } from 'socket.io';
-import { PathFinder } from '../core/lib';
+import { PathFinder, Matrix } from '../core/lib';
 import { RoomState, UserState } from './RoomState';
-import stairsMock from './stairs.mock';
+import { RoomService } from './RoomService';
+import { UserDTO } from '../user/dto/User.dto';
 
 declare module 'socket.io' {
   interface Socket {
     currentRoom: string;
+    user: UserDTO
   }
 }
 
@@ -22,8 +24,30 @@ export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
   private server: Server;
   private rooms: WeakMap<any, RoomState> = new Map();
 
+  constructor (
+    private roomSevice: RoomService
+  ) {}
+
+  roomName(id: string) {
+    return ['rooms', id].join('/');
+  }
+
+  sendError (error:string) {
+    return {
+      status: 0,
+      error
+    }
+  }
+
+  sendData (data:any) {
+    return {
+      status: 1,
+      data
+    }
+  }
+
   @SubscribeMessage('room:join')
-  joinRoom(
+  async joinRoom(
     @MessageBody()
     msgBody: { roomId: string },
     @ConnectedSocket()
@@ -32,15 +56,23 @@ export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
     let roomState = this.rooms.get(msgBody.roomId);
 
     if (!roomState) {
+      const room = (await this.roomSevice.getRoom(msgBody.roomId)).toJSON()
+
+      if (!room) return this.sendError('room_not_found')
+      
       roomState = new RoomState({
-        map: stairsMock.map,
+        room: room,
+        map: Matrix.fromLegacyString(room.map),
+        mobis: room.items,
       });
+      
       this.rooms.set(msgBody.roomId, roomState);
     }
 
-    const room = `rooms/${msgBody.roomId}`;
+    const room = this.roomName(msgBody.roomId);
     const userState: UserState = {
       position: [0, 0],
+      user: socket.user.toJSON(),
       socketId: socket.id,
       pathBeingFollowed: [],
     };
@@ -49,18 +81,18 @@ export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
 
     socket.join(room);
     socket.currentRoom = msgBody.roomId;
-    socket.emit('room:state', roomState.toJSON());
     socket.to(room).emit('room:join', userState);
+    return this.sendData(roomState);
   }
 
   @SubscribeMessage('user:speak')
   speak(
     @MessageBody()
-    msgBody: { text: string; },
+    msgBody: { text: string },
     @ConnectedSocket()
     socket: Socket,
   ) {
-    const room = `rooms/${socket.currentRoom}`;
+    const room = this.roomName(socket.currentRoom);
     const payload = {
       from: socket.id,
       text: msgBody.text,
@@ -79,14 +111,15 @@ export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
     const roomState = this.rooms.get(socket.currentRoom);
     const user = roomState.users.get(socket.id);
     const grid = roomState.map;
-    const pathFinder = new PathFinder(grid, (cell, curr) => {
-      const a = grid[cell.y][cell.x];
-      const b = grid[curr.y][curr.x];
+    const pathFinder = new PathFinder(grid, (tile1, tile2) => {
+      const a = grid.get(tile1.x, tile1.y);
+      const b = grid.get(tile2.x, tile2.y)
 
       // if (!this.canWalkTo(cell.x, cell.y)) {
       //   return false
       // }
 
+      // Stairs
       return a === b || Math.abs(a - b) === 1;
     });
 
@@ -94,10 +127,10 @@ export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
     const [toX, toY] = position;
 
     const path = pathFinder.find({ x, y }, { x: toX, y: toY });
-    user.pathBeingFollowed = path;
-    const room = `rooms/${socket.currentRoom}`;
 
-    return { path, socketId: socket.id }
+    user.pathBeingFollowed = path;
+
+    return path ? this.sendData(path) : this.sendError('invalid_tile');
   }
 
   @SubscribeMessage('user:step')
@@ -105,7 +138,7 @@ export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
     @ConnectedSocket()
     socket: Socket,
   ) {
-    const room = `rooms/${socket.currentRoom}`;
+    const room = this.roomName(socket.currentRoom);
     const roomState = this.rooms.get(socket.currentRoom);
     const user = roomState.users.get(socket.id);
     user.position = user.pathBeingFollowed.shift();

@@ -1,35 +1,37 @@
-import { Matrix } from "../core"
+import { Matrix } from '../core';
+import { RoomDTO } from './dto/Room.dto';
+import { UserDTO } from '../user/dto/User.dto';
 
 export class RoomState {
-  public map: number[][]
-  public mobis = {}
-  public users: Map<any, UserState>
+  public room: RoomDTO;
+  public map: Matrix<number>;
+  public mobis = {};
+  public users: Map<any, UserState>;
 
-  public door: [number, number] = [0, 0]
-
-  constructor (
-    {
-      map = [],
-      mobis = {},
-      users = new Map()
-    }
-  ) {
-    this.map = map
-    this.mobis = mobis
-    this.users = users
+  constructor({
+    room,
+    map = new Matrix(1, 1, [0]),
+    mobis = {},
+    users = new Map(),
+  }) {
+    this.map = map;
+    this.room = room;
+    this.mobis = mobis;
+    this.users = users;
   }
 
-  toJSON () {
+  toJSON() {
     return {
-      map: this.map,
+      room: this.room,
       mobis: Object.values(this.mobis),
-      users: Array.from(this.users.values())
-    }
+      users: Array.from(this.users.values()),
+    };
   }
 }
 
 export interface UserState {
-  position: [number, number]
-  socketId: string,
-  pathBeingFollowed: [number, number][]
+  position: [number, number];
+  user: Partial<UserDTO>,
+  socketId: string;
+  pathBeingFollowed: [number, number][];
 }

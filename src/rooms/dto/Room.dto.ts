@@ -7,18 +7,23 @@ import {
   IsEnum,
   IsBoolean,
   IsArray,
-  IsISO8601
+  IsISO8601,
 } from 'class-validator';
 import { DeepPartial } from '../../core/lib';
 import { ApiModelProperty } from '@nestjs/swagger';
 import { RoomItem } from './RoomItem.dto';
 import { RoomBan } from './RoomBan.dto';
+import { classToPlain, Expose } from 'class-transformer';
 
 export const RoomPrivacyItems = ['public'];
 export type RoomPrivacy = 'public' | 'secret';
 export type RoomState = 'open' | 'closed';
 
 export class RoomDTO {
+  @ApiModelProperty()
+  @IsString()
+  _id: string;
+
   @ApiModelProperty()
   @IsString()
   _key: string;
@@ -43,7 +48,11 @@ export class RoomDTO {
   @IsPositive()
   @IsNumber()
   users_max: number = 30;
+
+  @ApiModelProperty()
   owner: UserDTO | string;
+
+  @Expose({ groups: ['owner'] })
   password: string;
 
   @ApiModelProperty()
@@ -56,25 +65,39 @@ export class RoomDTO {
 
   @ApiModelProperty()
   @IsString()
-  map: string = '1,1:1';
+  map: string = '';
 
   @ApiModelProperty()
   @IsArray()
   items: RoomItem[] = [];
 
+  @Expose({ groups: ['owner'] })
   @ApiModelProperty()
   @IsArray()
   moderators: string[] | UserDTO[] = [];
 
+  @Expose({ groups: ['owner'] })
   @ApiModelProperty()
   @IsArray()
   bans: RoomBan[] = [];
 
   @ApiModelProperty()
   @IsISO8601()
-  created_at: Date;
+  created_at: Date = new Date();
 
   constructor(data: DeepPartial<RoomDTO>) {
     Object.assign(this, data);
+
+    if (typeof data.owner === 'object' && !(data.owner instanceof UserDTO)) {
+      this.owner = new UserDTO(data.owner)
+    }
+
+    console.log(this)
+  }
+
+  toJSON(groups = []): DeepPartial<RoomDTO> {
+    return classToPlain(this, {
+      groups,
+    });
   }
 }

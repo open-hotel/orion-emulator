@@ -4,6 +4,7 @@ import { InjectArango } from '../lib/injectArango.decorator';
 import { Injectable } from '@nestjs/common';
 import { UserRegisterDTO } from './dto/UserRegister.dto';
 import { UserDTO, UserAccountDTO } from './dto/User.dto';
+import { hashSync, compareSync } from 'bcrypt';
 
 @Injectable()
 export class UserService extends ArangoCrudService<UserDTO> {
@@ -22,8 +23,14 @@ export class UserService extends ArangoCrudService<UserDTO> {
         RETURN user
     `, { username }).then(c => c.next())
 
-    if (user && user.account.password === password) return user
+    if (user && compareSync(password, user.account.password)) return user
     return null
+  }
+
+  async findByAuthTicket (auth_ticket:string): Promise<UserDTO> {
+    return this.collection.firstExample({ auth_ticket })
+    .then(user => new UserDTO(user))
+    .catch(() => null)
   }
 
   async findAll () {

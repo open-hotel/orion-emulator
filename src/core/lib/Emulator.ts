@@ -7,6 +7,7 @@ import helmet from 'helmet'
 import cors from 'cors'
 import RateLimiter from 'express-rate-limit'
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
+import { WSAdapter } from "../../lib/WsAdapter"
 
 @Module({})
 export class Emulator {  
@@ -29,6 +30,7 @@ export class Emulator {
     
     app = await NestFactory.create(this.mainModule)
 
+    app.useWebSocketAdapter(new WSAdapter(app))
     app.use(cors())
 
     app.useGlobalPipes(new ValidationPipe({
@@ -38,7 +40,6 @@ export class Emulator {
       whitelist: true
     }));
     
-
     app.use(RateLimiter({
       windowMs: 60 * 1000, // 1 minute
       max: 70, // limit each IP to 30 requests per windowMs
@@ -49,6 +50,7 @@ export class Emulator {
     this.setupSwagger(app)
     
     app.init()
+
     setApp(app)
   }
 
