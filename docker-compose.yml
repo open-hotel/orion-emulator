@@ -26,8 +26,8 @@ services:
     stdin_open: true
     environment: 
       NODE_ENV: production
-    expose:
-      - "3000"
+    ports:
+      - "3000:3000"
     links: 
       - arangodb
     depends_on: 
@@ -36,3 +36,4 @@ services:
       - orion
 networks:
   orion:
+    driver: bridge

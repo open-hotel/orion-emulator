@@ -7,4 +7,5 @@ RUN apk --no-cache add --virtual builds-deps build-base python && \
 
 FROM base as prod
 RUN yarn build
+EXPOSE 3000
 CMD [ "sh", "start.sh" ]

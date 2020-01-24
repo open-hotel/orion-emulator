@@ -1,4 +1,4 @@
-import { Interface, createInterface } from "readline";
+import { Interface, createInterface, moveCursor, clearLine, clearScreenDown } from "readline";
 import yargs from 'yargs-parser';
 import { ShellProvider } from "./shell.provider";
 import { Stdout } from "../../lib/Stdout";
@@ -13,14 +13,17 @@ export class ShellSession {
   user: string;
   alive = false;
 
+  stdout: Stdout;
+
   constructor(
-    public stdin: NodeJS.ReadStream,
-    public stdout: Stdout,
+    public input: NodeJS.ReadStream,
+    public output: NodeJS.WriteStream,
     public sh: ShellProvider
   ) {
+    this.stdout = new Stdout(output);
     this.rl = createInterface({
-      input: stdin,
-      output: stdout,
+      input: input,
+      output: this.stdout,
       terminal: true,
       removeHistoryDuplicates: true,
       completer: line => {
@@ -42,19 +45,22 @@ export class ShellSession {
       },
     });
 
-    this.rl.on('SIGINT', () => this.exit());
+    this.rl.on('SIGINT', () => this.exit(!this.alive));
   }
 
   run(cmd: string | Function, catchErrors = true, args?) {
     return this.sh.run(this, cmd, catchErrors, args);
   }
 
-  async exit() {
-    if (this.sh.sessions.length === 1) {
-      await this.run('shutdown');
-    } else {
-      this.destroy();
+  async exit(shutdown = false) {
+    this.print('\x1bc')
+
+    if (shutdown && this.sh.sessions.length === 1 && this.sh.sessions[0] === this) {
+      return this.run('shutdown');
     }
+
+    this.destroy();
+    this.sh.startTTY(this.sh.createTTY(this.input, this.output));
   }
 
   async login() {
@@ -62,7 +68,7 @@ export class ShellSession {
     const password = await this.password('Password: ');
 
     if (!(user in users) || password !== users[user]) {
-      this.print('\x1b[F\x1b[K\x1b[F\x1b[K\x1b[F\x1b[K')
+      moveCursor(this.output, 0, -3);
       this.error('Invalid Credentials!');
       return this.login();
     }
@@ -70,7 +76,9 @@ export class ShellSession {
     this.user = user;
     this.alive = true;
 
-    this.print('\x1b[F\x1b[F\x1b[F\x1b[K')
+    moveCursor(this.output, 0, -3);
+    clearScreenDown(this.output);
+
     await this.run('about')
 
     return true;
@@ -80,6 +88,7 @@ export class ShellSession {
     this.rl.close();
     this.sh.removeSession(this);
     this.alive = false;
+    this.rl = undefined;
   }
 
   question(question: string): Promise<string> {

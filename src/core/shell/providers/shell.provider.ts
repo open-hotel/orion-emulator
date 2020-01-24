@@ -27,7 +27,7 @@ export class ShellProvider implements OnApplicationBootstrap {
   }
 
   createTTY(input: NodeJS.ReadStream, output: NodeJS.WriteStream) {
-    const session = new ShellSession(input, new Stdout(output), this);
+    const session = new ShellSession(input, output, this);
     this.sessions.push(session);
     return session;
   }

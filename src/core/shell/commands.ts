@@ -40,7 +40,7 @@ export class DefaultCommands {
   })
   api({ _: [bin, command] }, session: ShellSession) {
     const app = getApp();
-    if (command === 'start') return app.listen(3000);
+    if (command === 'start') return app.listen(process.env.PORT);
     if (command === 'stop') return app.close();
     return session.run(`help ${bin}`);
   }

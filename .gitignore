@@ -3,6 +3,8 @@
 /**/node_modules
 /**/.cache
 
+.docker
+
 # Logs
 logs
 *.log
