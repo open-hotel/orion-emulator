@@ -3,6 +3,7 @@ services:
   orion:
     build: 
       target: base
+    image: open-hotel/orion:dev
     command: "yarn start:dev"
     environment: 
       NODE_ENV: development

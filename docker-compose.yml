@@ -20,6 +20,7 @@ services:
       context: .
       dockerfile: Dockerfile
       target: prod
+    image: open-hotel/orion
     container_name: orion
     working_dir: /orion
     tty: true

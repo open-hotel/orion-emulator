@@ -1,4 +1,5 @@
 *
+!assets/
 !src/
 !.env
 !nest-cli.json
