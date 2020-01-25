@@ -3,6 +3,8 @@ import { InsertOptions } from 'arangojs/lib/cjs/util/types';
 import { QueryOptions } from 'arangojs/lib/cjs/database';
 import { AqlLiteral } from 'arangojs/lib/cjs/aql-query';
 import Aqb from 'aqb'
+import { UserDTO } from '../user/dto/User.dto';
+import { DeepPartial } from '../core/lib';
 
 interface Keyable {
   _id: string,
@@ -31,13 +33,13 @@ export class ArangoCrudService<T extends Keyable> {
       .then(c => c.next())
   }
 
-  save(data: T): Promise<T> {
+  save(data: DeepPartial<T>): Promise<T> {
     return this.db
       .query(`INSERT @data INTO ${this.collection.name} RETURN NEW`, { data })
-      .then(cursor => cursor.all())
+      .then(cursor => cursor.next())
   }
 
-  update(data: T) {
+  update(data: DeepPartial<T> & Keyable) {
     return this.db.collection(this.collection.name).update({
       _key: data._key
     }, data)

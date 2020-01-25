@@ -11,6 +11,8 @@ import { PathFinder, Matrix } from '../core/lib';
 import { RoomState, UserState } from './RoomState';
 import { RoomService } from './RoomService';
 import { UserDTO } from '../user/dto/User.dto';
+import { RateLimiter } from '../lib/RateLimiter';
+import { classToPlain } from 'class-transformer';
 
 declare module 'socket.io' {
   interface Socket {
@@ -19,10 +21,14 @@ declare module 'socket.io' {
   }
 }
 
-@WebSocketGateway()
+@WebSocketGateway({ namespace: '/game' })
 export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
   private server: Server;
   private rooms: WeakMap<any, RoomState> = new Map();
+  private stepLimiter = new RateLimiter({
+    time: 800,
+    max: 1
+  })
 
   constructor (
     private roomSevice: RoomService
@@ -72,7 +78,7 @@ export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
     const room = this.roomName(msgBody.roomId);
     const userState: UserState = {
       position: [0, 0],
-      user: socket.user.toJSON(),
+      user: classToPlain(socket.user),
       socketId: socket.id,
       pathBeingFollowed: [],
     };
@@ -134,10 +140,11 @@ export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
   }
 
   @SubscribeMessage('user:step')
-  userStep(
+  async userStep(
     @ConnectedSocket()
     socket: Socket,
   ) {
+    if (!await this.stepLimiter.tap(socket.user._key).catch(() => false)) return;
     const room = this.roomName(socket.currentRoom);
     const roomState = this.rooms.get(socket.currentRoom);
     const user = roomState.users.get(socket.id);

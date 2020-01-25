@@ -1,8 +1,8 @@
 import { ApiModelProperty } from '@nestjs/swagger';
-import { DeepPartial } from '../../core/lib';
-import { Exclude, Expose } from 'class-transformer';
+import { Expose } from 'class-transformer';
 import { merge } from 'lodash';
 import { classToPlain } from 'class-transformer';
+import { DeepPartial } from '../../core/lib';
 
 export type UserGender = 'M' | 'F';
 
@@ -19,7 +19,7 @@ export class UserProfileDTO {
   @ApiModelProperty()
   motto: string = null;
 
-  @Expose({ groups: ['user'] })
+  @Expose({ groups: ['user', 'admin'] })
   @ApiModelProperty()
   respect: number = 10;
 
@@ -32,7 +32,7 @@ export class UserAccountDTO {
   @ApiModelProperty()
   username: string = null;
 
-  @Expose({ groups: ['app'] })
+  @Expose({ groups: ['app', 'admin'] })
   @ApiModelProperty({ format: 'password' })
   password: string = null;
 
@@ -66,6 +66,10 @@ export class UserAccountDTO {
 
   @ApiModelProperty()
   online: boolean = false;
+
+  constructor (data: DeepPartial<UserAccountDTO> = {}) {
+    merge(this, data)
+  }
 }
 
 export class UserConfigDTO {
@@ -92,7 +96,7 @@ export class UserConfigDTO {
   @ApiModelProperty()
   hide_inroom: boolean = false;
 
-  @Expose({ groups: ['user'] })
+  @Expose({ groups: ['user', 'admin'] })
   @ApiModelProperty()
   client_volume: number = 1;
 
@@ -144,11 +148,5 @@ export class UserDTO {
 
   constructor(data: DeepPartial<UserDTO>) {
     merge(this, data);
-  }
-
-  toJSON(groups = []): Partial<UserDTO> {
-    return classToPlain(this, {
-      groups,
-    }) as any;
   }
 }

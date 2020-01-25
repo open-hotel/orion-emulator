@@ -1,6 +1,7 @@
 import { Matrix } from '../core';
 import { RoomDTO } from './dto/Room.dto';
 import { UserDTO } from '../user/dto/User.dto';
+import { DeepPartial } from '../core/lib';
 
 export class RoomState {
   public room: RoomDTO;
@@ -31,7 +32,7 @@ export class RoomState {
 
 export interface UserState {
   position: [number, number];
-  user: Partial<UserDTO>,
+  user: DeepPartial<UserDTO>,
   socketId: string;
   pathBeingFollowed: [number, number][];
 }
