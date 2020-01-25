@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import OAuth2Server from 'oauth2-server';
 import { JwtService } from '@nestjs/jwt';
-import { classToPlain } from 'class-transformer';
 import { UserService } from '../user';
 
 const client = {
@@ -54,7 +53,7 @@ export class OAuthServerProvider
   ): Promise<string> {
     return this.jwt.signAsync(
       {
-        sub: user.id,
+        sub: user._key,
         aud: client.id,
         scope: Array.isArray(scope) ? scope.join(',') : scope,
       },
@@ -74,7 +73,6 @@ export class OAuthServerProvider
         sub: user.id,
         aud: client.id,
         scope: Array.isArray(scope) ? scope.join(',') : scope,
-        user: classToPlain(user),
       },
       {
         expiresIn: client.accessTokenLifetime,

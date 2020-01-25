@@ -32,7 +32,7 @@ export class OAuthController {
         expires: Math.floor((token.accessTokenExpiresAt.getTime() - new Date().getTime()) / 1000)
       })
     }).catch(error => {
-      res.send(error)
+      res.status(error.status || 500).send(error)
     })
   }
 

@@ -5,6 +5,7 @@ services:
       target: base
     image: open-hotel/orion:dev
     command: "yarn start:dev"
+    env_file: []
     environment: 
       NODE_ENV: development
     volumes: 
