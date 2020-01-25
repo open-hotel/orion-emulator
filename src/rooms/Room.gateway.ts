@@ -62,12 +62,12 @@ export class RoomGateway implements OnGatewayInit, OnGatewayDisconnect {
     let roomState = this.rooms.get(msgBody.roomId);
 
     if (!roomState) {
-      const room = (await this.roomSevice.getRoom(msgBody.roomId)).toJSON()
+      const room = (await this.roomSevice.getRoom(msgBody.roomId))
 
       if (!room) return this.sendError('room_not_found')
       
       roomState = new RoomState({
-        room: room,
+        room: classToPlain(room),
         map: Matrix.fromLegacyString(room.map),
         mobis: room.items,
       });

@@ -14,6 +14,7 @@ import { ApiModelProperty } from '@nestjs/swagger';
 import { RoomItem } from './RoomItem.dto';
 import { RoomBan } from './RoomBan.dto';
 import { classToPlain, Expose } from 'class-transformer';
+import { merge } from 'lodash';
 
 export const RoomPrivacyItems = ['public'];
 export type RoomPrivacy = 'public' | 'secret';
@@ -86,18 +87,6 @@ export class RoomDTO {
   created_at: Date = new Date();
 
   constructor(data: DeepPartial<RoomDTO>) {
-    Object.assign(this, data);
-
-    if (typeof data.owner === 'object' && !(data.owner instanceof UserDTO)) {
-      this.owner = new UserDTO(data.owner)
-    }
-
-    console.log(this)
-  }
-
-  toJSON(groups = []): DeepPartial<RoomDTO> {
-    return classToPlain(this, {
-      groups,
-    });
+    merge(this, data);
   }
 }

@@ -37,8 +37,8 @@ export class WSAdapter extends IoAdapter {
         if (!socket.user) {
           return cb(new Error('invalid_auth_ticket'));
         }
-        cb();
       }
+      cb();
     });
 
     // WebShellAuth

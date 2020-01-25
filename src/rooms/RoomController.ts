@@ -5,6 +5,8 @@ import { RoomRegisterDTO } from "./dto/RoomRegister.dto";
 import { RoomDTO } from "./dto/Room.dto";
 import { Database } from "arangojs";
 import { InjectArango } from "../lib/injectArango.decorator";
+import { CurrentUser } from "../oauth/decorators/user.decorator";
+import { UserDTO } from "../user/dto/User.dto";
 
 @ApiUseTags('Rooms')
 @Controller('rooms')
@@ -20,10 +22,10 @@ export class RoomController {
     description: 'Create a new room'
   })
   @Post()
-  register (@Body() dto: RoomRegisterDTO) {
+  register (@Body() dto: RoomRegisterDTO, @CurrentUser() user:UserDTO) {
     const data = new RoomDTO({
       ...dto,
-      owner: null
+      owner: user._id
     })
 
     return this.roomService.save(data)

@@ -20,29 +20,34 @@ export class RoomService extends ArangoCrudService<RoomDTO> {
         SORT room.users_now DESC
         RETURN room
     `);
-    return cursor.map(item => new RoomDTO(item))
+    return cursor.map(item => new RoomDTO(item));
   }
 
   async getByOwner(ownerId: string) {
     const cursor = await this.db.query(
       aql`
       FOR room in rooms
-        FILTER room.owner == ${'users/'+ownerId}
+        FILTER room.owner == ${'users/' + ownerId}
         FILTER room.state == 'open'
         SORT room.created_at DESC
         RETURN room
-    `);
-    return cursor.map(item => new RoomDTO(item))
+    `,
+    );
+    return cursor.map(item => new RoomDTO(item));
   }
 
-  async getRoom (roomId:string): Promise<RoomDTO> {
-    return this.db.query(
-      aql`
+  async getRoom(roomId: string): Promise<RoomDTO> {
+    return this.db
+      .query(
+        aql`
         FOR room in rooms
-          LIMIT 1
           FILTER room._key == ${roomId}
-          return merge(room, { owner: DOCUMENT(room.owner) })
-      `
-    ).then(async (c) => new RoomDTO(await c.next()))
+          LIMIT 1
+          RETURN room
+      `,
+      )
+      .then(async c => {
+        return c.hasNext() ? new RoomDTO(await c.next()) : null
+      });
   }
 }
