@@ -21,39 +21,17 @@ function processNeighbors(
 ) {
   const neighbors = [];
 
-  const prevX = current.x - 1;
-  const nextX = current.x + 1;
-  const prevY = current.y - 1;
-  const nextY = current.y + 1;
-
-  const top = grid.get(prevY, current.x);
-  const left = grid.get(current.y, prevX);
-  const right = grid.get(current.y, nextX);
-  const bottom = grid.get(nextY, current.x);
-
-  const topLeft = grid.get(prevY, prevX);
-  const topRight = grid.get(prevY, nextX);
-  const bottomLeft = grid.get(nextY, prevX);
-  const bottomRight = grid.get(nextY, nextX);
-
-  const possibleNeighbors = [top, left, right, bottom];
-
-  if (instance.diagonalEnabled) {
-    possibleNeighbors.unshift(topLeft, topRight, bottomRight, bottomLeft);
-  }
-
-  for (const block of possibleNeighbors) {
+  const possibleNeighbors = grid.neighborsOf(current.x, current.y, instance.diagonalEnabled ? Matrix.NEIGHBORS_ALL : Matrix.NEIGHBORS_ADJACENT)
+  const len = possibleNeighbors.length;
+  for (let i = 0; i < len; i++) {
+    const block = possibleNeighbors[i];
     if (
       block &&
       !block.closed &&
       block.walkable &&
       instance.canWalk(block, current)
     ) {
-      const diagonal =
-        block === topLeft ||
-        block === topRight ||
-        block === bottomLeft ||
-        block === bottomRight;
+      const diagonal = instance.diagonalEnabled && i % 2 === 0;
 
       const cost = instance.getCostsOf(block, diagonal);
       block.parent = current;
@@ -121,7 +99,7 @@ function getPath(node: PNode) {
 const { abs, sqrt, SQRT2 } = Math;
 
 export class PathFinder {
-  static DIAGONAL_COST = 1; //SQRT2
+  static DIAGONAL_COST = Math.SQRT2; //SQRT2
   static STRAIGHT_COST = 1;
   static Heuristic = {
     Manhattan: (a: PNode, b: PNode) => abs(a.y - b.y) + abs(a.x - b.x),
@@ -147,7 +125,7 @@ export class PathFinder {
       .filter(item => item.test(block))
       .reduce((sum, item) => sum + item.cost, 1);
 
-    return diagonal ? PathFinder.DIAGONAL_COST * cost : cost;
+    return cost;
   }
 
   constructor(
@@ -171,8 +149,6 @@ export class PathFinder {
     let currentNode: PNode;
     let opened: PNode[] = [startNode];
 
-    const closed: PNode[] = [];
-
     while ((currentNode = opened.shift())) {
       const neighbors = processNeighbors(
         grid,
@@ -183,7 +159,6 @@ export class PathFinder {
       ).sort((a, b) => a.f - b.f);
 
       currentNode.closed = true;
-      closed.push(currentNode);
 
       // Chegou ao fim
       if (currentNode === goalNode) return getPath(currentNode);

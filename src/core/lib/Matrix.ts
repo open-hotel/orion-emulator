@@ -56,6 +56,39 @@ type SerializeOptions = typeof defaultSerializeOptions;
 const HEIGHTS = "x0123456789abcdefghijklmnopqrstuvwyz";
 
 export class Matrix<T = any> {
+  static NEIGHBORS = {
+    TOP_LEFT    : {x: -1, y: -1},
+    TOP         : {x: 0, y: -1},
+    TOP_RIGHT   : {x: 1, y: -1},
+    RIGHT       : {x: 1, y: 0},
+    BOTTOM_RIGHT: {x: 1, y: 1},
+    BOTTOM      : {x: 0, y: 1},
+    BOTTOM_LEFT : {x: -1, y: 1},
+    LEFT        : {x: -1, y: 0},
+  }
+  static NEIGHBORS_ALL = [
+    Matrix.NEIGHBORS.TOP_LEFT,
+    Matrix.NEIGHBORS.TOP,
+    Matrix.NEIGHBORS.TOP_RIGHT,
+    Matrix.NEIGHBORS.RIGHT,
+    Matrix.NEIGHBORS.BOTTOM_RIGHT,
+    Matrix.NEIGHBORS.BOTTOM,
+    Matrix.NEIGHBORS.BOTTOM_LEFT,
+    Matrix.NEIGHBORS.LEFT,
+  ]
+  static NEIGHBORS_ADJACENT = [
+    Matrix.NEIGHBORS.TOP,
+    Matrix.NEIGHBORS.RIGHT,
+    Matrix.NEIGHBORS.BOTTOM,
+    Matrix.NEIGHBORS.LEFT,
+  ]
+  static NEIGHBORS_DIAGONAL = [
+    Matrix.NEIGHBORS.TOP_LEFT,
+    Matrix.NEIGHBORS.TOP_RIGHT,
+    Matrix.NEIGHBORS.BOTTOM_RIGHT,
+    Matrix.NEIGHBORS.BOTTOM_LEFT,
+  ]
+
   constructor(
     public width: number = 3,
     public height: number = width,
@@ -299,18 +332,20 @@ export class Matrix<T = any> {
    * @param x Coluna
    * @param y Linha
    */
-  neighborsOf(x: number, y: number): Matrix<T> {
-    return new Matrix<T>(3, 3, [
-      this.get(x - 1, y - 1),
-      this.get(x, y - 1),
-      this.get(x + 1, y - 1),
-      this.get(x - 1, y + 0),
-      this.get(x, y + 0),
-      this.get(x + 1, y + 0),
-      this.get(x - 1, y + 1),
-      this.get(x, y + 1),
-      this.get(x + 1, y + 1)
-    ]);
+  neighborsOf(x: number, y: number, items = Matrix.NEIGHBORS_ALL): T[] {
+    // return new Matrix<T>(3, 3, [
+    //   this.get(x - 1, y - 1),
+    //   this.get(x, y - 1),
+    //   this.get(x + 1, y - 1),
+    //   this.get(x - 1, y),
+    //   this.get(x, y),
+    //   this.get(x + 1, y),
+    //   this.get(x - 1, y + 1),
+    //   this.get(x, y + 1),
+    //   this.get(x + 1, y + 1)
+    // ]);
+
+    return items.map((r) => this.get(x + r.x, y + r.y))
   }
 
   /**
