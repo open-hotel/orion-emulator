@@ -34,7 +34,7 @@
     "@nestjs/websockets": "^6.8.3",
     "aqb": "^2.1.0",
     "arangojs": "^6.11.1",
-    "bcrypt": "^3.0.7",
+    "bcrypt": "^5.0.0",
     "class-transformer": "^0.2.3",
     "class-validator": "^0.10.1",
     "cli-table3": "^0.5.1",
