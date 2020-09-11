@@ -59,7 +59,7 @@
     "xterm": "^4.1.0",
     "xterm-addon-attach": "^0.3.0",
     "xterm-addon-fit": "^0.2.1",
-    "yargs-parser": "^13.1.1"
+    "yargs-parser": "^13.1.2"
   },
   "devDependencies": {
     "@nestjs/cli": "^6.9.0",
