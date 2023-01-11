@@ -36,7 +36,7 @@
     "arangojs": "^6.11.1",
     "bcrypt": "^3.0.7",
     "class-transformer": "^0.2.3",
-    "class-validator": "^0.10.1",
+    "class-validator": "^0.14.0",
     "cli-table3": "^0.5.1",
     "console-png": "^1.2.1",
     "cors": "^2.8.5",
